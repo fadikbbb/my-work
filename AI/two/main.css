@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .like-button {
+    border: none;
+    outline: none;
+    background: none;
+    color: #ff0000;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  
+  .like-count {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  
