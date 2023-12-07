@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #333;    
+}
+.link{
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 40px;
+    border: 2px solid greenyellow;
+display: block;
+    width: 160px;
+    height: 40px;
+    position: relative;
+    line-height: 40px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+}
+.link::before{
+    content: "word";
+    position: absolute;
+    color: greenyellow;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: 0.3s;
+}
+.link span{
+    display: block;
+    transition: 0.3s;
+}
+.link:hover:before{
+    transform: translateX(0);
+}
+.link:hover span{
+    transform: translateX(-100%);
+}

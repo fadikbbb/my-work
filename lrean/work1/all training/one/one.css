@@ -1,0 +1,51 @@
+div{
+    margin: 40px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #b3b3b3;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+div::before{
+    width: 40px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    animation: big-small 1s infinite 0.1s ease-in-out ;
+}
+div::after{
+    width: 45px;
+    height: 45px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    animation: big-small 1s infinite ease-in-out ;
+    animation-direction: alternate;
+}
+@keyframes big-small{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+div:hover::after{
+    animation-play-state:paused;
+
+}
+div:hover::before{
+    animation-play-state:paused;
+}

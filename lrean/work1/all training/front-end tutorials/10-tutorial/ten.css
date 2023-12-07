@@ -1,0 +1,16 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(201, 201, 201);
+    position: relative;
+}
+.first{
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    clip-path: polygon(92% 82%, 85% 82%, 59% 33%, 59% 33%, 27% 80%, 20% 80%, 59% 23%, 59% 23%);
+
+}

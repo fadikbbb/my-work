@@ -1,0 +1,1042 @@
+/* start variables */
+:root {
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+}
+
+/* end variables */
+/* start global rules */
+* {
+  color: #666666;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.top,
+.right,
+.nav,
+.right {
+  display: flex;
+}
+
+header {
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.top {
+  margin-top: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.right {
+  align-items: center;
+}
+
+.right .fa-bars {
+  display: none;
+  cursor: pointer;
+}
+
+.right .fa-search {
+  margin-left: 20px;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-left: 1px solid #666666;
+}
+
+.nav {
+  margin-right: 20px;
+}
+
+.nav li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.nav li a {
+  border-bottom: 1px solid #2c2c2c;
+  padding: 15px;
+  margin-left: 0;
+}
+
+.nav li:first-child a,
+.nav li:hover a {
+  text-decoration: none;
+  color: #19c8fa;
+  border-bottom: 2px solid #19c8fa;
+}
+
+.top {
+  position: relative;
+}
+
+header {
+  position: relative;
+}
+
+.top:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  z-index: -1;
+  height: 2px;
+  background-color: #666666;
+  display: block;
+}
+
+.icon {
+  display: flex;
+}
+
+header {
+  z-index: 3;
+  position: absolute;
+}
+
+.landing {
+  min-height: 950px;
+  background-image: url(/FHO/Fadi/work1/templete2/img/space-station-60615_1280.jpg);
+  left: 0;
+  background-size: cover;
+  position: relative;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.459);
+}
+
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: flex-end;
+  background-color: #19c9fa81;
+  width: 50%;
+}
+
+.landing .overlay .container {
+  width: 50%;
+  display: flex;
+  margin: 0;
+}
+
+.landing .text h1,
+.landing .text p {
+  width: 100%;
+  color: white;
+  padding-right: 20px;
+}
+
+.landing .text h1 {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.landing .text p {
+  font-size: 15px;
+}
+
+.landing .fa-arrow-alt-circle-left,
+.landing .fa-arrow-alt-circle-right {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.landing .fa-arrow-alt-circle-left {
+  left: 0;
+  margin-left: 15px;
+}
+
+.landing .fa-arrow-alt-circle-right {
+  right: 0;
+  margin-right: 15px;
+}
+
+.points,
+.container-test .points {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.points li,
+.box-test .points li {
+  border: 1px solid #eee;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+.points li:nth-child(2) {
+  background-color: #19c8fa;
+  border: none;
+}
+
+.service .container .head-of-content,
+.portfolio .container .head-of-content {
+  text-align: center;
+}
+
+.head-of-content .text,
+.head-of-content .text {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-of-content .text h1,
+.head-of-content .text h1 {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  position: relative;
+
+}
+
+.head-of-content .text h1::after,
+.head-of-content .text h1::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: -28px;
+  z-index: -2;
+  height: 2px;
+  background-color: #666666;
+  z-index: 0;
+}
+
+.head-of-content .text li,
+.head-of-content .text li {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 1px solid #666666;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+
+.service-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.object {
+  text-align: center;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+
+.object i {
+  font-weight: 900;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.object .text h3,
+.object .text p,
+.object .text {
+  width: 95%;
+}
+
+.object .text h3 {
+  color: #19c8fa;
+}
+
+.service .container .head-of-content .text {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+
+.service {
+  width: 100%;
+}
+
+.p-head {
+  text-align: center;
+  width: 50%;
+}
+
+.mobile {
+  background-image: url(https://wallpaperdig.com/space-wallpaper-4k-download/drftgyhu/);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: -1;
+}
+
+.mobile .image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile img {
+  display: flex;
+  justify-content: flex-end;
+  width: 400px;
+  position: relative;
+  left: 0;
+  bottom: -100px;
+}
+
+.mobile .text {
+  display: flex;
+  background-color: #19c9fa85;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+
+.mobile .text h2 {
+  margin-left: 15px;
+  color: white;
+}
+
+.mobile .text li {
+  margin-bottom: 30px;
+
+}
+
+.mobile .text i {
+  width: 100%;
+  color: white;
+  letter-spacing: 3px;
+
+}
+
+.fa-computer::before {
+  margin-right: 15px;
+
+}
+
+.portfolio .container {
+  background-color: white;
+}
+
+.portfolio .container ul {
+  margin-top: 50px;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.app li,
+.more {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.app li:hover,
+.app .active {
+  background-color: #19c8fa;
+}
+
+.box img {
+  width: calc(100%);
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.box:hover img {
+  animation: s .3s 1 ease-in-out;
+}
+
+@keyframes s {
+  0% {
+    transform: rotatez(0);
+  }
+
+  50% {
+    transform: rotatez(20deg) scale(1.5);
+  }
+
+  100% {
+    transform: rotatez(0);
+  }
+}
+
+.box .caption {
+  position: absolute;
+  bottom: -50%;
+  background-color: white;
+  z-index: 1;
+  width: 100%;
+  transition: .3s;
+
+}
+
+.box .caption h4,
+.box .caption p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 70%;
+  margin-left: 10px;
+}
+
+.box .caption p {
+  color: #19c8fa;
+}
+
+.box:hover .caption {
+  bottom: 0;
+}
+
+.imgs-container {
+  display: grid;
+  grid-template-columns: calc(100%/4) calc(100%/4) calc(100%/4) calc(100%/4);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+}
+
+.more {
+  color: white;
+  background-color: #19c8fa;
+  display: flex;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.video {
+  width: 100%;
+  position: relative;
+}
+
+video {
+  width: 100%;
+
+}
+
+.video::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.425);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+
+.video .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  background-color: #19c9fa6c;
+  z-index: 1;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.video .text button,
+.video .text h2,
+.video .text p {
+  color: white;
+}
+
+.video .text h2 {
+  text-transform: uppercase;
+}
+
+.video .text button {
+  background-color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.about .container .image {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+}
+
+
+.about .container .image img {
+  position: absolute;
+  bottom: -150px;
+}
+
+.container-static {
+  background-image: url(https://wallpapers.com/images/featured/outer-space-3pae4flbryaputyl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  justify-content: center;
+}
+
+.box-static {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  height: fit-content;
+  margin: 0px auto;
+  justify-content: space-around;
+  background-color: #19c9fa73;
+  z-index: 1;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  margin: 15px 25px;
+}
+
+.statistic .icon {
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  background-color: #2c2c2c;
+}
+
+
+
+.statistic .number {
+  font-size: 50px;
+}
+
+.statistic i,
+.statistic p,
+.statistic .number {
+  margin: 10px;
+  color: white;
+  z-index: 1;
+}
+
+.container-static::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.432);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.skills-level {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.testimonials,
+.our-skills {
+  position: relative;
+  text-align: center;
+  width: 40%;
+}
+
+.testimonials p,
+.our-skills p {
+  font-size: 10px;
+}
+
+.testimonials .title,
+.our-skills .title {
+  font-size: 20px;
+}
+
+.testimonials .container-test .box-test img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.box-test {
+  display: flex;
+
+
+}
+
+.box-test .text {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.box-test .text h6 {
+  text-align: end;
+  color: #d6d6d6;
+  margin: 0 0 10px 0px;
+}
+
+.container-skills {
+  text-align: start;
+}
+
+.box-skills .text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.box-skills .text .nb {
+  background-color: #2c2c2c;
+  color: white;
+  width: 35px;
+  height: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.box-skills .text .nb::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  bottom: -9px;
+  border: 5px solid;
+  border-color: #2c2c2c transparent transparent transparent;
+}
+
+.box-skills:nth-child(1) .text .nb {
+  position: absolute;
+  left: 95%;
+  transform: translateX(-50%);
+}
+
+.box-skills:nth-child(2) .text .nb {
+  position: absolute;
+  left: 93%;
+  transform: translateX(-50%);
+}
+
+.box-skills:nth-child(3) .text .nb {
+  position: absolute;
+  left: 85%;
+  transform: translateX(-50%);
+}
+
+.box-skills:nth-child(4) .text .nb {
+  position: absolute;
+  left: 87%;
+  transform: translateX(-50%);
+}
+
+.box-skills .text h3 {
+  font-size: 15px;
+}
+
+.level {
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  position: relative;
+}
+
+.box-skills:nth-child(1) .level::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  background-color: #19c8fa;
+}
+
+.box-skills:nth-child(2) .level::before {
+  content: "";
+  position: absolute;
+  width: 93%;
+  height: 100%;
+  background-color: #19c8fa;
+}
+
+.box-skills:nth-child(3) .level::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  background-color: #19c8fa;
+}
+
+.box-skills:nth-child(4) .level::before {
+  content: "";
+  position: absolute;
+  width: 87%;
+  height: 100%;
+  background-color: #19c8fa;
+}
+
+.foot-about {
+  background-image: url(https://e0.pxfuel.com/wallpapers/208/992/desktop-wallpaper-floating-in-space-by-visualdon-live-2d-space.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.foot-about::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.459);
+}
+
+.foot-about p,
+.foot-about h6 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.container-price {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box-price {
+  margin-bottom: 50px;
+}
+
+.top-box {
+  margin: 5px;
+  border-bottom: 1px solid #19c8fa;
+  border-top: 1px solid #19c8fa;
+}
+
+.top-box .number {
+  font-size: 50px;
+  color: black;
+  font-weight: 700;
+  margin: 10px 30px;
+
+}
+
+.number sup {
+  top: -20px
+}
+
+.number sub,
+.number sup {
+  font-size: 12px;
+}
+
+.bottom-box {
+
+  margin: auto 10px;
+}
+
+.bottom-box ul {
+  padding: 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #19c8fa;
+}
+
+.bottom-box ul li:last-child {
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.bottom-box ul li {
+  width: 70%;
+  font-size: 12px;
+  padding-bottom: 10px;
+  margin: 20px auto;
+  border-bottom: 1px solid #19c8fa;
+}
+
+.box-price button {
+  background-color: white;
+  border: 1px solid #19c8fa;
+  padding: 8px 20px;
+}
+
+.foot-price {
+  text-align: center;
+}
+
+.foot-price .contact-us {
+  background-color: #19c8fa;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 70px;
+}
+
+.email .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.email-container {
+  display: flex;
+  border: 1px solid #666666;
+  width: 40%;
+  background-color: white;
+  height: 40px;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.email {
+  display: flex;
+  background-image: url(https://media.istockphoto.com/id/1466890104/photo/contact-us-and-support-concept-and-digital-network-with-blue-space-background.jpg?s=170667a&w=0&k=20&c=OwqOMmfrcYUu-3CnSA9LlVGXIbB8eTci8kWvVFeUc4w=);
+  padding: 100px 0;
+  background-size: cover;
+  background-position-y: 0;
+  position: relative;
+}
+
+.email::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.459);
+}
+
+.email-container input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.email-container button {
+  background-color: #19c8fa;
+  color: white;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.email .container p {
+  width: 50%;
+  color: white;
+}
+
+.top-contact,
+.bottom-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.input-top {
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+}
+
+.top-contact .input-top input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #eee;
+  outline: none;
+  text-align: start;
+
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+
+.top-contact .text,
+.bottom-contact .text {
+  display: flex;
+  width: 20%;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.top-contact .text h3,
+.bottom-contact .text h3 {
+  margin: 0;
+}
+
+.top-contact .text .number h4 span,
+.bottom-contact .text .number h4 span {
+  color: #c2c2c2;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+
+.bottom-contact .input-bottom {
+  height: 100%;
+}
+
+.bottom-contact .input-bottom {
+  width: 70%;
+  height: 180px;
+  border: 1px solid #eee;
+}
+
+.bottom-contact .input-bottom input {
+  width: 100%;
+  outline: none;
+  height: 40px;
+  padding-left: 20px;
+  border: none;
+}
+
+.submit-info {
+  position: relative;
+  left: 50%;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #19c8fa;
+  border: none;
+  color: white;
+  margin: 100px auto;
+}
+footer{
+  background-image: url(https://t3.ftcdn.net/jpg/05/58/61/32/360_F_558613274_Z1zbjnHZKjpnTvvsjfZzYXk2TIeUl54a.jpg);
+  background-size: cover;
+  width: 100%;
+position: relative;
+}
+footer::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.452);
+
+}
+footer .container .foot .logo-foot img {
+  width: 100px;
+}
+
+footer .container .foot , footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
+}
+
+footer .container .foot h5 {
+  padding: 18px 35px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  border-bottom: 1px solid #ffffff;}
+footer .container .foot .logo-foot {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+footer .container .foot .icon-social i{
+  margin:0 10px ;
+}
+footer .container .foot {
+  margin: 50px 0;
+}
+footer .container .copyright{
+  text-transform: capitalize;
+  color: white;
+  margin-bottom: 50px;
+}
+footer .container .copyright span{
+  color: #19c8fa;
+}footer .container .icon-social i {
+  color: white;
+}

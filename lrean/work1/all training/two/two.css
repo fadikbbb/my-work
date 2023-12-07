@@ -1,0 +1,74 @@
+body{
+    width: 600px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all{
+
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+.zero{
+    display: flex;
+    
+    flex-direction: row;
+width: 100px;
+background-color: #ffffff;
+height: auto;
+overflow-x: hidden;
+animation-fill-mode: forwards;
+transform: translateX(0px);
+animation: anim2 0.4s 1  ease-in;
+}
+.one{position: absolute;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    justify-content:flex-end ;
+    z-index: 3;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: large;
+    animation: anim2 0.4s 1  ease-in forwards;
+    overflow: hidden;
+}
+@keyframes anim2{
+    0%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translatex(0);
+    }
+    90%{
+        transform: translateX(-60px);
+    }
+    100%{
+        transform: translateX(-60px);
+    }
+}
+.two{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    width: 100px;
+    margin-left:40px;
+    animation: anim1 0.6s 1  ease-in-out forwards;
+}
+@keyframes anim1{
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}

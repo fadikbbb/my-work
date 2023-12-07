@@ -1,0 +1,24 @@
+.parent{
+    width: 600px;
+    height: 300px;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+}
+.one,.two,.three{
+    color: white;
+    width: 25px;
+    display: flex;
+    background-color: rgb(37, 146, 110);
+    height: calc(240px/3);
+    justify-content: center;
+    align-items: center;
+}
+.two{
+    width: 50%;
+    display: flex;
+    align-self: flex-start;
+}

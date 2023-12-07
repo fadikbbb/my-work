@@ -1,0 +1,23 @@
+div{
+    padding: 100px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(224, 224, 224);
+    border-radius: 90px;
+    height: 40px;
+
+}
+::-webkit-scrollbar{
+    background-color: rgb(182, 182, 182);
+    color: aliceblue;
+    width: 4px;
+    border-radius: 90px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: aliceblue;
+}
+::-webkit-scrollbar-corner{
+    background-image:url(https://www.thehealthy.com/wp-content/uploads/2017/01/06-dumbbell-push-press-the-best-14-upper-body-exercises-dumbbells-1.gif?fit=700,467);
+    background-size:cover;
+}
+

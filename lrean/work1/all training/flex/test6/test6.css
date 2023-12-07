@@ -1,0 +1,21 @@
+.parent{margin: 0;
+    width: 600px;
+    height: 300px;
+    background-color: rgb(184, 184, 184);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+div div{
+    height: 35px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: calc(570px/3);
+    background-color:rgb(255, 28, 28);
+}

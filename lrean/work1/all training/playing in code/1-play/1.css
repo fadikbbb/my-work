@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    box-shadow: 0 0 5px 0 gray;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: black;
+}
+.word{
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%) translateY(-50%);
+    top: 50%;
+    transition: 0.5s;
+    background-size: cover;
+    cursor: pointer;
+}
+.word:hover{
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%) translateY(-50%);
+    background-position: 40% 110%;
+    background-size: 1000px;
+    background-image: url(https://thumbs.gfycat.com/IdolizedSaltyArawana-size_restricted.gif);
+    cursor: pointer;
+}

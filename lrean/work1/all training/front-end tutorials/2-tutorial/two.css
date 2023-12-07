@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.fil{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    font-weight:bold;
+    font-size: 100px;
+    width: fit-content;
+    color:transparent;
+    -webkit-text-stroke: 2px #333;
+    transition: 0.3s;
+    position: relative;
+}
+.fil::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: #ff5722;
+    transition: 0.5s;
+    width: 0;
+    overflow: hidden;
+}
+.fil:hover::before{
+    width: 100%;
+}

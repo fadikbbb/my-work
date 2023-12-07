@@ -1,0 +1,49 @@
+from{
+    margin: 20px auto;
+    width: 400px;
+    background-color: aliceblue;
+
+}
+from > div{
+    padding: 5px  20px;
+}
+from input[type="radio"]{
+appearance: none;
+-webkit-appearance: none;
+}
+from label{
+    position: relative;
+    padding-left: 25px;
+}
+from label::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgb(0, 140, 255);
+}
+from input[type="radio"]:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 140, 255);
+}
+from input[type="radio"]:not(:checked):hover + label::after{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 140, 255);
+    opacity: 0.2;
+}
+from input[type="radio"]:checked + label{
+    color: rgb(0, 140, 255);
+}

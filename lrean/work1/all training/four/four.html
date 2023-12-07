@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300.741" height="225.556" viewBox="0 0 300.741 225.556">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+		opacity: 0 ;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #1f7fdd;
+        stroke-miterlimit: 10;
+        stroke-width: 9px;
+      }
+
+      .cls-3 {
+        fill: #1f7fdd;
+      }
+	  
+	  /* Animation Code */
+	  
+	  .case:hover {
+	  animation: jump 1.5s linear infinite;
+	  position:relative;
+	  top:0;
+	  bottom:0;
+	  left:0;
+	  right:0;
+	  margin:0 auto;
+	  transform-origin: 50% 50%;
+	  }
+	
+	@keyframes jump{
+	0% {transform: translate(0,0) ;}
+	30% {transform: translate(0,-10%) ;}
+	100% {transform: translate(0,0) ;}
+	}
+	
+	.lines:hover {
+		  animation: woosh 1.5s linear infinite;
+	  position:relative;
+	  top:0;
+	  bottom:0;
+	  left:0;
+	  right:0;
+	  margin:0 auto;
+	  transform-origin: 50% 75%;
+	}
+	
+		@keyframes woosh{
+
+	0%, 5% {
+		transform: scaleY(0);
+	}
+
+	30% {
+		transform: scaleY(-1);
+		opacity: 0.3;
+	}
+	55% {
+		
+		opacity: 0;
+	}
+
+	100% {
+		transform: scaleY(-1);
+		opacity: 0;
+	}
+
+	}
+    </style>
+  </defs>
+  <title>Wrench</title>
+  <g id="Layer_3" data-name="Layer 3">
+
+  </g>
+  <g id="Layer_2" data-name="Layer 2">
+    <g class="lines">
+	  <circle class="cls-1" cx="150.37" cy="112.778" r="105"/>
+	  <g class="lines">
+      <line class="cls-2" x1="149.87" y1="175.278" x2="149.87" y2="154.278"/>
+      <line class="cls-2" x1="106.37" y1="180.778" x2="106.37" y2="159.778"/>
+      <line class="cls-2" x1="194.37" y1="180.778" x2="194.37" y2="159.778"/>
+	  </g>
+    </g>
+  </g>
+      <circle class="cls-2" cx="150.37" cy="112.778" r="101"/>
+  <g id="Layer_1" data-name="Layer 1" class="case">
+	    <circle class="cls-1" cx="150.37" cy="112.778" r="105"/>
+    <path class="cls-2" d="M104.37,77.278h92a12,12,0,0,1,12,12v75a0,0,0,0,1,0,0h-116a0,0,0,0,1,0,0v-75A12,12,0,0,1,104.37,77.278Z" transform="translate(300.741 241.556) rotate(180)"/>
+    <rect class="cls-2" x="131.37" y="54.278" width="38" height="23" rx="7.639"/>
+    <polyline class="cls-2" points="207.96 77.278 207.96 99.792 150.37 127.778 92.78 99.792 92.78 77.278"/>
+    <rect class="cls-3" x="142.37" y="112.778" width="16" height="23" rx="3"/>
+  </g>
+</svg>

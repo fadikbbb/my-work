@@ -1,0 +1,95 @@
+*{
+    box-sizing: 0PX;
+    margin: 0;
+}
+.one{
+    background-color: aqua;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.five:hover>.three,.four{
+    animation-play-state: running;
+
+}
+.three,.four,.five,.two{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: red;
+}
+.two{
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.five{
+    position: absolute;
+    width: 100px;
+    height: 22px;
+    background-color: red;
+}
+.three{
+    width: 100px;
+    background-color: transparent;
+    z-index: 1;   
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    animation:anim1-1 1s infinite ease-in-out ;
+    animation-play-state:paused;
+    overflow: hidden;
+}
+@keyframes anim1-1{
+    0%{
+
+        transform: scalex(1);
+    }
+
+    50%{
+        transform:  scalex(10);
+    }
+    90%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform:  scalex(1);
+    }
+}
+.four{
+    width: 97px;
+    height: 24px;
+    background-color: transparent;
+    z-index: 3;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    animation: anim1-2 1s infinite 0.5s ease-in-out ;
+    animation-play-state:paused;
+    overflow: hidden;
+}
+@keyframes anim1-2{
+        0%{
+            transform: scaley(1);
+        }
+    
+        50%{
+            transform:  scaley(15);
+        }
+        90%{
+            transform: scaley(1);
+        }
+        100%{
+            transform:  scaley(1);
+        }
+    }
+    .four:hover{
+        animation-play-state: running;
+    }

@@ -1,0 +1,32 @@
+/* .product {
+  border: 1px solid gray;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+border-radius:10px ;
+background-image: linear-gradient(to bottom,red,white,green);
+}
+.all{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+span{
+    color: black;
+    width: 20px;   
+     margin-left: 10px;
+}
+h3{
+    color:rgb(0, 255, 110);
+
+}
+p{color: red;} */
+/*----------------------------------------------------------------------------*/
+#my-div{
+  cursor: pointer;
+}

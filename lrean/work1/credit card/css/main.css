@@ -1,0 +1,190 @@
+body{
+    background-color: rgb(9, 8, 19);
+position: relative;
+}
+.container{
+    width: 300px;
+    height: 203px;
+    margin:auto;
+
+    border-radius: 25px; 
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    top: 250px;
+    z-index: 300;
+
+    position: relative;
+    
+}
+.container:hover .container2{
+    transform: rotatey(180deg) rotatez(180deg) rotateX(180deg);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+.container2:hover header,.container2:hover section ,.container2:hover footer{
+    display: none;
+}
+.container2 .hidenumber,.container2 .background,.container2 .phonenumber,.container2 .inback{
+display:none;
+}
+.container .hidenumber,.container .background,.container .phonenumber,.container .inback{
+    display:none;
+    }
+.container:hover .hidenumber,.container:hover .background,.container:hover .phonenumber,.container:hover .inback{ 
+display: flex;
+margin: 10px;
+
+}
+.container:hover .phonenumber,.container:hover .inback{
+    font-size: 7px;
+    text-align: center;
+}
+.container2:hover .background,.container:hover .background{
+    width: 115%;
+    height: 20%;
+    background-color: black;
+
+}
+.container hr,.container2 hr{
+    display: none;
+}
+.container:hover .hidenumber{
+    width: 90%;
+    border-radius: 5px;
+    justify-content: flex-end;
+    background-color: white;
+    color: black;
+font-weight: 500;
+    padding: 5px;
+    font-size: large;
+position: relative;
+
+}
+.container:hover .one{
+display: flex;
+width: 70%;
+height: 2px;
+border: none;
+background-color: white;
+position: absolute;
+top: 135px;
+z-index: 20;
+left: 30px;
+}
+
+.container:hover .two{
+    display: flex;
+    width: 70%;
+    height: 2px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 105px;
+    z-index: 20;
+    left: 30px;
+    }
+    
+.container:hover .three{
+    display: flex;
+    width: 70%;
+    height: 2px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 120px;
+    z-index: 20;
+    left: 30px;
+    }
+.container:hover .hidenumber::before{
+    width: 85%;
+    left: 0;
+    bottom: -10px;
+    border-radius: 5px;
+
+    content: "";
+    height: 150%;
+    background-color: rgb(212, 212, 212);
+    z-index: 1;
+    position: absolute;
+
+}
+.container2{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(25px);
+    transition: 0.3s;    
+    box-shadow: 1px 1px 10px 3px black;
+}
+body::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: 30%;
+    top: 100%;
+    width:150px;
+    height: 150px;
+    z-index: -1;
+    background-image: linear-gradient(to right,rgb(225, 0, 255),white);
+
+}
+body::after{
+    content: "";
+    position: absolute;
+    right: 28%;
+    top: 180%;
+    z-index: -1;
+    width:150px;
+    border-radius: 50%;
+    height: 150px;
+    background-image: linear-gradient(to right,rgb(225, 0, 255),white);
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom:20px ;
+    align-items: center;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo{
+    margin-left: -15px;
+    height: 50px;
+}
+section{
+    margin-bottom: 10px;
+}
+.cardp{
+    display: flex;
+    font-size: 10px;
+    margin-bottom: 15px;
+    
+}
+.logo2{
+    width: 70px;
+}
+footer{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding-bottom: 10px;
+}
+.date{
+    font-size: small;
+}
+.date-nb{
+    font-size:large;
+}
+.container:hover header,.container:hover section,.container:hover footer{
+    display: none;
+}

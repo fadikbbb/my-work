@@ -1,0 +1,76 @@
+.grid{
+    width: 800px;
+    height: 900px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(7,1fr);
+
+}
+.grid div{
+    padding: 10px;
+   border-bottom:4px solid orange;
+   margin: 5px;
+    display: grid;
+    overflow: hidden;
+}
+.one{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    grid-column: span 4;
+    grid-row:span 2 ;
+}
+.two{
+    color: black;
+    background-color: #ffffff;
+    grid-column: span 2;
+    grid-row:span 2 ;
+}
+.three{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    grid-column: span 2;
+    grid-row: span 6;
+}
+.four{
+    color: black;
+    background-color: #ffffff;
+    grid-column: span 2;
+    grid-row: span 4;
+}
+.five{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.six{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    grid-column: span 4;
+    grid-row: span 2;
+}
+.seven{
+    color: black;
+    background-color: #ffffff;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.eight{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.nine{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.ten{
+    color: black;
+    background-color:white;
+    grid-column: span 2;
+    grid-row: span 1;
+}

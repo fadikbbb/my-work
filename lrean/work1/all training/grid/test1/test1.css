@@ -1,0 +1,47 @@
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 30.25% 30.25% 30.25%;
+    grid-template-rows: 10% 85%;
+    gap:5%;
+    justify-content: space-between;
+
+  }
+div div{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+    color:white;
+    background-color: #607d8b;
+}
+div :nth-child(1)::before{
+  content: "Element 1";
+
+}
+div :nth-child(2)::before{
+  content: "Element 2";
+
+}
+div :nth-child(3)::before{
+  content: "Element 3";
+
+}
+div :nth-child(4)::before{
+  content: "Element 4";
+
+}
+div :nth-child(5)::before{
+  content: "Element 5";
+
+}
+div :nth-child(6)::before{
+  content: "Element 6";
+
+}

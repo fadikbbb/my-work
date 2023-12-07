@@ -1,0 +1,291 @@
+:root {
+    --space-margin-bottom: 10px;
+    --sizeicon-font-size: 70px;
+}
+
+body {
+    height: 660px;
+    background-image: url(https://t3.ftcdn.net/jpg/03/89/32/80/360_F_389328016_ak3iUrk15slWfEZdYL96O6eKTUyImDeC.jpg);
+    background-size: cover;
+
+}
+
+
+img {
+    margin-left: 110px;
+    margin-top: 20px;
+    width: 200px;
+
+    border: 10px solid rgb(11, 9, 9);
+    border-inline: 10px solid red;
+    border-radius: 50%;
+}
+
+/* finsh header */
+.all {
+    width: 450px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 9px;
+    width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 800px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.all::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-vector/colorful-background-with-social-media-logos_69286-224.jpg?w=2000);
+    z-index: -2;
+}
+
+section {
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+
+}
+
+section .container a {
+
+    text-decoration: none;
+
+}
+
+.ins,
+.tik,
+.face,
+.you {    
+
+    width: 0px;
+    overflow-x: hidden;
+}
+
+.instagram:hover .ins,
+.facebook:hover .face,
+.tiktok:hover .tik,
+.youtube:hover .you {
+    margin-left: 70px;
+}
+
+
+
+.container {
+    width: 100px;
+    margin: auto;
+
+}
+
+.instagram,
+.youtube,
+.tiktok,
+.facebook {
+    width: 250px;
+    border-radius: 4px;
+    overflow-y: hidden;
+    height: 80px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    transition: 0.3s;
+}
+
+.instagram:hover,
+.youtube:hover,
+.tiktok:hover,
+.facebook:hover {
+    background-image: url(https://img.freepik.com/premium-photo/3d-rendering-bunch-instagram-square-badges-colorful-background_284880-347.jpg?w=360);
+    background-size: cover;
+    width: 300px;
+    padding-left: 0px;
+    margin-left: -90px;
+    align-items: center;
+}
+
+.fa-instagram,
+.fa-youtube,
+.fa-tiktok,
+.fa-facebook {
+
+    font-size: var(--sizeicon-font-size);
+    padding: 5px;
+}
+
+.instagram:hover .fa-instagram,
+.youtube:hover .fa-youtube,
+.tiktok:hover .fa-tiktok,
+.facebook:hover .fa-facebook {
+    background-color: white;
+    margin: auto;
+    box-shadow: 10px 10px 50px 90px white;
+}
+
+.instagram:hover .ins,
+.youtube:hover .you,
+.tiktok:hover .tik,
+.facebook:hover .face {
+    display: flex;
+    width: 250px;
+
+}
+
+.text-you {
+    font-size: 30px;
+    color: red;
+    font-family: 'Anton', sans-serif;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.youtube:hover {
+    background-image: url(https://as1.ftcdn.net/v2/jpg/04/64/08/64/500_F_464086465_YpTfRqa35wKuisGbH6DhDcCqjnY3FdTr.jpg);
+    background-size: cover;
+}
+
+.text-face {
+    font-size: 30px;
+    color: rgb(0, 140, 255);
+    font-family: 'Anton', sans-serif;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.facebook:hover {
+    background-image: url(https://img.freepik.com/premium-photo/3d-rendering-lot-facebook-square-badges-blue_284880-256.jpg);
+    background-size: cover;
+}
+
+.text-tik {    
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    margin-left: var(--space-margin-bottom);
+    font-family: 'Anton', sans-serif;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+.text-ins {
+    font-size: 30px;
+    color: rgb(238, 0, 255);
+    font-family: 'Anton', sans-serif;
+    margin-left: 10px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.tiktok:hover {
+    background-image: url(https://as1.ftcdn.net/v2/jpg/04/63/91/20/500_F_463912062_M1Dp4Ekkz6eNTxiaajLe8H7ZmyxuvPTV.jpg);
+    background-size: cover;
+}
+
+@media (max-width:480px) {
+    .all {
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.342);
+        border-radius: 9px;
+        width: 350px;
+        height: 700px;
+        position: relative;
+        margin-top: 40px;
+    }
+
+    .instagram,
+    .youtube,
+    .tiktok,
+    .facebook {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-left: 55px;
+    }
+    .instagram:hover::before{
+        background-position-x: -350px;
+    }
+    .all::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-image: url(https://img.freepik.com/free-vector/colorful-background-with-social-media-logos_69286-224.jpg?w=2000);
+        z-index: -2;
+    }
+}
+
+
+.instagram::before,
+.tiktok:before,
+.youtube::before,
+.facebook::before {
+    content: "";
+    display: none;
+
+    opacity: 0;
+    display: block;
+    width: 600px;
+    height: 850px;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    transition: 0.5s  ;
+    
+}
+
+.tiktok:before {
+    margin-top: -440px;
+}
+
+.facebook::before {
+    margin-top: -220px;
+}
+
+.youtube::before {
+    margin-top: -620px;
+}
+
+.instagram:hover::before,
+.tiktok:hover::before,
+.youtube:hover::before,
+.facebook:hover::before {
+    content: "";
+    opacity: 1;
+    display: block;
+    background-image: url(https://w0.peakpx.com/wallpaper/691/499/HD-wallpaper-instagram-purple-logo-purple-brickwall-instagram-logo-brands-instagram-neon-logo-instagram.jpg);
+    background-position: -370px;
+    width: 600px;
+    height: 850px;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    margin-left: -170px;
+    border-radius: 9px;
+    margin-bottom: 5px;
+}
+
+.tiktok:hover::before {
+    margin-top: -440px;
+    background-image: url(https://w0.peakpx.com/wallpaper/780/802/HD-wallpaper-tiktok-green-logo-green-brickwall-tiktok-logo-social-networks-tiktok-neon-logo-tiktok.jpg);
+
+
+}
+
+.youtube:hover::before {
+    margin-top: -620px;
+    background-image: url(https://w0.peakpx.com/wallpaper/57/343/HD-wallpaper-youtube-red-logo-red-brickwall-youtube-logo-brands-youtube-neon-logo-youtube.jpg);
+}
+
+.facebook:hover::before {
+    margin-top: -220px;
+
+    background-image: url(https://w0.peakpx.com/wallpaper/636/634/HD-wallpaper-facebook-blue-logo-blue-brickwall-facebook-logo-social-networks-facebook-neon-logo-facebook.jpg);
+}
