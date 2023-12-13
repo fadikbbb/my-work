@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    body {
+      background-color: hsl(206, 94%, 87%);
+    }
+
+    .bigest-container {
+      margin: auto;
+      width: 826px;
+      border-radius: 15px;
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+    }
+
+    .nav {
+      width: 275px;
+      height: 580px;
+      margin-right: 100px;
+      background-repeat: no-repeat;
+      background-image: url(assets/images/bg-sidebar-desktop.svg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-nav1,
+    .content-nav2,
+    .content-nav3,
+    .content-nav4 {
+      display: flex;
+      flex-direction: row;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    .nb-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 30px;
+      height: 30px;
+      color: white;
+      margin: 0px 20px 0px 40px;
+    }
+
+    span {
+      color: hsl(231, 11%, 63%);
+    }
+
+    .nav-name {
+      color: white;
+    }
+
+    .container1 {
+      position: relative;
+
+      padding-bottom: 50px;
+    }
+
+    .title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      color: hsl(213, 96%, 18%);
+    }
+
+    .des {
+      color: hsl(231, 11%, 63%);
+    }
+
+    .input-content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+    }
+
+    .active {
+      background-color: hsl(206, 94%, 87%) !important;
+      color: hsl(213, 96%, 18%) !important;
+    }
+
+    input {
+      padding-left: 15px;
+      height: 35px;
+      border-radius: 6px;
+      margin-top: 10px;
+      border: 1px solid hsl(0, 0%, 87%);
+      color: hsl(213, 96%, 18%);
+      font-weight: bold;
+    }
+
+    input:focus {
+      outline: 1px solid hsl(228, 57%, 40%);
+
+    }
+
+    .submit {
+      padding: 10px 15px 15px 15px;
+      background-color: hsl(228, 45%, 44%);
+      color: white;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+    }
+
+    .submit:hover {
+      background-color: hsl(213, 96%, 18%);
+    }
+
+    .attribution a {
+      color: hsl(213, 96%, 18%);
+    }
+
+    .container2,
+    .container3,
+    .container4,
+    .container5 {
+      width: 40%;
+      display: none;
+      flex-direction: column;
+    }
+    img{
+      width: 40px;
+      
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar start -->
+  <div class="bigest-container">
+    <div class="nav">
+      <div class="content-nav1">
+        <div class="nb-nav active">1</div>
+        <div class="text">
+          <span>Step 1</span>
+          <div class="nav-name">Your info</div>
+        </div>
+      </div>
+      <div class="content-nav2">
+        <div class="nb-nav">2</div>
+        <div class="text">
+          <span>Step 2</span>
+          <div class="nav-name">Select plan</div>
+        </div>
+      </div>
+      <div class="content-nav3">
+        <div class="nb-nav">3</div>
+        <div class="text">
+          <span>Step 3</span>
+          <div class="nav-name">Add-ons</div>
+        </div>
+      </div>
+      <div class="content-nav4">
+        <div class="nb-nav">4</div>
+        <div class="text">
+          <span>Step 4</span>
+          <div class="nav-name">Summary</div>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+    <div class="container1">
+      <div class="title">Personal info</div>
+      <p class="des">Please provide your name, email address, and phone number.
+      </p>
+      <form action="">
+        <div class="input-content">
+          Name
+          <input type="text" placeholder="e.g. Stephen King" required>
+        </div>
+
+        <div class="input-content">
+          Email Address
+          <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required id="">
+        </div>
+        <div class="input-content">
+          Phone Number
+          <input type="text" placeholder="e.g. +1 234 567 890" required>
+        </div>
+        <button class="button1">next step</button>
+      </form>
+
+    </div>
+
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+    <div onload class="container2">
+      <div class="title">Select your plan</div>
+
+      <p class="des"> You have the option of monthly or yearly billing.
+      </p>
+      <div class="card">
+        <div class="card-content">
+          <img src="assets/images/icon-arcade.svg" alt="">
+          <div class="card-text">
+            Arcade
+            $9/mo
+          </div>
+        </div>
+        <div class="card-content">
+<img src="assets/images/icon-advanced.svg" alt="">
+          <div class="card-text">
+            Advanced
+            $12/mo
+          </div>
+        </div>
+        <div class="card-content">          
+          <img src="assets/images/icon-pro.svg" alt="">
+          <div class="card-text">
+            Pro
+            $15/mo
+          </div>
+        </div>
+      </div>
+      <div class="sub-m-y">
+        Monthly
+        Yearly
+      </div>
+go Back
+next step
+    </div>
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <div class="container3">
+      Pick add-ons
+      Add-ons help enhance your gaming experience.
+
+      Online service
+      Access to multiplayer games
+      +$1/mo
+
+      Larger storage
+      Extra 1TB of cloud save
+      +$2/mo
+
+      Customizable Profile
+      Custom theme on your profile
+      +$2/mo
+
+      Go Back
+      Next Step
+    </div>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+    <div class="container4">
+      Finishing up
+      Double-check everything looks OK before confirming.
+
+      <!-- Dynamically add subscription and add-on selections here -->
+
+      Total (per month/year)
+
+      Go Back
+      Confirm
+    </div>
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+    <div class="container5">
+      Thank you!
+
+      Thanks for confirming your subscription! We hope you have fun
+      using our platform. If you ever need support, please feel free
+      to email us at support@loremgaming.com.
+    </div>
+    <!-- Step 5 end -->
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">fadi kabbani</a>.
+  </div>
+  <script src="index.js">
+
+
+  </script>
+</body>
+
+</html>
