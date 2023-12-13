@@ -15,6 +15,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+
     }
 
     body {
@@ -65,6 +66,7 @@
     }
 
     span {
+      font-size: 14px;
       color: hsl(231, 11%, 63%);
     }
 
@@ -122,7 +124,8 @@
       position: absolute;
       right: 0;
       bottom: 0;
-
+      border-radius: 6px;
+      border: none;
     }
 
     .submit:hover {
@@ -137,14 +140,36 @@
     .container3,
     .container4,
     .container5 {
-      width: 40%;
+      width: 50%;
       display: none;
       flex-direction: column;
     }
     img{
       width: 40px;
-      
-    }
+}
+.card-text{
+  display: flex;
+  flex-direction: column;
+}
+.card-content{
+  width: calc(100% / 3);
+  padding: 10px 20px;
+  margin-right: 5px;
+  border: 1px solid hsl(0, 0%, 87%);display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+border-radius: 10px;
+}
+.card-content:hover{
+border: 1px solid hsl(213, 96%, 18%);
+cursor: pointer;
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  
+}
   </style>
 </head>
 
@@ -192,18 +217,18 @@
       <form action="">
         <div class="input-content">
           Name
-          <input type="text" placeholder="e.g. Stephen King" required>
+        <input type="text" class="input-name" placeholder="e.g. Stephen King" required>
         </div>
 
         <div class="input-content">
           Email Address
-          <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required id="">
+          <input type="email" class="input-email" class="input-email" placeholder="e.g. stephenking@lorem.com" required id="">
         </div>
         <div class="input-content">
           Phone Number
-          <input type="text" placeholder="e.g. +1 234 567 890" required>
+          <input type="number" class="input-phone" placeholder="e.g. +1 234 567 890" required>
         </div>
-        <button class="button1">next step</button>
+        <button class="submit button1">next step</button>
       </form>
 
     </div>
@@ -220,22 +245,22 @@
         <div class="card-content">
           <img src="assets/images/icon-arcade.svg" alt="">
           <div class="card-text">
-            Arcade
-            $9/mo
+            <div class="name-card">Arcade</div>
+            <div class="price">$9/mo</div>
           </div>
         </div>
         <div class="card-content">
 <img src="assets/images/icon-advanced.svg" alt="">
           <div class="card-text">
-            Advanced
-            $12/mo
+             <div class="name-card">Advanced</div>
+            <div class="price">$12/mo</div>
           </div>
         </div>
         <div class="card-content">          
           <img src="assets/images/icon-pro.svg" alt="">
           <div class="card-text">
-            Pro
-            $15/mo
+           <div class="name-card"> Pro</div>
+           <div class="price"> $15/mo</div>
           </div>
         </div>
       </div>
