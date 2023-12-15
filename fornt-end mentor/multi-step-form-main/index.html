@@ -7,11 +7,17 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./assets/fonts/Ubuntu-Bold.ttf">
+  <link rel="stylesheet" href="./assets/fonts/Ubuntu-Medium.ttf">
+  <link rel="stylesheet" href="./assets/fonts/Ubuntu-Regular.ttf">
   <title>Frontend Mentor | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -19,7 +25,7 @@
     }
 
     body {
-      background-color: hsl(206, 94%, 87%);
+      background-color: hsl(215, 55%, 96%);
     }
 
     .bigest-container {
@@ -28,7 +34,7 @@
       border-radius: 15px;
       padding: 30px;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       background-color: rgb(255, 255, 255);
     }
 
@@ -48,9 +54,7 @@
     .content-nav4 {
       display: flex;
       flex-direction: row;
-      font-family: Arial, Helvetica, sans-serif;
       margin-top: 30px;
-      cursor: pointer;
     }
 
     .nb-nav {
@@ -76,12 +80,12 @@
 
     .container1 {
       position: relative;
-
+      flex-direction: column;
       padding-bottom: 50px;
     }
 
     .title {
-      font-family: Arial, Helvetica, sans-serif;
+
       font-size: 30px;
       font-weight: bold;
       color: hsl(213, 96%, 18%);
@@ -116,10 +120,13 @@
       outline: 1px solid hsl(228, 57%, 40%);
 
     }
-
-    .submit {
+.one{
+  color:  hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+    .front {
       padding: 10px 15px 15px 15px;
-      background-color: hsl(228, 45%, 44%);
+      background-color: hsl(213, 96%, 18%);
       color: white;
       position: absolute;
       right: 0;
@@ -128,7 +135,7 @@
       border: none;
     }
 
-    .submit:hover {
+    .front:hover {
       background-color: hsl(213, 96%, 18%);
     }
 
@@ -140,36 +147,97 @@
     .container3,
     .container4,
     .container5 {
+      position: relative;
       width: 50%;
       display: none;
       flex-direction: column;
     }
-    img{
+
+    img {
       width: 40px;
-}
-.card-text{
-  display: flex;
-  flex-direction: column;
-}
-.card-content{
-  width: calc(100% / 3);
-  padding: 10px 20px;
-  margin-right: 5px;
-  border: 1px solid hsl(0, 0%, 87%);display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-border-radius: 10px;
-}
-.card-content:hover{
-border: 1px solid hsl(213, 96%, 18%);
-cursor: pointer;
-}
-.card{
-  display: flex;
-  flex-direction: row;
-  height: 150px;
-  
-}
+    }
+
+    .card-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-content {
+      width: calc(100% / 3);
+      padding: 10px 20px;
+      margin-right: 5px;
+      border: 1px solid hsl(0, 0%, 87%);
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      border-radius: 10px;
+    }
+
+    .card-content:hover {
+      border: 1px solid hsl(213, 96%, 18%);
+      cursor: pointer;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      height: 150px;
+
+    }
+
+    .sub-m-y {
+      display: flex;
+      margin-top: 15px;
+      justify-content: center;
+      word-spacing: 52px;
+      background-color: hsl(215, 55%, 96%);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .chooseMY {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background-color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    .month {
+      color: hsl(213, 96%, 18%);
+
+    }
+
+    .year {
+      color: hsl(231, 11%, 63%)
+    }
+
+    .chooseMY::after {
+      z-index: 1;
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: hsl(213, 96%, 18%);
+      left: 1%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .back {
+      position: absolute;
+      color: hsl(213, 96%, 18%);
+      font-weight: bold;
+      left: 0;
+      bottom: 0;
+      padding: 10px 15px 15px 15px;
+
+
+    }
   </style>
 </head>
 
@@ -210,25 +278,34 @@ cursor: pointer;
     <!-- Sidebar end -->
 
     <!-- Step 1 start -->
-    <div class="container1">
+    <div class="container1" id="container1">
       <div class="title">Personal info</div>
       <p class="des">Please provide your name, email address, and phone number.
       </p>
       <form action="">
         <div class="input-content">
-          Name
-        <input type="text" class="input-name" placeholder="e.g. Stephen King" required>
+          <div class="textOfInput">
+            <span class="one"> Name</span>
+            <span class="two" style="display:none;">invalid input </span>
+          </div>
+          <input type="text" class="input-name" placeholder="e.g. Stephen King">
         </div>
 
         <div class="input-content">
-          Email Address
-          <input type="email" class="input-email" class="input-email" placeholder="e.g. stephenking@lorem.com" required id="">
+          <div class="textOfInput">
+            <span class="one">Email Address</span>
+            <span class="two" style="display:none;">invalid input </span>
+          </div>
+          <input type="email" class="input-email" class="input-email" placeholder="e.g. stephenking@lorem.com" required>
         </div>
         <div class="input-content">
-          Phone Number
-          <input type="number" class="input-phone" placeholder="e.g. +1 234 567 890" required>
+          <div class="textOfInput">
+            <span class="one">Phone Number</span>
+            <span class="two" style="display:none;">invalid input </span>
+          </div>
+          <input type="text" class="input-phone" placeholder="e.g. +1 234 567 890">
         </div>
-        <button class="submit button1">next step</button>
+        <input type="submit" value="next step" class="front button1" name="submit">
       </form>
 
     </div>
@@ -236,7 +313,7 @@ cursor: pointer;
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <div onload class="container2">
+    <div onload id="container2" class="container2">
       <div class="title">Select your plan</div>
 
       <p class="des"> You have the option of monthly or yearly billing.
@@ -250,31 +327,33 @@ cursor: pointer;
           </div>
         </div>
         <div class="card-content">
-<img src="assets/images/icon-advanced.svg" alt="">
+          <img src="assets/images/icon-advanced.svg" alt="">
           <div class="card-text">
-             <div class="name-card">Advanced</div>
+            <div class="name-card">Advanced</div>
             <div class="price">$12/mo</div>
           </div>
         </div>
-        <div class="card-content">          
+        <div class="card-content">
           <img src="assets/images/icon-pro.svg" alt="">
           <div class="card-text">
-           <div class="name-card"> Pro</div>
-           <div class="price"> $15/mo</div>
+            <div class="name-card"> Pro</div>
+            <div class="price"> $15/mo</div>
           </div>
         </div>
       </div>
       <div class="sub-m-y">
-        Monthly
-        Yearly
-      </div>
-go Back
-next step
+        <div class="month">Monthly</div>
+
+        <div class="chooseMY"></div>
+        <div class="year">Yearly</div>
+      </div class="bef-aft">
+      <div class="back">Go Back</div>
+      <div class="front">next step</div>
     </div>
     <!-- Step 2 end -->
 
     <!-- Step 3 start -->
-    <div class="container3">
+    <div class="container3" id="container3">
       Pick add-ons
       Add-ons help enhance your gaming experience.
 
@@ -296,7 +375,7 @@ next step
     <!-- Step 3 end -->
 
     <!-- Step 4 start -->
-    <div class="container4">
+    <div class="container4" id="container4">
       Finishing up
       Double-check everything looks OK before confirming.
 

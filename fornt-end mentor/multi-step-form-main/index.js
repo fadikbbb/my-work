@@ -9,25 +9,29 @@ input1 = document.querySelector(".input-name");
 input2 = document.querySelector(".input-email");
 input3 = document.querySelector(".input-phone");
 
-button1.addEventListener("click", function (e) {
-  if (input1 != "" && input2 != "" && input3) {
-    container1.style.display = "none";
+    container1.style.display = "flex";
 
-    e.preventDefault(); container2.style.display = "flex";
-    if (nbNav[0].className == "active") {
-      nbNav.classList.remove("active");
-    } else {
-      nbNav[1].classList.add("active");
-      nbNav[0].classList.remove("active");
-    }
-  }
-  else {
-    e.preventDefault();
-    console.log(typeof input3);
-    console.log(typeof input2);
-    console.log(typeof input1);
-  }
-});
+    container2.style.display = "none";
+    // container3.style.display = "flex";
+    // container4.style.display = "flex";
+// button1.addEventListener("click", function (e) {
+//   if (true) {
+//     container1.style.display = "none";
+
+//     if (nbNav[0].className == "active") {
+//       nbNav.classList.remove("active");
+//     } else {
+//       nbNav[1].classList.add("active");
+//       nbNav[0].classList.remove("active");
+//     }
+//   }
+//   else {
+//     e.preventDefault();
+//   }
+//   console.log(typeof input3);
+//   console.log(typeof input2);
+//   console.log(typeof input1);
+// });
 
 
 
