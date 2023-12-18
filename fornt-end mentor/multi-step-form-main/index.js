@@ -96,30 +96,50 @@ inputBox[2].onclick = function () {
 };
 
 //-----------------------------------------------------------
-let text = document.querySelectorAll(".text1");
-let T, p;
+
+let add = document.createElement("div");
+add.className = "add";
 submit[2].addEventListener("click", function () {
   for (let i = 0; i < 3; i++) {
-    price = document.querySelectorAll(".box-price")[i].cloneNode(true);
+    let text = document.querySelectorAll(".text1")[i].cloneNode(true);
+    let price = document.querySelectorAll(".box-price")[i].cloneNode(true);
     if (contentBox[i].classList.contains("color2")) {
-      console.log(text[i].childNodes[1]);
-
-      container4.append(text[i].childNodes[1].innerHTML);
-      console.log(price[i]);
+      text = text.childNodes[1];
+      text.className = "check_copy";
+      price.className = "check_copy";
+      container4.append(text);
       container4.append(price);
+      console.log(text);
+      console.log(price);
     }
   }
+
+  console.log(container4.childNodes);
+});
+back[2].addEventListener("click", function () {
+  let del = document.querySelectorAll(".check_copy");
+  for (let i = 0; i < del.length; i++) {
+    del[i].remove();
+  }
+  console.log(del.classList);
+  console.log(del.length);
+  console.log(container4.childNodes);
 });
 //-----------------------------------------------------
 submit[1].addEventListener("click", function () {
   for (let i = 0; i < 3; i++) {
     if (cardContent[i].classList.contains("color")) {
       let cardName = document.querySelectorAll(".name-card")[i].cloneNode(true);
-      let cardPrice=document.querySelectorAll(".price")[i].cloneNode(true);
+      let cardPrice = document.querySelectorAll(".price")[i].cloneNode(true);
       console.log(cardName);
       console.log(cardPrice);
-      container4.append(cardName.innerHTML);
-      container4.append(cardPrice.innerHTML);
+
+      container4.append(cardName);
+      container4.append(cardPrice);
     }
   }
+});
+back[1].addEventListener("click", function () {
+  console.log(container4.childNodes[12].remove());
+  console.log(container4.childNodes[11].remove());
 });
