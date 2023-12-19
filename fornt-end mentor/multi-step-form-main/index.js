@@ -66,22 +66,20 @@ let month = document.querySelector(".month");
 let year = document.querySelector(".year");
 
 input4.addEventListener("click", function () {
-
   month.classList.toggle("color1-1");
   year.classList.toggle("color1-2");
   for (let i = 0; i < 3; i++) {
     let price = document.querySelectorAll(".box-price")[i];
     let price1 = document.querySelectorAll(".price")[i];
-    
-      if (year.classList.contains("color1-2")) {
+
+    if (year.classList.contains("color1-2")) {
       price.innerHTML = `${10 * (i + 1)}\$/yr`;
       price1.innerHTML = `${10 * parseInt(price1.innerHTML)}\$/yr`;
       console.log(price);
       console.log(price1);
     } else {
-    
-      price.innerHTML = `${}\$/mo`;
-      price1.innerHTML = `${price1.innerHTML}\$/mo`;
+      price.innerHTML = `${parseInt(price.innerHTML) / 10}\$/mo`;
+      price1.innerHTML = `${parseInt(price1.innerHTML) / 10}\$/mo`;
       console.log(price);
       console.log(price1);
     }
@@ -109,39 +107,55 @@ submit[2].addEventListener("click", function () {
   for (let i = 0; i < 3; i++) {
     let text = document.querySelectorAll(".text1")[i].cloneNode(true);
     let price = document.querySelectorAll(".box-price")[i].cloneNode(true);
+    let bc4 = document.createElement("div");
+    bc4.className = "cb4";
     if (contentBox[i].classList.contains("color2")) {
       text = text.childNodes[1];
-      text.className = "check_copy";
-      price.className = "check_copy";
-      container4.append(text);
-      container4.append(price);
-      console.log(text);
-      console.log(price);
+      text.className = "text_copy";
+      price.className = "price_copy";
+      bc4.append(text);
+      bc4.append(price);
+      container4.append(bc4)
+      console.log(bc4);
+      console.log(container4);
     }
   }
 });
 //--------------------------------------------------------------
 back[2].addEventListener("click", function () {
-  let del = document.querySelectorAll(".check_copy");
+  let del = document.querySelectorAll(".text_copy");
+  let del1 = document.querySelectorAll(".price_copy");
   for (let i = 0; i < del.length; i++) {
     del[i].remove();
+    del1[i].remove();
   }
 });
 //-----------------------------------------------------
+
 submit[1].addEventListener("click", function () {
   for (let i = 0; i < 3; i++) {
     if (cardContent[i].classList.contains("color")) {
       let cardName = document.querySelectorAll(".name-card")[i].cloneNode(true);
       let cardPrice = document.querySelectorAll(".price")[i].cloneNode(true);
+      let hc4 = document.createElement("div");
+      hc4.className = "hc4";
+      cardName.className = "name-card-copy";
+      cardPrice.className = "price-card-copy";
       console.log(cardName);
       console.log(cardPrice);
-      container4.append(cardName);
-      container4.append(cardPrice);
+      hc4.appendChild(cardName);
+      hc4.appendChild(cardPrice);
+      container4.append(hc4);
+      console.log(hc4);
+      console.log(container4);
     }
   }
 });
+
 //-----------------------------------------------------------
 back[1].addEventListener("click", function () {
-  console.log(container4.childNodes[12].remove());
-  console.log(container4.childNodes[11].remove());
+  let cardName = document.querySelector(".name-card-copy");
+  let cardPrice = document.querySelector(".price-card-copy");
+  cardName.remove();
+  cardPrice.remove();
 });
