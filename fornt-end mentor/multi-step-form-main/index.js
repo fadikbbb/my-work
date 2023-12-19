@@ -11,77 +11,83 @@ let back = document.getElementsByClassName("back");
 // container3.style.display = "none";
 // container2.style.display = "flex";
 // // container4.style.display = "flex";
-
+function changePage(page1, page2) {
+  page1.style.display = "none";
+  page2.style.display = "flex";
+}
+function active(page1, page2) {
+  page1.classList.add("active");
+  page2.classList.remove("active");
+}
+function changeColor(content1, content2, content3) {
+  content1.classList.add("color");
+  content2.classList.remove("color");
+  content3.classList.remove("color");
+}
 submit[0].addEventListener("click", function () {
-  container1.style.display = "none";
-  container2.style.display = "flex";
-  nbNav[1].classList.add("active");
-  nbNav[0].classList.remove("active");
+  changePage(container1, container2);
+  active(nbNav[1], nbNav[0]);
 });
 submit[1].addEventListener("click", function () {
-  container2.style.display = "none";
-  container3.style.display = "flex";
-  nbNav[2].classList.add("active");
-  nbNav[1].classList.remove("active");
+  changePage(container2, container3);
+  active(nbNav[2], nbNav[1]);
 });
-
 submit[2].onclick = function () {
-  container4.style.display = "flex";
-  container3.style.display = "none";
-  nbNav[3].classList.add("active");
-  nbNav[2].classList.remove("active");
+  changePage(container3, container4);
+  active(nbNav[3], nbNav[2]);
 };
-
 back[0].addEventListener("click", function () {
-  container1.style.display = "flex";
-  container2.style.display = "none";
-  nbNav[0].classList.add("active");
-  nbNav[1].classList.remove("active");
+  changePage(container2, container1);
+  active(nbNav[0], nbNav[1]);
 });
 back[1].addEventListener("click", function () {
-  container2.style.display = "flex";
-  container3.style.display = "none";
-  nbNav[1].classList.add("active");
-  nbNav[2].classList.remove("active");
+  changePage(container3, container2);
+  active(nbNav[1], nbNav[2]);
 });
 back[2].addEventListener("click", function () {
-  container3.style.display = "flex";
-  container4.style.display = "none";
-  nbNav[2].classList.add("active");
-  nbNav[3].classList.remove("active");
+  changePage(container4, container3);
+  active(nbNav[2], nbNav[3]);
 });
-
 //--------------------------------------------------------------------------
 let cardContent = document.getElementsByClassName("card-content");
 cardContent[0].classList.add("color");
 cardContent[0].addEventListener("click", function () {
-  cardContent[0].classList.add("color");
-  cardContent[1].classList.remove("color");
-  cardContent[2].classList.remove("color");
-  console.log("clicked");
+  changeColor(cardContent[0], cardContent[1], cardContent[2]);
 });
 cardContent[1].addEventListener("click", function () {
-  cardContent[0].classList.remove("color");
-  cardContent[1].classList.add("color");
-  cardContent[2].classList.remove("color");
-
-  console.log("clicked");
+  changeColor(cardContent[1], cardContent[0], cardContent[2]);
 });
 cardContent[2].addEventListener("click", function () {
-  cardContent[0].classList.remove("color");
-  cardContent[1].classList.remove("color");
-  cardContent[2].classList.add("color");
+  changeColor(cardContent[2], cardContent[0], cardContent[1]);
 });
 //-----------------------------------------------------------------------
 let input4 = document.querySelector(".input-m-y");
-
 let month = document.querySelector(".month");
 let year = document.querySelector(".year");
-let date = "month";
-input4.onclick = function () {
-  month.classList.toggle("color1");
-  year.classList.toggle("color1");
-};
+
+input4.addEventListener("click", function () {
+
+  month.classList.toggle("color1-1");
+  year.classList.toggle("color1-2");
+  for (let i = 0; i < 3; i++) {
+    let price = document.querySelectorAll(".box-price")[i];
+    let price1 = document.querySelectorAll(".price")[i];
+    
+      if (year.classList.contains("color1-2")) {
+      price.innerHTML = `${10 * (i + 1)}\$/yr`;
+      price1.innerHTML = `${10 * parseInt(price1.innerHTML)}\$/yr`;
+      console.log(price);
+      console.log(price1);
+    } else {
+    
+      price.innerHTML = `${}\$/mo`;
+      price1.innerHTML = `${price1.innerHTML}\$/mo`;
+      console.log(price);
+      console.log(price1);
+    }
+  }
+});
+
 //--------------------------------------------------------------------
 let contentBox = document.querySelectorAll(".content-box");
 inputBox = document.querySelectorAll(".check");
@@ -113,17 +119,13 @@ submit[2].addEventListener("click", function () {
       console.log(price);
     }
   }
-
-  console.log(container4.childNodes);
 });
+//--------------------------------------------------------------
 back[2].addEventListener("click", function () {
   let del = document.querySelectorAll(".check_copy");
   for (let i = 0; i < del.length; i++) {
     del[i].remove();
   }
-  console.log(del.classList);
-  console.log(del.length);
-  console.log(container4.childNodes);
 });
 //-----------------------------------------------------
 submit[1].addEventListener("click", function () {
@@ -133,12 +135,12 @@ submit[1].addEventListener("click", function () {
       let cardPrice = document.querySelectorAll(".price")[i].cloneNode(true);
       console.log(cardName);
       console.log(cardPrice);
-
       container4.append(cardName);
       container4.append(cardPrice);
     }
   }
 });
+//-----------------------------------------------------------
 back[1].addEventListener("click", function () {
   console.log(container4.childNodes[12].remove());
   console.log(container4.childNodes[11].remove());

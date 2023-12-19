@@ -165,7 +165,10 @@
 background-color:hsl(215, 55%, 96%);
 border:2px solid hsl(213, 96%, 18%);
 }
-.color1{
+.color1-1{
+  color: hsl(213, 96%, 18%) !important;
+}
+.color1-2{
   color: hsl(213, 96%, 18%) !important;
 }
   .card {
