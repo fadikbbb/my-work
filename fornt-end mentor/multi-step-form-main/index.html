@@ -7,145 +7,15 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./assets/fonts/Ubuntu-Bold.ttf">
+  <link rel="stylesheet" href="./assets/fonts/Ubuntu-Medium.ttf">
+  <link rel="stylesheet" href="./assets/fonts/Ubuntu-Regular.ttf">
   <title>Frontend Mentor | Multi-step form</title>
-
+  <link rel="stylesheet" href="main.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    body {
-      background-color: hsl(206, 94%, 87%);
-    }
-
-    .bigest-container {
-      margin: auto;
-      width: 826px;
-      border-radius: 15px;
-      padding: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: white;
-    }
-
-    .nav {
-      width: 275px;
-      height: 580px;
-      margin-right: 100px;
-      background-repeat: no-repeat;
-      background-image: url(assets/images/bg-sidebar-desktop.svg);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .content-nav1,
-    .content-nav2,
-    .content-nav3,
-    .content-nav4 {
-      display: flex;
-      flex-direction: row;
-      font-family: Arial, Helvetica, sans-serif;
-      margin-top: 30px;
-      cursor: pointer;
-    }
-
-    .nb-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      border: 1px solid white;
-      width: 30px;
-      height: 30px;
-      color: white;
-      margin: 0px 20px 0px 40px;
-    }
-
-    span {
-      color: hsl(231, 11%, 63%);
-    }
-
-    .nav-name {
-      color: white;
-    }
-
-    .container1 {
-      position: relative;
-
-      padding-bottom: 50px;
-    }
-
-    .title {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 30px;
-      font-weight: bold;
-      color: hsl(213, 96%, 18%);
-    }
-
-    .des {
-      color: hsl(231, 11%, 63%);
-    }
-
-    .input-content {
-      display: flex;
-      flex-direction: column;
-      margin-top: 30px;
-    }
-
-    .active {
-      background-color: hsl(206, 94%, 87%) !important;
-      color: hsl(213, 96%, 18%) !important;
-    }
-
-    input {
-      padding-left: 15px;
-      height: 35px;
-      border-radius: 6px;
-      margin-top: 10px;
-      border: 1px solid hsl(0, 0%, 87%);
-      color: hsl(213, 96%, 18%);
-      font-weight: bold;
-    }
-
-    input:focus {
-      outline: 1px solid hsl(228, 57%, 40%);
-
-    }
-
-    .submit {
-      padding: 10px 15px 15px 15px;
-      background-color: hsl(228, 45%, 44%);
-      color: white;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-
-    }
-
-    .submit:hover {
-      background-color: hsl(213, 96%, 18%);
-    }
-
-    .attribution a {
-      color: hsl(213, 96%, 18%);
-    }
-
-    .container2,
-    .container3,
-    .container4,
-    .container5 {
-      width: 40%;
-      display: none;
-      flex-direction: column;
-    }
-    img{
-      width: 40px;
-      
-    }
   </style>
+
 </head>
 
 <body>
@@ -189,21 +59,30 @@
       <div class="title">Personal info</div>
       <p class="des">Please provide your name, email address, and phone number.
       </p>
-      <form action="">
+      <form name="form1" action="">
         <div class="input-content">
-          Name
-          <input type="text" placeholder="e.g. Stephen King" required>
+          <div class="textOfInput">
+            <span class="one"> Name</span>
+            <span class="two" style="display:none;">invalid input </span>
+          </div>
+          <input type="text" class="input-name" placeholder="e.g. Stephen King" required>
         </div>
 
         <div class="input-content">
-          Email Address
-          <input type="email" name="email" placeholder="e.g. stephenking@lorem.com" required id="">
+          <div class="textOfInput">
+            <span class="one">Email Address</span>
+            <span class="two" style="display:none;">invalid input </span>
+          </div>
+          <input type="email" class="input-email" class="input-email" placeholder="e.g. stephenking@lorem.com" required>
         </div>
         <div class="input-content">
-          Phone Number
-          <input type="text" placeholder="e.g. +1 234 567 890" required>
+          <div class="textOfInput">
+            <span class="one">Phone Number</span>
+            <span class="two" style="display:none;">invalid input </span>
+          </div>
+          <input type="tel" class="input-phone" placeholder="e.g. +1 234 567 890">
         </div>
-        <button class="button1">next step</button>
+        <div class="front">next step</div>
       </form>
 
     </div>
@@ -211,7 +90,7 @@
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <div onload class="container2">
+    <div class="container2">
       <div class="title">Select your plan</div>
 
       <p class="des"> You have the option of monthly or yearly billing.
@@ -220,86 +99,131 @@
         <div class="card-content">
           <img src="assets/images/icon-arcade.svg" alt="">
           <div class="card-text">
-            Arcade
-            $9/mo
+            <div class="name-card">Arcade</div>
+            <div class="price">9$/mo</div>
           </div>
         </div>
         <div class="card-content">
-<img src="assets/images/icon-advanced.svg" alt="">
+          <img src="assets/images/icon-advanced.svg" alt="">
           <div class="card-text">
-            Advanced
-            $12/mo
+            <div class="name-card">Advanced</div>
+            <div class="price">12$/mo</div>
           </div>
         </div>
-        <div class="card-content">          
+        <div class="card-content">
           <img src="assets/images/icon-pro.svg" alt="">
           <div class="card-text">
-            Pro
-            $15/mo
+            <div class="name-card"> Pro</div>
+            <div class="price"> 15$/mo</div>
           </div>
         </div>
       </div>
-      <div class="sub-m-y">
-        Monthly
-        Yearly
+
+      <form action="" class="form2" name="form2">
+
+        <label class="switch">
+          <div class="month color1-1">Monthly</div>
+          <input class="input-m-y" type="checkbox">
+          <span class="slider round"></span>
+          <div class="year">Yearly</div>
+        </label>
+      </form>
+      <div class="bef-aft">
+        <div class="back">Go Back</div>
+        <div class="front">next step</div>
       </div>
-go Back
-next step
     </div>
     <!-- Step 2 end -->
 
     <!-- Step 3 start -->
     <div class="container3">
-      Pick add-ons
-      Add-ons help enhance your gaming experience.
+      <div class="title">Pick add-ons</div>
+      <div class="des"> Add-ons help enhance your gaming experience.
+      </div>
+      <div class="boxes">
+        <form action="">
+          <label for="oneDollar">
+            <div class="content-box">
+              <div class="input-info">
+                <input type="checkbox" class="check" value="dollar1/mo" id="oneDollar">
+                <div class="text text1">
+                  <div class="text-box-one">Online service</div>
+                  <div class="text-box-two">Access to multiplayer games</div>
+                </div>
+              </div>
+              <div class="box-price">+$1/mo
+              </div>
+            </div>
+          </label>
 
-      Online service
-      Access to multiplayer games
-      +$1/mo
 
-      Larger storage
-      Extra 1TB of cloud save
-      +$2/mo
+      <label for="twoDollar">
+        <div class="content-box">
+          <div class="input-info">
 
-      Customizable Profile
-      Custom theme on your profile
-      +$2/mo
+            <input type="checkbox" class="check" value="dollar2/mo" id="twoDollar">
+            <div class="text text1">
+              <div class="text-box-one">Larger storage</div>
+              <div class="text-box-two"> Extra 1TB of cloud save</div>
+            </div>
+          </div>
+          <div class="box-price">+$2/mo
+          </div>
+        </div>
+      </label>
 
-      Go Back
-      Next Step
-    </div>
-    <!-- Step 3 end -->
+    <label for="threeDollar">
+      <div class="content-box">
+        <div class="input-info">
+          <input type="checkbox" class="check" value="dollar3/mo" id="threeDollar">
+          <div class="text text1">
+            <div class="text-box-one">Customizable Profile</div>
+            <div class="text-box-two"> Custom theme on your profile</div>
+          </div>
+        </div>
+        <div class="box-price">+$3/mo
+        </div>
+    </label>
+    </form>
+  </div>
+  </div>
+  <div class="back">Go Back</div>
+  <div class="front">Next Step</div>
 
-    <!-- Step 4 start -->
-    <div class="container4">
-      Finishing up
+  </div>
+  <!-- Step 3 end -->
+
+  <!-- Step 4 start -->
+  <div class="container4">
+    <div class="title">Finishing up</div>
+    <div class="des">
       Double-check everything looks OK before confirming.
-
-      <!-- Dynamically add subscription and add-on selections here -->
-
-      Total (per month/year)
-
-      Go Back
-      Confirm
     </div>
-    <!-- Step 4 end -->
+    <!-- Dynamically add subscription and add-on selections here -->
 
-    <!-- Step 5 start -->
-    <div class="container5">
-      Thank you!
+    Total (per month/year)
 
-      Thanks for confirming your subscription! We hope you have fun
-      using our platform. If you ever need support, please feel free
-      to email us at support@loremgaming.com.
-    </div>
-    <!-- Step 5 end -->
+    <div class="back"> Go Back</div>
+    <div class="front">Confirm</div>
+  </div>
+  <!-- Step 4 end -->
+
+  <!-- Step 5 start -->
+  <div class="container5">
+    Thank you!
+
+    Thanks for confirming your subscription! We hope you have fun
+    using our platform. If you ever need support, please feel free
+    to email us at support@loremgaming.com.
+  </div>
+  <!-- Step 5 end -->
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">fadi kabbani</a>.
   </div>
-  <script src="index.js">
-
+  <script src="index.js"></script>
+  <script>
 
   </script>
 </body>
