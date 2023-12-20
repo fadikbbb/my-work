@@ -1,3 +1,4 @@
+
 let nbNav = document.getElementsByClassName("nb-nav");
 let page1 = document.querySelector(".content-nav1");
 let page2 = document.querySelector(".content-nav2");
