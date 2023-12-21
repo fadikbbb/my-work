@@ -130,7 +130,10 @@ submit[1].addEventListener("click", function () {
 submit[2].onclick = function () {
   changePage(container3, container4);
   active(nbNav[3], nbNav[2]);
-};
+};submit[3].onclick=function(){
+  
+  changePage(container4, container5);
+}
 back[0].addEventListener("click", function () {
   changePage(container2, container1);
   active(nbNav[0], nbNav[1]);

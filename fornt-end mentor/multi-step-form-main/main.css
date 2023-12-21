@@ -3,7 +3,8 @@
   }
 
   .attribution {
-    font-size: 11px;
+
+    font-size: 501px;
     text-align: center;
 
   }
@@ -560,4 +561,118 @@ input[type="checkbox"] {
     accent-color: hsl(243.11deg 100% 62.16%);
     align-content: center;
   }  
+.content5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+}
+.container5{
+  justify-content: center;
+  align-items: center;
+}
+.container5 .content5 p{
+  text-align: center;
+  color: hsl(220, 2%, 67%) ;
+  font-size: 20px;
+}
+.container5 .content5 img{
+  width: 100px;
+  margin-bottom:20px ;
+}
+  @media (max-width:767px){
+    .bigest-container{
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background-color: aliceblue;
+      flex-direction: column;
+      padding: 0;
+    }
+    .nav{
+      margin: 0;
+      background-image: url(assets/images/bg-sidebar-desktop.svg);
+
+      background-position: bottom;
+      background-size: cover;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      height: 180px; 
+    }
+    .text{
+      display: none;
+    }
+    .container1,.container2,.container3,.container4,.container5{
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 15px;
+      width: 70%;
+      height: 600px;
+      border-radius: 10px;
+      z-index: 1;
+      margin: 0;
+  
+    }
+    .card{
+      flex-direction: column;
+      height: fit-content;
+    }.card-content{
+      flex-direction: row;
+      width: calc(100% - 20px);
+      margin-bottom: 15px;
+      padding: 20px 0px 20px 10px;
+      justify-content: flex-start;
+
+    }.card-text{
+      margin-left: 15px;
+    }
+    .name-card{
+      font-size: 20px;
+    }
+    .nb-nav{
+      width: 40px;
+      height: 40px;
+      margin: 0;
+
+    }.content-nav1,.content-nav2,.content-nav3,.content-nav4{
+      height: fit-content;
+      width: fit-content;
+      justify-content: center;
+      width: calc(50%/4);
+      margin-top: 70px;
+      height: calc(100%);
+    }
+.form2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    .switch{
+
+  flex-direction: row;
+  margin: 20px;
+}
+.content-box{
+  width: calc(100% - 20px);
+}
+.text1{
+  
+  display: flex;
+  flex-direction: column;
+}
+.front{
+position: absolute;
+transform: translateX(50%)translateY(200%);
+
+}
+.back{
+  transform: translateX(-50%)translateY(200%);
+}
+
+    }
+    
