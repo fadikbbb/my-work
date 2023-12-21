@@ -63,7 +63,14 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-
+  .name-card{
+    font-size: 16px;
+    font-weight: bold;
+    color:hsl(213, 96%, 18%) ;
+  }
+  .price{
+    color:hsl(0, 0%, 68%) ;
+  }
   .container1 {
     position: relative;
     flex-direction: column;
@@ -181,9 +188,7 @@ border:2px solid hsl(213, 96%, 18%);
   margin-top: 20px;
   border-radius: 10px;
   background-color: aliceblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .switch {
@@ -345,4 +350,4 @@ margin:0 10px ;
   input[type="checkbox"]:checked {
     accent-color: hsl(243.11deg 100% 62.16%);
     align-content: center;
-  }
+  }  
