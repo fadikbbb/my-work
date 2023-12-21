@@ -219,6 +219,7 @@ img {
   border-radius: 10px;
   background-color: aliceblue;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -226,10 +227,14 @@ img {
 .switch {
   width: 50%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 10px;
 }
-
+.textOfInput{
+  display: flex; justify-content: space-between;
+}
 .switch input {
   position: absolute;
   opacity: 0;

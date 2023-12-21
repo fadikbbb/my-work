@@ -1,16 +1,17 @@
+let input_name = document.querySelector(".input-name");
+let input_email = document.querySelector(".input-email");
+let input_phone = document.querySelector(".input-phone");
+let submit = document.getElementsByClassName("front");
+let back = document.getElementsByClassName("back");
 let container1 = document.querySelector(".container1");
 let container2 = document.querySelector(".container2");
 let container3 = document.querySelector(".container3");
 let container4 = document.querySelector(".container4");
 let container5 = document.querySelector(".container5");
 let nbNav = document.getElementsByClassName("nb-nav");
-let submit = document.getElementsByClassName("front");
-let back = document.getElementsByClassName("back");
-
-// container1.style.display = "none";
-// container3.style.display = "none";
-// container2.style.display = "flex";
-// // container4.style.display = "flex";
+let error1 = document.querySelectorAll(".two");
+let val1, val2, val3;
+let tf1, tf2, tf3=false;
 function changePage(page1, page2) {
   page1.style.display = "none";
   page2.style.display = "flex";
@@ -24,10 +25,104 @@ function changeColor(content1, content2, content3) {
   content2.classList.remove("color");
   content3.classList.remove("color");
 }
+input_name.oninput = function () {
+  val1 = input_name.value;
+  console.log(val1);
+};
+input_email.oninput = function () {
+  val2 = input_email.value;
+  console.log(val2);
+};
+input_phone.oninput = function () {
+  val3 = input_phone.value;
+  console.log(val3);
+};
 submit[0].addEventListener("click", function () {
-  changePage(container1, container2);
-  active(nbNav[1], nbNav[0]);
+  if (val1 != undefined) {
+    for (let i = 0; i < val1.length; i++) {
+      if (val1[i] < "9" && val1[i] > "0") {
+        tf1 = false;
+        break;
+      } else {
+        tf1 = true;
+      }
+    }
+    if (tf1) {
+      if (val1.length < 20) {
+        console.log(tf1);
+      } else {
+        input_name.style.borderColor = "red";
+        error1[0].innerHTML = "max letter can use 20";
+        error1[0].style.display = "flex";
+        error1[0].style.color = "red";
+        tf1 = false;
+      }
+    } else {
+      input_name.style.borderColor = "red";
+      error1[0].innerHTML = "you cant use number in name";
+      error1[0].style.display = "flex";
+      error1[0].style.color = "red";
+    }
+  } 
+  else {
+    input_name.style.borderColor = "red";
+    error1[0].innerHTML = "required enter";
+    error1[0].style.display = "flex";
+    error1[0].style.color = "red";
+    tf1 = false;
+  }
+if (val2!=undefined) {
+  let at, dot;
+  at = val2.indexOf("@");
+  dot = val2.indexOf(".");
+  if ((at > 0 && dot > 4) ) {
+    tf2 = true;
+  } 
+  if (tf2) {
+    console.log(tf2)
+  } else {
+    error1[1].innerHTML = "Invalid Email";
+    input_email.style.borderColor = "red";
+    error1[1].style.display = "flex";
+    error1[1].style.color = "red";
+    tf2 = false;
+  }
+}
+else {
+  error1[1].innerHTML = "Invalid Email";
+  input_email.style.borderColor = "red";
+  error1[1].style.display = "flex";
+  error1[1].style.color = "red";
+  tf2 = false;
+}
+  if (val3 >= "1" && val3 <= "9") {
+    tf3 = true;
+    console.log(tf3);
+  } 
+  else {
+    console.log(val3);
+    input_phone.style.borderColor = "red";
+    error1[2].style.display = "flex";
+    error1[2].style.color = "red";
+    tf3 = false;
+  }
+  if (tf1 == true && tf2 == true && tf3 == true) {
+    changePage(container1, container2);
+    active(nbNav[1], nbNav[0]);
+  }
 });
+input_name.onfocus = function () {
+  input_name.style.borderColor = "hsl(0, 0%, 87%)";
+  error1[0].style.display = "none";
+};
+input_email.onfocus = function () {
+  input_email.style.borderColor = "hsl(0, 0%, 87%)";
+  error1[1].style.display = "none";
+};
+input_phone.onfocus = function () {
+  input_phone.style.borderColor = "hsl(0, 0%, 87%)";
+  error1[2].style.display = "none";
+};
 submit[1].addEventListener("click", function () {
   changePage(container2, container3);
   active(nbNav[2], nbNav[1]);
@@ -185,4 +280,3 @@ back[2].addEventListener("click", function () {
   let total = document.querySelector(".sum");
   console.log(total.remove());
 });
-
