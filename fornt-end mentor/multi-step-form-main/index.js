@@ -29,15 +29,12 @@ function changeColor(content1, content2, content3) {
 }
 input_name.oninput = function () {
   val1 = input_name.value;
-  console.log(val1);
 };
 input_email.oninput = function () {
   val2 = input_email.value;
-  console.log(val2);
 };
 input_phone.oninput = function () {
   val3 = input_phone.value;
-  console.log(val3);
 };
 submit[0].addEventListener("click", function () {
   if (val1 != undefined) {
@@ -51,7 +48,6 @@ submit[0].addEventListener("click", function () {
     }
     if (tf1) {
       if (val1.length < 20) {
-        console.log(tf1);
       } else {
         input_name.style.borderColor = "red";
         error1[0].innerHTML = "max letter can use 20";
@@ -76,7 +72,7 @@ submit[0].addEventListener("click", function () {
     let at, space;
     at = val2.indexOf("@gmail.com");
     space = val2.indexOf(" ");
-    console.log(space);
+
     if (at > 0 && space == -1) {
       tf2 = true;
     } else {
@@ -96,9 +92,7 @@ submit[0].addEventListener("click", function () {
   if (val3 >= "0" && val3 <= "9") {
     if (val3.length < 15) {
       tf3 = true;
-      console.log(tf3);
     } else {
-      console.log(val3);
       error1[2].innerHTML = "the number is long";
       input_phone.style.borderColor = "red";
       error1[2].style.display = "flex";
@@ -106,7 +100,6 @@ submit[0].addEventListener("click", function () {
       tf3 = false;
     }
   } else {
-    console.log(val3);
     error1[2].innerHTML = "Invalid phone number";
     input_phone.style.borderColor = "red";
     error1[2].style.display = "flex";
@@ -215,15 +208,10 @@ submit[1].addEventListener("click", function () {
       cardName.className = "name-card-copy";
       cardPrice.className = "price-card-copy";
       sum1 = parseInt(cardPrice.innerHTML);
-      console.log(sum1);
-      console.log(cardName);
-      console.log(cardPrice);
       hc4.appendChild(cardName);
       hc4.appendChild(cardPrice);
       hbc4.append(hc4);
       container4.append(hbc4);
-      console.log(hc4);
-      console.log(container4);
     }
   }
 });
@@ -250,13 +238,10 @@ submit[2].addEventListener("click", function () {
       text.className = "text_copy";
       price.className = "price_copy";
       sum += parseInt(price.innerHTML);
-      console.log(sum);
       bc4.append(text);
       bc4.append(price);
       hbc4.append(bc4);
       container4.append(hbc4);
-      console.log(bc4);
-      console.log(container4);
     }
   }
 });
@@ -266,18 +251,14 @@ submit[2].addEventListener("click", function () {
   let total = document.querySelector(".Total");
   let addtional = document.createElement("div");
   total.before(hbc4);
-  console.log(container4);
-
   if (year.classList.contains("color1-2")) {
     sum2 = `${sum + sum1}\$/yr`;
   } else {
     sum2 = `${sum + sum1}\$/mo`;
   }
   addtional.className = "sum";
-
   addtional.append(sum2);
   total.append(addtional);
-  console.log(sum2);
 });
 //-----------------------------------------------------
 back[2].addEventListener("click", function () {
@@ -285,10 +266,13 @@ back[2].addEventListener("click", function () {
   let del1 = document.querySelectorAll(".price_copy");
   let del3 = document.querySelector(".sum");
   sum = 0;
-  console.log(del3.remove());
+  del3.remove();
   for (let i = 0; i < del.length; i++) {
     del[i].remove();
     del1[i].remove();
     bc4.remove();
   }
+});
+submit[3].addEventListener("click", function () {
+  console.log("thank you");
 });
