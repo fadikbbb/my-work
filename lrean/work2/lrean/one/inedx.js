@@ -1401,9 +1401,8 @@
 // element.append(createdP); //for put the element in side the element and in last it
 // element.prepend("hello from js"); //for put the string in side the element and in first it
 // element.prepend(createdP1); //for put the element in side the element and in first it
-// element.remove();//for delete element 
+// element.remove();//for delete element
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // let container = document.createElement("div");
@@ -1521,3 +1520,27 @@
 //     justify-content: center;
 // `
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let lis = document.querySelectorAll("li");
+// let exp = document.querySelector(".ex");
+// // window.localStorage.clear();
+// if (window.localStorage.getItem("color")) {
+//   exp.style.backgroundColor = window.localStorage.getItem("color");
+//   lis.forEach((li) => {
+//     li.classList.remove("active");
+//   });
+//   document
+//     .querySelector(`[data-color=${window.localStorage.getItem("color")}]`)
+//     .classList.add("active");
+// } else {
+//   console.log("no");
+// }
+// lis.forEach((li) => {
+//   li.addEventListener("click", (e) => {
+//     lis.forEach((li) => {
+//       li.classList.remove("active");
+//     });
+//     e.currentTarget.classList.add("active");
+//     window.localStorage.setItem("color", e.currentTarget.dataset.color);
+//     exp.style.backgroundColor = e.currentTarget.dataset.color;
+//   });
+// });
