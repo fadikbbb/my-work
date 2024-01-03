@@ -80,3 +80,7 @@ body .container .active {
   background-color: red;
   margin: 40px;
 } */
+/*-------------------------------*/
+p{
+  cursor: pointer;
+}

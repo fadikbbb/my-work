@@ -1403,7 +1403,55 @@
 // element.prepend(createdP1); //for put the element in side the element and in first it
 // element.remove();//for delete element
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let span = document.querySelector(".two");
 
+// console.log(span.nextSibling);//nextSibling any element or comment or object come after it
+// console.log(span.nextElementSibling);//nextElementSibling only element come after it
+// console.log(span.previousSibling);//nextSibling any element or comment or object come before it
+// console.log(span.previousElementSibling);//nextElementSibling only element come before it
+// console.log(span.parentElement);// return parent of element
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //cloneNode makes copy from the element if you want it with all element inside it write true if not write false
+// let myP = document.querySelector(".my-p").cloneNode(true);
+// let myDiv = document.querySelector("div");
+// myP.id = `${myP.id}-copy`;//you can change id or class for clone element
+// myDiv.appendChild(myP);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//addEventListener used to make event click, blur el...,and it is good more than "on" because addEventListener doesnt make override li
+let myp = document.querySelector("p");
+// myp.onclick = one;
+// myp.onclick = two;
+// function one() {
+//   console.log("click 1");
+// }
+// function two() {
+//   console.log("click 2");
+// }
+// console.log("------------------------");
+// myp.addEventListener("click", one);
+// myp.addEventListener("click", two);
+//-------------------------------------------------
+// //you cant enter string in event and onclick doesnt show you error but addEventListner show you the error
+// // myp.onclick = "fadi";
+// // myp.addEventListener("click", "fadi");
+//-------------------------------------------------
+//if you want to attach element not found in page yet you cant use "on"
+// myp.onclick = function () {
+//   let newp = myp.cloneNode(true);
+//   newp.className = "clone";
+//   document.body.appendChild(newp);
+// };
+//               "false"
+// let cloned = document.querySelector("clone");
+// cloned.onclick = function () {
+//   console.log("i am clone");
+// };
+//---------------------------------
+//             "true"
+// document.addEventListener("click", function (e) {
+// if(e.target.className==="clone")
+//     console.log("i am clone");
+// });
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // let container = document.createElement("div");
 // container.className = "container";
@@ -1470,7 +1518,7 @@
 // background-color:rgb(236,236,236)
 // `;
 // for (let i = 1; i <= 15; i++) {
-//   prodact = document.createElement("div");
+    //   prodact = document.createElement("div");
 //   prodact.className = `prodact`;
 //   all.appendChild(prodact);
 //   num = document.createElement("h1");
@@ -1536,7 +1584,7 @@
 // }
 // lis.forEach((li) => {
 //   li.addEventListener("click", (e) => {
-//     lis.forEach((li) => {
+    //     lis.forEach((li) => {
 //       li.classList.remove("active");
 //     });
 //     e.currentTarget.classList.add("active");
@@ -1544,3 +1592,7 @@
 //     exp.style.backgroundColor = e.currentTarget.dataset.color;
 //   });
 // });
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
