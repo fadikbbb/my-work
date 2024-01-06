@@ -1418,7 +1418,7 @@
 // myDiv.appendChild(myP);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //addEventListener used to make event click, blur el...,and it is good more than "on" because addEventListener doesnt make override li
-let myp = document.querySelector("p");
+// let myp = document.querySelector("p");
 // myp.onclick = one;
 // myp.onclick = two;
 // function one() {
@@ -1518,7 +1518,7 @@ let myp = document.querySelector("p");
 // background-color:rgb(236,236,236)
 // `;
 // for (let i = 1; i <= 15; i++) {
-    //   prodact = document.createElement("div");
+//   prodact = document.createElement("div");
 //   prodact.className = `prodact`;
 //   all.appendChild(prodact);
 //   num = document.createElement("h1");
@@ -1553,7 +1553,6 @@ let myp = document.querySelector("p");
 // footer.appendChild(CR);
 // let CRText = document.createTextNode("CopyRight 2023");
 // CR.appendChild(CRText);
-
 // console.log(container);
 // document.body.appendChild(container);
 // CR.style.cssText=`
@@ -1568,6 +1567,135 @@ let myp = document.querySelector("p");
 //     justify-content: center;
 // `
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //No longer used
+// alert("test"); //used if you want make  warning
+// let confirmMsg = confirm("are you sure?"); //confirm return true or false value
+// if (confirmMsg == true) {
+//   console.log("deleted item");
+// } else {
+//   console.log("not deleted item");
+// }
+// let promptMsg = prompt("what do you want?","write there");//if you want to collect message from user
+// console.log(promptMsg);
+// // you can use good way like "sweetalert2.github.io"
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //setTimeOut used for make delay before print the message or element...
+// setTimeout(() => {
+//   console.log("msg");
+// }, 3000);
+// //---------------------------
+// //another way with function
+// //in set time out yoou cant make brakets and put the argument
+// setTimeout(sayMsg, 3000, "fadi" /*<= user*/, 34 /*<= age*/);
+// function sayMsg(user, age) {
+//   console.log(`iam message for ${user} his age is ${age}`);
+// }
+// //---------------------------
+// //counter is handler of this set time need it to make clear time out
+// let counter = setTimeout(sayMsg1, 3000);
+// function sayMsg1() {
+//     console.log(`iam message`);
+// }
+// let btn = document.querySelector(".btn");
+// btn.onclick = function () {
+//   clearTimeout(counter);
+// };
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// setInterval(() => {
+//   //setInterval used for make call in specfic time by looping
+//   console.log("msg every 1s");
+// }, 1000);
+// //----------------------
+// // another way
+// setInterval(sayMsg, 1000);
+// function sayMsg() {
+//   console.log("msg every 1s");
+// }
+// //---------------------
+// //ex for setInterval and clearInterval
+// let div = document.querySelector("div");
+// let counter=setInterval(countDown, 3000);
+// function countDown() {
+//   div.innerHTML-=1;
+//   if(div.innerHTML=="0"){
+//       clearInterval(counter)
+//   }
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// console.log(window.location.href); //if you want to get link of page
+// // location.href = "https://google.com"; //to change the link of page
+// console.log(location.host); //return value port of link
+// location.host = "https:google.com"; //for cahnge name of link with write protocol
+// console.log(location.hostname); //return value port of link
+// location.hostname = "google.com"; //for cahnge name of link without write protocol
+// console.log(location.protocol); //return value protocol of link
+// console.log(location.hash); //return value hash of page
+// console.log(location.reload); //make reload for page
+// //remove te current page from history and change it in new page by link
+// console.log(location.replace("https://google.com"));
+// //save current page in history
+// console.log(location.assign("https://google.com"));
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// setTimeout(() => {
+//   //for open new page in window
+//   window.open(
+//     /*url any link(default value 'blank')=>*/ "https://google.com",
+//     /*window name title of new page"_blank in other page","_self=> in same page"*/ "_blank",
+//     /*window features for search */ "width=400,height=400,top=200,left=200"
+//   );
+// }, 2000);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// console.log(history); //history is box of your pages opened
+// console.log(history.length);
+// console.log(history.back()); //for back one page
+// console.log(history.forward()); //for forward one page
+// console.log(history.go(0))//0=>same page,1 forward one page,-1 back one page
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// window.stop();//for stop reload of page
+// window.print();//using to print page or part of it
+// let myNewWindow = window.open(
+//   "https://google.com",
+//   "_blank",
+//   "width=500,height=500"
+// );
+// myNewWindow.focus(); //for make focus to page
+// myNewWindow.close();
+//----------------------------------------------------------
+// window.scrollTo(0,1000);//if you want to make scroll to spesfic index in page direct
+// window.scrollTo({
+//     left:0,
+//     top:1000,
+//     behavior:"smooth",
+// })
+// window.scroll(0, 400); //same
+// window.scrollBy(0,400); //if want to increase to scroll where is it
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// window.scrollY; //return value of scrolling in page of y
+// window.onscroll = function () {
+//   console.log(window.scrollY);
+// };
+// window.scrollX; //return value of scrolling in page of x
+// console.log(window.scrollX);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// console.log(window.localStorage);
+// //setItem take 2 argument and it save the value in localstorge
+// window.localStorage.setItem(/*key=>*/ "color", /*value=>*/ "#f00");
+// //other way
+// window.localStorage.fontWeight = "bold";
+// window.localStorage["fontSize"] = "20px";
+// //getItem take 1 argument and it print the value from localstorge
+// console.log(window.localStorage.getItem(/*key=>*/ "color"));
+// document.body.style.backgroundColor = window.localStorage.getItem("color");
+// // other way
+// console.log(window.localStorage.fontWeight);
+// console.log(window.localStorage["fontSize"]);
+// //removeItem take 1 argument and delete the key and value from localstroge
+// window.localStorage.removeItem(/*key=>*/ "color");
+// //clear remove all value from localstorge
+// window.localStorage.clear();
+// //localstroge.key() to know index of key
+// console.log(window.localStorage.key(0));
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // let lis = document.querySelectorAll("li");
 // let exp = document.querySelector(".ex");
 // // window.localStorage.clear();
@@ -1584,7 +1712,7 @@ let myp = document.querySelector("p");
 // }
 // lis.forEach((li) => {
 //   li.addEventListener("click", (e) => {
-    //     lis.forEach((li) => {
+//         lis.forEach((li) => {
 //       li.classList.remove("active");
 //     });
 //     e.currentTarget.classList.add("active");
@@ -1592,7 +1720,143 @@ let myp = document.querySelector("p");
 //     exp.style.backgroundColor = e.currentTarget.dataset.color;
 //   });
 // });
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// window.localStorage.setItem("color", "red"); //save data in localstorge data will stay when leave page
+// window.sessionStorage.setItem("color", "blue"); // save data only during work in page
+// let Name = document.querySelector(".name");
+// Name.oninput = function () {
+//   window.sessionStorage.setItem("value", Name.value);
+// };
+// if(sessionStorage.getItem("value")){
+//     Name.value=sessionStorage.getItem("value")
+// }
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// document.addEventListener("DOMContentLoaded", function () {
+//     let input = document.querySelector(".input");
+//     let submit = document.querySelector(".add");
+//     let tasks = document.querySelector(".tasks");
 
+//     function createTaskElement(taskText, index) {
+//       let task = document.createElement("div");
+//       task.className = "task";
+//       task.innerHTML = taskText;
 
+//       let dele = document.createElement("div");
+//       dele.className = "delete";
+//       dele.innerHTML = "delete";
+//       dele.addEventListener("click", function () {
+//         // Remove task from local storage and DOM
+//         localStorage.removeItem(`title${index}`);
+//         localStorage.removeItem(`delete${index}`);
+//         tasks.removeChild(task);
+//       });
+
+//       task.appendChild(dele);
+//       return task;
+//     }
+
+//     submit.addEventListener("click", function () {
+//       let taskText = input.value;
+
+//       if (taskText.trim() !== "") {
+//         let size = localStorage.getItem("size") || 0;
+//         localStorage.setItem(`title${size}`, taskText);
+//         localStorage.setItem(`delete${size}`, "delete");
+//         localStorage.setItem("size", parseInt(size) + 1);
+
+//         let task = createTaskElement(taskText, size);
+//         tasks.appendChild(task);
+
+//         input.value = ""; // Clear input after adding task
+//       }
+//     });
+
+//     // Load tasks from local storage
+//     for (let g = 0; g < localStorage.getItem("size"); g++) {
+//       if (localStorage.getItem(`title${g}`)) {
+//         let taskText = localStorage.getItem(`title${g}`);
+//         let task = createTaskElement(taskText, g);
+//         tasks.appendChild(task);
+//       }
+//     }
+//   });
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // let a = 1;//error-----|
+// // let b = 2;//error     |
+// // let c = 3;//error     }beacuse you already made declare for it
+// // let d = 4;//error-----|
+// let myFriends = ["ahmed", "sayed", "ali", "maysa"]; //array
+// let [a, b, c, d] = myFriends; //destructuring for array=> every variable take value from array
+// console.log(a); //ahmed
+// console.log(b); //sayed
+// console.log(c); //ali
+// console.log(d); //maysa
+// //if you dont want value from array you can skip it like this
+// let [y, x /*stay empty=>*/, , z] = myFriends;
+// console.log(y);
+// console.log(x);
+// console.log(z);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myFriends = [
+//   "ahmed",
+//   "saved",
+//   "ali",
+//   ["shady", "amr", ["mohamed", "gamal"]],
+// ];
+// console.log(myFriends[3][2][1]); //by index
+// let [, , , [a, , [, b]]] = myFriends;
+// console.log(a);//by distructuring
+// console.log(b);//by distructuring
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // // smiple and older way for swwapping variables
+// let book = "video";
+// let video = "book";
+// // let stash = book;
+// // book = video;
+// // video = stash;
+// // console.log(video)
+// // console.log(book)
+// //------------------------------
+// //new with distructuring
+// [book, video] = [video, book];
+// console.log(video)
+// console.log(book)
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   theTtile: "developer",
+//   theCountry: "egypt",
+// };
+// console.log(user.theName);
+// console.log(user.theAge);
+// console.log(user.theTtile);
+// console.log(user.theCountry);
+// //if want save it in variables
+// // let theName = user.theName;//error------------|
+// // let theAge = user.theAge;//  error            }you cant Declare the variable two times
+// // let theTtile = user.theTtile;//error          |
+// // let theCountry = user.theCountry;//error------|
+// let { theName, theAge, theTtile, theCountry } = user;//you declare the from the  object by same name 
+// console.log(theName); 
+// console.log(theAge);
+// console.log(theTtile);
+// console.log(theCountry);
+// let { theName, theAge, theTtile, theCountry } = user;//you declare the from the  object by same name 
+// console.log(theName); 
+// console.log(theAge);
+// console.log(theTtile);
+// console.log(theCountry);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let user = {
+  theName: "osama",
+  theAge: 39,
+  theTtile: "developer",
+  theCountry: "egypt",
+};
+let { theName, theAge, theTtile, theCountry } = user;//you declare the from the  object by same name 
+console.log(theName); 
+console.log(theAge);
+console.log(theTtile);
+console.log(theCountry);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

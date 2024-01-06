@@ -3,7 +3,7 @@
 }
 .container {
   position: relative;
-  width: 367px;
+  width: 100%;
   min-width: 200px;
   background: #fff;
   box-shadow: 2px 4px 11px 0px rgba(0, 0, 0, 0.25);
@@ -25,7 +25,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  max-width: 367px;
+  max-width: 100%;
   height: 130px;
   background-image: linear-gradient(-100deg, white, #9fafff);
 }
@@ -34,11 +34,11 @@
   width: 100%;
   background-image: linear-gradient(-100deg, white, #9fafff);
   z-index: 4;
-  max-width: 367px;
+  max-width: 100%;
 }
 .headerTop {
   display: flex;
-  max-width: 367px;
+  max-width: 100%;
   justify-content: space-between;
 }
 .titleNav,
@@ -51,7 +51,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  max-width: 367px;
+  max-width: 100%;
 }
 .titleMiddle {
   font-size: 25px;
@@ -62,7 +62,7 @@
   padding: 0;
   margin: 0;
   overflow-x: scroll;
-  max-width: 367px;
+  max-width: 100%;
 }
 .allTextNav::-webkit-scrollbar,
 .containerTop::-webkit-scrollbar {
@@ -248,7 +248,7 @@ button {
   background-color: white;
 }
 .scroll {
-  width: 367px;
+  width: 100%;
   height: 50px;
   position: fixed;
   top: 98px;
@@ -256,6 +256,7 @@ button {
   display: flex;
   align-items: center;
   background-image: linear-gradient(-100deg, white, #9fafff);
+  transition: 0.3s linear;
 }
 .footer {
   height:55px;
@@ -267,7 +268,7 @@ button {
   border-radius: 19px;
 background: linear-gradient(180deg, #3D318B 0%, #7387F5 100%);
   position: fixed;
-  max-width: 367px;
+  max-width: 100%;
   height:55px;
   bottom:0;
   width: 100%;
