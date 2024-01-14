@@ -2061,19 +2061,143 @@
 // myMap.clear();//delete all keys
 // console.log(myMap.size);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// map VS WeakMap
-let mapUser = {
-  theName: "Elzero",
-};
-let myMap = new Map();
-myMap.set(mapUser, "object value");
-mapUser = null; //the null will not make override becouse it is store in Map
-console.log(myMap)
-console.log("#".repeat(20));
-let weakMapUser = {
-  theName: "Elzero",
-};
-let myWeakMap = new WeakMap();//weakMap doesnt have all property have it the Map
-myWeakMap.set(weakMapUser, "object value"); 
- weakMapUser= null; //weakMap make override
-console.log(myWeakMap);
+// // map VS WeakMap
+// let mapUser = {
+//   theName: "Elzero",
+// };
+// let myMap = new Map();
+// myMap.set(mapUser, "object value");
+// mapUser = null; //the null will not make override becouse it is store in Map
+// console.log(myMap)
+// console.log("#".repeat(20));
+// let weakMapUser = {
+//   theName: "Elzero",
+// };
+// let myWeakMap = new WeakMap();//weakMap doesnt have all property have it the Map
+// myWeakMap.set(weakMapUser, "object value");
+//  weakMapUser= null; //weakMap make override
+// console.log(myWeakMap);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // array method
+// console.log(Array.from("osama")); //array.from take any iterable ,mapfunction and make it array
+// console.log(Array.from(1234)); //not iterable
+// console.log(Array.from("1234")); //iterable
+
+// console.log(
+//   Array.from("1234", function (e) {
+//     //to make string number
+//     return +e + +e;
+//   })
+// );
+// let myArray = [1, 1, 1, 2, 2, 3, 4];
+// let mySet = new Set(myArray); //we use set fro take specail number but it makes the array object
+// console.log(Array.from(mySet)); //we use array.from to return it array
+// // console.log(...new Set(myArray));//from future
+// function testArgs() {
+//   //return arguments
+//   return arguments;
+// }
+// console.log(testArgs("osama", "ahmed", "sayed")); //the arguments
+// function af() {//return array
+//   return Array.from(arguments);
+// }
+//   console.log(af("osama", "ahmed", "sayed")); //the arguments
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myArray = [10, 20, 30, 40, 50, "A", "B"];
+// //to make copy from same array
+// myArray.copyWithin(
+//   1 /*=>start of select default "0" */,
+//   4 /*=>start of copy default "0" */,
+//   6 /*=>end of copy and the end is not included default from start to end the array*/
+// );
+// console.log(myArray);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let nums = [1, 2, 3, 4, 5, 6, 7];
+// let myNumber = 5;
+// //some like for each or fliter but this retrun bolean value
+// //that mean some check all value in array if found your condition return true if not false
+// let check = nums.some(function (e) {
+//   console.log("test");
+//   return e > this; //this return to window but if you put your variable return it
+// }, myNumber); //variable of 'this'
+// console.log(check);
+// //trrining
+// function checkValues(arr /*array*/, val /*value we need to check it*/) {
+//   return arr.some(function (e /*values in array*/) {
+//     //it is enter on array check one by one
+//     return e === val; //if it found values enter by user return true if not false
+//   });
+// }
+// console.log(checkValues(nums, 20)); //false
+// console.log(checkValues(nums, 5)); //true
+
+// let range = {
+//   min: 1,
+//   max: 5,
+// };
+// let checkNumberInRange = nums.some(function (e) {
+//   return e >= this.min && e <= this.max;
+// }, range);
+// console.log(checkNumberInRange);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let locations = {
+//   20: "place1",
+//   30: "place2",
+//   10: "place3",
+//   40: "place4",
+// };
+// let mainLocation = 15;
+// console.log(locations)
+// let locationsArray = Object.keys(locations);
+
+// console.log(locationsArray);
+// let array1 = locationsArray.map(function (e) {
+//   return +e;
+// });
+// console.log(array1);
+// let check = array1.every(function (e) {
+//   return e >= this;
+// }, mainLocation);
+// console.log(check);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // spread oprator => ...iterable
+// // "allow iterable to expand in place"
+// console.log("osama");
+// console.log(..."osama");
+// console.log([..."osama"]);
+// //-------------------------
+// // concatenate arrays
+// let array1 = [1, 2, 3];
+// let array2 = [4, 5, 6];
+// let allArray = [...array1, ...array2];
+// console.log(allArray);
+// //-------------------------
+// // copy arrays
+// let copyArray = [...array1];
+// console.log(copyArray);
+// //-------------------------
+// // push inside array
+// let oldFriends = ["ahmed", "samir", "fadi"];
+// let newFriends = ["sameh", "mahmoud"];
+// oldFriends.push(...newFriends);
+// console.log(oldFriends);
+// //-------------------------
+// //use with math object
+// let myNums = [10, 20, 100, -100, 1000, 500];
+// console.log(Math.max(...myNums));
+// //-------------------------
+// //spread with object =>merge objects
+// let objone = {
+//   a: 1,
+//   b: 2,
+// };
+// let objtwo = {
+//   c: 3,
+//   d: 4,
+// };
+// console.log({ ...objone, ...objtwo, e: 5 });
+//-----------------------------------chellange-----------------------------------------------------------------------------------------------------------------------------------------
+// let n1 =[10,30,10,20];
+// let n2=[30,20,10]
+// console.log([...n1,...n2].length*new Set(n1).size*Math.min(...n1))//210
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
