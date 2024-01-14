@@ -127,7 +127,6 @@
 // let d = 2.4;
 // //find smallest number in all variables return integer
 // console.log(Math.trunc(Math.min(a, b, c, d)));
-
 // //use variables  a + d one time to get the needed out put
 // console.log(Math.pow(a, Math.trunc(d))); //10000
 // //get integer "2" from d variables with 4 methods
@@ -1837,26 +1836,244 @@
 // // let theAge = user.theAge;//  error            }you cant Declare the variable two times
 // // let theTtile = user.theTtile;//error          |
 // // let theCountry = user.theCountry;//error------|
-// let { theName, theAge, theTtile, theCountry } = user;//you declare the from the  object by same name 
-// console.log(theName); 
+// let { theName, theAge, theTtile, theCountry } = user;//you declare the  object by same name
+// console.log(theName);
 // console.log(theAge);
 // console.log(theTtile);
 // console.log(theCountry);
-// let { theName, theAge, theTtile, theCountry } = user;//you declare the from the  object by same name 
-// console.log(theName); 
+// let { theName, theAge, theTtile, theCountry } = user;//you declare  the  object by same name
+// console.log(theName);
 // console.log(theAge);
 // console.log(theTtile);
 // console.log(theCountry);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-let user = {
-  theName: "osama",
-  theAge: 39,
-  theTtile: "developer",
-  theCountry: "egypt",
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   theTtile: "developer",
+//   theCountry: "egypt",
+//   skills: {
+//     html: 70,
+//     css: 80,
+//   },
+// };
+// //you skip value from object by doesnt write tis name and can change name of variable like this
+// let {
+//   theName: a,
+//   theAge: b,
+//   theCountry: c,
+//   /*you can add property=>*/ theColor: d = "red",
+//   /*if you have nest object */ skills: { html: h, css: s },
+// } = user;
+// //other way for nests object |||
+// //                           \/
+// let { html: skillone, css: skilltwo } = skills.user;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(h);
+// console.log(s);
+// console.log(skillone);
+// console.log(skilltwo);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   skills: {
+//     html: 70,
+//     css: 80,
+//   },
+// };
+// showDetails(user);
+// // global way for call from object by function
+// function showDetails(obj) {
+//   console.log(`your name is ${obj.theName}`);
+//   console.log(`your name is ${obj.theAge}`);
+//   console.log(`your name is ${obj.skills.css}`);
+// }
+// //by distructuring
+// showDetails1(user);
+// function showDetails1(
+//   /*you can change name of variable*/ {
+//     theName: n,
+//     theAge: a,
+//     skills: { css: s },
+//   } = user
+// ) {
+//   console.log(`your name is ${n}`);
+//   console.log(`your name is ${a}`);
+//   console.log(`your name is ${s}`);
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //trining
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   skills: ["html", "css", "javascript"],
+//   addresses: {
+//     egypt: "cairo",
+//     ksa: "riyadh",
+//   },
+// };
+// let {
+//   theName,
+//   theAge,
+//   skills: [one, two, three],
+//   addresses:{egypt},
+// } = user;
+// console.log(theName);
+// console.log(theAge);
+// console.log(`${one} ${two} ${three}`);
+// console.log(egypt);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // challenge
+// let chosen = 2;
+// let myFriends = [
+//   { title: "osama", age: 39, available: true, skills: ["html", "css"] },
+//   { title: "ahmed", age: 25, available: false, skills: ["python", "Django"] },
+//   { title: "sayed", age: 33, available: true, skills: ["php", "laravel"] },
+// ];
+
+// if (chosen == 1) {
+//   let [
+//     {
+//       title,
+//       age,
+//       available:av,
+//       skills: [, two],
+//     },
+//     ,
+//   ] = myFriends;
+//   ([{av = "available"},,]=myFriends)
+//   console.log(title);
+//   console.log(age);
+//   console.log(av);
+//   console.log(two);
+// } else if (chosen == 2) {
+//   let [
+//     ,
+//     {
+//       title,
+//       age,
+//       available:av,
+//       skills: [, two],
+//     },
+//   ] = myFriends;
+//   ([,{av = "not available"},]=myFriends)
+//   console.log(title);
+//   console.log(age);
+//   console.log(av);
+//   console.log(two);
+// } else if (chosen == 3) {
+//   let [
+//     ,
+//     ,
+//     {
+//       title,
+//       age,
+//       available:av,
+//       skills: [, two],
+//     },
+//   ] = myFriends;
+//   ([,{av = "available"},]=myFriends)
+//   console.log(title);
+//   console.log(age);
+//   console.log(av);
+//   console.log(two);
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myData = [1, 1, 1, 2, 3];
+// let myUniqueData = new Set([1, 1, 1, 2, 3]);//set make fliter if you have many value same  retrun one value of it
+// myUniqueData = new Set(myData);//other way
+// myUniqueData = new Set().add(1).add(1).add(1).add(2).add(3).add("A");//other way
+// console.log(myData);
+// console.log(myData[0]);
+// console.log(myUniqueData);
+// console.log(myUniqueData.size);//size return length of set
+// console.log(myUniqueData[0]);//if call it by index return undefine
+// console.log(myUniqueData.delete(2));//delete  remove the value and return boolean true if found it or false if not
+// console.log(myUniqueData.size);
+// console.log(myUniqueData.has("A"))//has search for value if found it return true or false if not
+// console.log(myUniqueData.clear());//clear delete all value
+// console.log(myUniqueData.size);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // defferent between aet and weakset
+// let mySet = new Set([1, 1, 1, 2, 3, "A", "A"]); //in set you can stroe any data variable string number
+
+// console.log(mySet);
+// console.log(`size of element is :${mySet.size}`); //set have perproty size
+// let iterator = mySet.keys();
+// console.log(iterator);
+// console.log(iterator.next()); //next go one step foewards and check if it last value ex:1
+// console.log(iterator.next()); //2 false
+// console.log(iterator.next()); //3 false
+// console.log(iterator.next()); //A false
+// console.log(iterator.next()); //undefined true
+// console.log(iterator.next().value); // value return value => undefined
+// console.log(iterator.next().done); // done return boolean false or true => true
+
+// mySet.forEach((el) => console.log(el));
+// console.log("#".repeat(30));
+// //---------------------------------------------
+// let myWeakSet = new WeakSet({ a: "a", b: "b" }); //in weakset  can store only object
+// //weakset doesnt have perporty like size and next()
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // defferent between map datatype and Object
+// let myObject = {}; //object have defualt keys=>value
+// // how you can make object doesnt have keys like map doesnt have property
+// let myEmptyObject = Object.create(null);
+// let myMap = new Map(); //doesnot have property when it empty and we can add any key variable, object, function.....
+// console.log(myObject);
+// console.log(myEmptyObject);
+// console.log(myMap);
+// let myNewObject = {
+//   10: "Number",
+//   10: "String",
+// };
+// //--------------------------------------
+// let myNewMap = new Map();
+// myNewMap.set(10, "number");//set for enter the key
+// myNewMap.set("10", "string");
+// //----------------------------------------
+// console.log(myNewMap.get(10));//get for call the key
+// console.log(myNewMap.get("10")); //map doesnt make override on same key 10=>number,"10"=>string
+// console.log(myNewObject[10]); //object make override if see to key same ,10 =>string
+// //-----------------------------------------
+// console.log(myNewObject); //this have only one value=>10:"string"
+// console.log(myNewMap); //this have two value:10=>"number","10"=>"string"
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myMap = new Map([
+//   [10, "number"], //-----------------|
+//   ["name", "string"], //              }can you add key in map like this or by set
+//   [false, "boolean"], //--------------|
+// ]);
+// // myMap.set(10, "number");
+// // myMap.set("name", "string");
+// console.log(myMap);
+// console.log(myMap.get(10));
+// console.log(myMap.get("name"));
+// console.log(myMap.get(false));
+// console.log(myMap.size);//to get size of map
+// console.log(myMap.delete("name"))//to remove key from map and retrun boolean value
+// console.log(myMap.size);
+// console.log(myMap.has(false))//search for key if found it return boolean value true
+// myMap.clear();//delete all keys
+// console.log(myMap.size);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// map VS WeakMap
+let mapUser = {
+  theName: "Elzero",
 };
-let { theName, theAge, theTtile, theCountry } = user;//you declare the from the  object by same name 
-console.log(theName); 
-console.log(theAge);
-console.log(theTtile);
-console.log(theCountry);
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let myMap = new Map();
+myMap.set(mapUser, "object value");
+mapUser = null; //the null will not make override becouse it is store in Map
+console.log(myMap)
+console.log("#".repeat(20));
+let weakMapUser = {
+  theName: "Elzero",
+};
+let myWeakMap = new WeakMap();//weakMap doesnt have all property have it the Map
+myWeakMap.set(weakMapUser, "object value"); 
+ weakMapUser= null; //weakMap make override
+console.log(myWeakMap);
