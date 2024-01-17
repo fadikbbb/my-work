@@ -2201,3 +2201,44 @@
 // let n2=[30,20,10]
 // console.log([...n1,...n2].length*new Set(n1).size*Math.min(...n1))//210
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myString = "Hello Elzero Web School I Love elzero";
+// let regex = /Elzero/gi; /*<= pattern*/
+// /*i<=used for doesnt make deferent between captail or samll latter "case insensitive" */
+// /*g<= used for return all value in variable "global" */
+// /*m<= used for check all lines */
+// console.log(myString.match(regex)); // match make search and return the values by array if not found the values return null
+// //syntax
+// // /pattern/modifier(s)"preferred"
+// // new RegExp("pattern","modifier(s)")"Not preferred"
+// //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //regular expression "ranges"
+// let tld = "com net org info code io";
+// let tldre = /(org|info|io)/gi; //used or "|" if you want to check many values
+// console.log(tld.match(tldre));
+// //----------------------
+// let nums = "12345678910";
+// let numsRe = /[0-9]/g; //make range in number
+// console.log(nums.match(numsRe));
+// //----------------------
+// let notNums = "1234%^&56&^78910";
+// //^<=not used if you want any value but doesnt in this range
+// let notNumsRe = /[^0-9]/g;
+// console.log(notNums.match(notNumsRe));
+// //----------------------
+// let practice = "os1 os1os os2 os8 os8os";
+// //we want all os have number between 5 and 9 and have after it os
+// let practiceRe = /os[5-9]os/g;
+// console.log(notNums.match(notNumsRe));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myString = "AaBbcdefg123!234%^&*";
+// let aTozSmall = /[a-z]/g;
+// let AToZcapital = /[A-Z]/g;
+// let aAndbAnde=/[abe]/g
+// let allLetter = /[a-zA-Z]/g;
+// let specail = /[^a-zA-z0-9]/g;
+// console.log(myString.match(aTozSmall));
+// console.log(myString.match(AToZcapital));
+// console.log(myString.match(aAndbAnde));
+// console.log(myString.match(allLetter));
+// console.log(myString.match(specail));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
