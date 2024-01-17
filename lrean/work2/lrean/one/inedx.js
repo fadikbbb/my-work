@@ -2242,3 +2242,56 @@
 // console.log(myString.match(allLetter));
 // console.log(myString.match(specail));
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //regular expression
+// /*character classes
+// .=>matches any character ,except newline or other line termintors
+// \w=> matches word character,[a-zA-Z0-9]and underscore
+// \W=> matches non word character
+// \d=>matches digits from 0 to 9
+// \D=>mathces non-digits character
+// \s=>mathces whitespace character
+// \S=>matches non whitespace character
+// */
+// let email = "o@@@g...com o@g.com o@g.net A@y.com O-g.com o@s.org 1@1.com";
+// let dot = /./g;
+// let word = /\w/g;
+// let valid = /\w@\w.(com|.org|net)/g;
+// console.log(email.match(dot));
+// console.log(email.match(word));
+// console.log(email.match(valid));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //regular expression
+// /*character classes
+// \b=> matches at the beginning or end of a word
+// \B=>matches not at the beginning or endof a word
+// test method
+// pattern.test(input)=> test used to retrun true if values was find or false if not
+// */
+// let names = "sayed 1Spam 2Spam 3Spam Spam4 Spam5 Osama Ahmed Aspamo";
+// let re = /(\bspam|spam\b)/gi;
+// console.log(names.match(re));
+// //syntax
+// console.log(
+//   /(\bspam|spam\b)/gi.test(
+//     "sayed 1Spam 2Spam 3Spam Spam4 Spam5 Osama Ahmed Aspamo"
+//   )
+// ); //true
+// console.log(re.test(names)); //true
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*regular expression
+
+// quantifiers
+// n+   =>one or more character
+// n*   =>zero or more character
+// n?   =>zero or one character
+// */
+// let mail = "o@nn.sa osama@gmail.com elzero@gmail.net osama@mail.ru"; //all mail
+// let mailRe = /\w+@\w+.(com|net)/gi;
+// console.log(mail.match(mailRe));
+// let nums = "0110 10 150 05120 0560 350 00"; //0 number or no 0
+// let numsRe = /0\d*0/gi;
+// console.log(nums.match(numsRe));
+// let urls = "https://google.com http://www.website.net web.com "; //http + https
+// let urlsRe = /(https?:\/\/)?(www.)?\w+.\w+/gi;
+// console.log(urls.match(urlsRe));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
