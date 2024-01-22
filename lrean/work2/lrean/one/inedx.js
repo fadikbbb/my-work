@@ -2294,4 +2294,67 @@
 // let urls = "https://google.com http://www.website.net web.com "; //http + https
 // let urlsRe = /(https?:\/\/)?(www.)?\w+.\w+/gi;
 // console.log(urls.match(urlsRe));
+// //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*quantifier
+// n{x}=>number of
+// n{x,y}=>range
+// n{x,} =>at least x*/
+// let serials = "s100s s3000s s50000s s950000s";
+// console.log(serials.match(/s\d{3}s/gi));
+// console.log(serials.match(/s\d{4,5}s/gi));
+// console.log(serials.match(/s\d{4,}s/gi));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*regular expression
+// quantifiers
+// $  => end with something
+// ^  => start with something
+// ?= => followed by something
+// ?! =>not followed by something
+// */
+// let myString = "We Love Programing";
+// let names = "1OsamaZ 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
+// console.log(/ing$/gi.test(myString)); //end in "ing"
+// console.log(/^we/gi.test(myString)); //start in "we"
+// console.log(/lz$/gi.test(names)); //end in "lz"
+// console.log(/^\d/gi.test(names)); //start in digit
+// //return all values start in digits then 5 word character then followed by Z
+// console.log(names.match(/\d\w{5}(?=z)/gi));
+// //return all values start in digits then 8 word character then not followed by Z
+// console.log(names.match(/\d\w{8}(?!z)/gi));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*regular Expression
+// replace
+// replaceAll
+// */
+// let txt = "we Love Programing And @ Because @ Is Amazing";
+// console.log(txt.replaceAll("@", "javascript")); //replaceAll used to replace all values
+// console.log(txt.replace("@", "javascript")); //replace used to replace one value
+// console.log(txt.replace(/@/gi, "javascript"));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // regilar expressiom
+// // input form validation practice
+// document.querySelector("#register").onsubmit = function () {
+//   let phoneInput = document.querySelector("#phone").value;
+//   let phoneRe = /\(\d{4}\)\s\d{3}-\d{4}/gi;
+//   let validationResult = phoneRe.test(phoneInput);
+//   if (validationResult === false) {
+//     return false;//for doesnt make submit
+//   }
+// };
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //chellange regular expression
+// let url1 = "elzero.org";
+// let url2 = "elzero.org";
+// let url3 = "https://elzero.org";
+// let url4 = "https:www.elzero.org";
+// let url5 = "https:www.elzero.org:8080/articles.php?id=100&cat=topics";
+// let url6 =
+//   "https://www.youtube.com/watch?v=_n_oiZRqH_k&list=PLDoPjvoNmBAx3kiplQR_oeDqLDBUDYwVv&index=146";
+//   let re = /(https|http)?(:\/\/)?(www.)?\w+.(com|org|net)((\/|:)[\w\W]+)?/gi;
+// console.log(url1.match(re))
+// console.log(url2.match(re))
+// console.log(url3.match(re))
+// console.log(url4.match(re))
+// console.log(url5.match(re))
+// console.log(url6.match(re))
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
