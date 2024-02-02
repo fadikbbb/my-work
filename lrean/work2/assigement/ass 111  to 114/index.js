@@ -54,44 +54,44 @@ let color = document.querySelector("#sele");
 let submit = document.querySelector(".submit");
 name1.oninput = function () {
   console.log(name1.value);
-  localStorage.setItem("name", name1.value);
+  sessionStorage.setItem("name", name1.value);
 };
 userName.oninput = function () {
   console.log(userName.value);
-  localStorage.setItem("userName", userName.value);
+  sessionStorage.setItem("userName", userName.value);
 };
 pass.oninput = function () {
   console.log(pass.value);
-  localStorage.setItem("pass", pass.value);
+  sessionStorage.setItem("pass", pass.value);
 };
 color.oninput = function () {
   console.log(color.value);
-  localStorage.setItem("color", color.value);
+  sessionStorage.setItem("color", color.value);
 };
-if (localStorage.getItem("name")) {
+if (sessionStorage.getItem("name")) {
   console.log("yes");
-  name1.value = localStorage.getItem("name");
+  name1.value = sessionStorage.getItem("name");
 } else {
   console.log("no");
 }
-if (localStorage.getItem("userName")) {
+if (sessionStorage.getItem("userName")) {
   console.log("yes");
-  userName.value = localStorage.getItem("userName");
+  userName.value = sessionStorage.getItem("userName");
 } else {
   console.log("no");
 }
-if (localStorage.getItem("pass")) {
+if (sessionStorage.getItem("pass")) {
   console.log("yes");
-  pass.value = localStorage.getItem("pass");
+  pass.value = sessionStorage.getItem("pass");
 } else {
   console.log("no");
 }
-if (localStorage.getItem("color")) {
+if (sessionStorage.getItem("color")) {
   console.log("yes");
-  color.value = localStorage.getItem("color");
+  color.value = sessionStorage.getItem("color");
 } else {
   console.log("no");
 }
 submit.onclick = function () {
-  window.localStorage.clear();
+  window.sessionStorage.clear();
 };
