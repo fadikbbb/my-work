@@ -2358,3 +2358,126 @@
 // console.log(url5.match(re))
 // console.log(url6.match(re))
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //opp
+// function User(id, userName, salary) {//opp class or function
+//   this.i = id;
+//   this.u = userName;
+// //we can add for all user by this function without acc one by one
+//   this.s = salary+1000;
+// }
+// let oneUser = new User(101, "fadi", 1000);//we make instance from class or function
+// let twoUser = new User(102, "hadi", 2000);
+// let threeUser = new User(103, "shadi", 3000);
+// console.log(oneUser.i);//we call id of userone
+// console.log(oneUser.u);//-- --- username ----
+// console.log(oneUser.s);//-- --- salary ----
+// //same
+// console.log(twoUser.i);
+// console.log(twoUser.u);
+// console.log(twoUser.s);
+// console.log(threeUser.i);
+// console.log(threeUser.u);
+// console.log(threeUser.s);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+//   //new syntax but same value return
+//   constructor(id, userName, salary) {
+//     //opp class or function
+//     this.i = id;
+//     this.u = userName;
+//     //we can add for all user by this function without acc one by one
+//     this.s = salary + 1000;
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000); //we make instance from class or function;
+// console.log(oneUser.i); //we call id of userone
+// console.log(oneUser.u); //-- --- username ----
+// console.log(oneUser.s); //-- --- salary ----
+// console.log(oneUser instanceof User); //we check if oneUser if from class user
+// console.log(oneUser.constructor === User); //we check if oneUser if from class user
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+//   constructor(id, userName, salary) {
+//     this.i = id;
+//     this.u = userName || "unkown";
+//     this.s = salary < 6000 ? salary + 500 : salary; //we make condition
+//    //property \/
+//     this.msg = function () {
+//       return `hello ${this.u} your salary is ${this.s}`;
+//     };
+//   }
+//   //method \/
+//   writeMsg() {
+//     return `hello ${this.u} your salary is ${this.s}`;
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000);
+// let twoUser = new User(102, "hadi", 2000);
+// console.log(oneUser.i);
+// console.log(oneUser.u);
+// console.log(oneUser.s);
+// console.log(oneUser.msg());
+// console.log(oneUser.writeMsg());
+// console.log(twoUser.i);
+// console.log(twoUser.u);
+// console.log(twoUser.s);
+// console.log(twoUser.msg());
+// console.log(twoUser.writeMsg());
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+//   constructor(id, userName, salary) {
+//     this.i = id;
+//     this.u = userName;
+//     this.s = salary;
+//   }
+//   //method used for update the name because some times you can access on it
+//   updateName(newName) {
+//     return (this.u = newName);
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000);
+// oneUser.updateName("ahmed");
+// console.log(oneUser.i);
+// console.log(oneUser.u);
+// console.log(oneUser.s);
+// let strOne = "elzero";
+// let strtwo = new String("elzero");
+// console.log(strOne);
+// console.log(strtwo);
+// console.log(strOne instanceof String);//false because it is not from object string
+// console.log(strtwo instanceof String);//true
+// console.log(strOne.constructor === String);//true because we used object string to create it
+// console.log(strtwo.constructor === String);//true because we used object string to create it
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+  //   //we used static if we need to make praperty or var for class without effect to object
+//   //and we cant access on it by any object
+//   static count = 0;
+//   //opposite
+//   count1 = 1;
+//   constructor(id, userName, salary) {
+//     this.i = id;
+//     this.u = userName;
+//     this.s = salary;
+//     User.count++;
+//   }
+//   static sayHello() {
+//     return `hello from class`;
+//   }
+//   static countMembers() {
+//     return `${this.count} members created`;
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000);
+// let twoUser = new User(102, "hadi", 2000);
+// let threeUser = new User(103, "shadi",3000);
+// console.log(oneUser.i);
+// console.log(oneUser.count); //return undefined =>object
+// console.log(User.count); //return value=>class
+// console.log("#".repeat(8)); //###################
+// console.log(oneUser.count1); //return value =>object
+// console.log(User.count1); //return undefine =>class
+// // console.log(oneUser.sayHello());//error
+// console.log(User.sayHello());
+// console.log(User.countMembers());
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
