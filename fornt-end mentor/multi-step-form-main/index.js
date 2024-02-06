@@ -11,7 +11,9 @@ let container5 = document.querySelector(".container5");
 let nbNav = document.getElementsByClassName("nb-nav");
 let error1 = document.querySelectorAll(".two");
 let val1, val2, val3;
-let tf1, tf2, tf3=false;
+let tf1,
+  tf2,
+  tf3 = false;
 function changePage(page1, page2) {
   page1.style.display = "none";
   page2.style.display = "flex";
@@ -27,20 +29,17 @@ function changeColor(content1, content2, content3) {
 }
 input_name.oninput = function () {
   val1 = input_name.value;
-  console.log(val1);
 };
 input_email.oninput = function () {
   val2 = input_email.value;
-  console.log(val2);
 };
 input_phone.oninput = function () {
   val3 = input_phone.value;
-  console.log(val3);
 };
 submit[0].addEventListener("click", function () {
   if (val1 != undefined) {
     for (let i = 0; i < val1.length; i++) {
-      if (val1[i] < "9" && val1[i] > "0") {
+      if (val1[i] <= "9" && val1[i] >= "0") {
         tf1 = false;
         break;
       } else {
@@ -49,7 +48,6 @@ submit[0].addEventListener("click", function () {
     }
     if (tf1) {
       if (val1.length < 20) {
-        console.log(tf1);
       } else {
         input_name.style.borderColor = "red";
         error1[0].innerHTML = "max letter can use 20";
@@ -63,23 +61,27 @@ submit[0].addEventListener("click", function () {
       error1[0].style.display = "flex";
       error1[0].style.color = "red";
     }
-  } 
-  else {
+  } else {
     input_name.style.borderColor = "red";
     error1[0].innerHTML = "required enter";
     error1[0].style.display = "flex";
     error1[0].style.color = "red";
     tf1 = false;
   }
-if (val2!=undefined) {
-  let at, dot;
-  at = val2.indexOf("@");
-  dot = val2.indexOf(".");
-  if ((at > 0 && dot > 4) ) {
-    tf2 = true;
-  } 
-  if (tf2) {
-    console.log(tf2)
+  if (val2 != undefined) {
+    let at, space;
+    at = val2.indexOf("@gmail.com");
+    space = val2.indexOf(" ");
+
+    if (at > 0 && space == -1) {
+      tf2 = true;
+    } else {
+      error1[1].innerHTML = "Invalid Email";
+      input_email.style.borderColor = "red";
+      error1[1].style.display = "flex";
+      error1[1].style.color = "red";
+      tf2 = false;
+    }
   } else {
     error1[1].innerHTML = "Invalid Email";
     input_email.style.borderColor = "red";
@@ -87,20 +89,18 @@ if (val2!=undefined) {
     error1[1].style.color = "red";
     tf2 = false;
   }
-}
-else {
-  error1[1].innerHTML = "Invalid Email";
-  input_email.style.borderColor = "red";
-  error1[1].style.display = "flex";
-  error1[1].style.color = "red";
-  tf2 = false;
-}
-  if (val3 >= "1" && val3 <= "9") {
-    tf3 = true;
-    console.log(tf3);
-  } 
-  else {
-    console.log(val3);
+  if (val3 >= "0" && val3 <= "9") {
+    if (val3.length < 15) {
+      tf3 = true;
+    } else {
+      error1[2].innerHTML = "the number is long";
+      input_phone.style.borderColor = "red";
+      error1[2].style.display = "flex";
+      error1[2].style.color = "red";
+      tf3 = false;
+    }
+  } else {
+    error1[2].innerHTML = "Invalid phone number";
     input_phone.style.borderColor = "red";
     error1[2].style.display = "flex";
     error1[2].style.color = "red";
@@ -130,6 +130,9 @@ submit[1].addEventListener("click", function () {
 submit[2].onclick = function () {
   changePage(container3, container4);
   active(nbNav[3], nbNav[2]);
+};
+submit[3].onclick = function () {
+  changePage(container4, container5);
 };
 back[0].addEventListener("click", function () {
   changePage(container2, container1);
@@ -194,6 +197,33 @@ inputBox[2].onclick = function () {
 };
 
 //-----------------------------------------------------------
+let sum1 = 0;
+let hc4 = document.createElement("div");
+submit[1].addEventListener("click", function () {
+  for (let i = 0; i < 3; i++) {
+    if (cardContent[i].classList.contains("color")) {
+      let cardName = document.querySelectorAll(".name-card")[i].cloneNode(true);
+      let cardPrice = document.querySelectorAll(".price")[i].cloneNode(true);
+      hc4.className = "hc4";
+      cardName.className = "name-card-copy";
+      cardPrice.className = "price-card-copy";
+      sum1 = parseInt(cardPrice.innerHTML);
+      hc4.appendChild(cardName);
+      hc4.appendChild(cardPrice);
+      hbc4.append(hc4);
+      container4.append(hbc4);
+    }
+  }
+});
+//-----------------------------------------------------------
+back[1].addEventListener("click", function () {
+  let cardName = document.querySelector(".name-card-copy");
+  let cardPrice = document.querySelector(".price-card-copy");
+  cardName.remove();
+  cardPrice.remove();
+  hc4.remove();
+});
+//--------------------------------------------------------------
 let sum = 0;
 let hbc4 = document.createElement("div");
 hbc4.className = "content4";
@@ -208,75 +238,41 @@ submit[2].addEventListener("click", function () {
       text.className = "text_copy";
       price.className = "price_copy";
       sum += parseInt(price.innerHTML);
-      console.log(sum);
       bc4.append(text);
       bc4.append(price);
       hbc4.append(bc4);
       container4.append(hbc4);
-      console.log(bc4);
-      console.log(container4);
     }
   }
 });
 //--------------------------------------------------------------
+let sum2 = 0;
+submit[2].addEventListener("click", function () {
+  let total = document.querySelector(".Total");
+  let addtional = document.createElement("div");
+  total.before(hbc4);
+  if (year.classList.contains("color1-2")) {
+    sum2 = `${sum + sum1}\$/yr`;
+  } else {
+    sum2 = `${sum + sum1}\$/mo`;
+  }
+  addtional.className = "sum";
+  addtional.append(sum2);
+  total.append(addtional);
+});
+//-----------------------------------------------------
 back[2].addEventListener("click", function () {
   let del = document.querySelectorAll(".text_copy");
   let del1 = document.querySelectorAll(".price_copy");
+  let del3 = document.querySelector(".sum");
+  sum = 0;
+  del3.remove();
   for (let i = 0; i < del.length; i++) {
     del[i].remove();
     del1[i].remove();
     bc4.remove();
-    sum = 0;
   }
 });
-//-----------------------------------------------------
-let sum1 = 0;
-let hc4 = document.createElement("div");
-submit[1].addEventListener("click", function () {
-  for (let i = 0; i < 3; i++) {
-    if (cardContent[i].classList.contains("color")) {
-      let cardName = document.querySelectorAll(".name-card")[i].cloneNode(true);
-      let cardPrice = document.querySelectorAll(".price")[i].cloneNode(true);
-      hc4.className = "hc4";
-      cardName.className = "name-card-copy";
-      cardPrice.className = "price-card-copy";
-      sum1 = parseInt(cardPrice.innerHTML);
-      console.log(sum1);
-      console.log(cardName);
-      console.log(cardPrice);
-      hc4.appendChild(cardName);
-      hc4.appendChild(cardPrice);
-      hbc4.append(hc4);
-      container4.append(hbc4);
-      console.log(hc4);
-      console.log(container4);
-    }
-  }
-});
-
-//-----------------------------------------------------------
-back[1].addEventListener("click", function () {
-  let cardName = document.querySelector(".name-card-copy");
-  let cardPrice = document.querySelector(".price-card-copy");
-  cardName.remove();
-  cardPrice.remove();
-  hc4.remove();
-});
-submit[2].addEventListener("click", function () {
-  let total = document.querySelector(".Total");
-  let addtional = document.createElement("div");
-  console.log(total.before(hbc4));
-  console.log(container4);
-  if (year.classList.contains("color1-2")) {
-    sum = `${sum + sum1}\$/yr`;
-  } else {
-    sum = `${sum + sum1}\$/mo`;
-  }
-  addtional.className = "sum";
-  addtional.append(sum);
-  total.append(addtional);
-});
-back[2].addEventListener("click", function () {
-  let total = document.querySelector(".sum");
-  console.log(total.remove());
+submit[3].addEventListener("click", function () {
+  console.log("thank you");
 });

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form {
+        background-color: #eee;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        height: 30px;
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 4px;
+      }
+      .input {
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        width: 60%;
+      }
+      .add {
+        color: white;
+        background-color: rgb(255, 123, 0);
+        border: none;
+        outline: none;
+        border-radius: 4px;
+      }
+      .tasks {
+        border-radius: 4px;
+        padding: 20px;
+        background-color: #eee;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .task {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .delete {
+        cursor: pointer;
+        color: white;
+        background-color: red;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" />
+        <input type="button" class="add" value="add task" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let input = document.querySelector(".input");
+        let submit = document.querySelector(".add");
+        let tasks = document.querySelector(".tasks");
+
+        function createTaskElement(taskText, index) {
+          let task = document.createElement("div");
+          task.className = "task";
+          task.innerHTML = taskText;
+
+          let dele = document.createElement("div");
+          dele.className = "delete";
+          dele.innerHTML = "delete";
+          dele.addEventListener("click", function () {
+            // Remove task from local storage and DOM
+            localStorage.removeItem(`title${index}`);
+            localStorage.removeItem(`delete${index}`);
+            tasks.removeChild(task);
+          });
+
+          task.appendChild(dele);
+          return task;
+        }
+
+        submit.addEventListener("click", function () {
+          let taskText = input.value;
+
+          if (taskText.trim() !== "") {
+            let size = localStorage.getItem("size") || 0;
+            localStorage.setItem(`title${size}`, taskText);
+            localStorage.setItem(`delete${size}`, "delete");
+            localStorage.setItem("size", parseInt(size) + 1);
+
+            let task = createTaskElement(taskText, size);
+            tasks.appendChild(task);
+
+            input.value = ""; // Clear input after adding task
+          }
+        });
+
+        // Load tasks from local storage
+        for (let g = 0; g < localStorage.getItem("size"); g++) {
+          if (localStorage.getItem(`title${g}`)) {
+            let taskText = localStorage.getItem(`title${g}`);
+            let task = createTaskElement(taskText, g);
+            tasks.appendChild(task);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

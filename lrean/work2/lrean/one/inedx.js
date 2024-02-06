@@ -127,7 +127,6 @@
 // let d = 2.4;
 // //find smallest number in all variables return integer
 // console.log(Math.trunc(Math.min(a, b, c, d)));
-
 // //use variables  a + d one time to get the needed out put
 // console.log(Math.pow(a, Math.trunc(d))); //10000
 // //get integer "2" from d variables with 4 methods
@@ -1401,10 +1400,57 @@
 // element.append(createdP); //for put the element in side the element and in last it
 // element.prepend("hello from js"); //for put the string in side the element and in first it
 // element.prepend(createdP1); //for put the element in side the element and in first it
-// element.remove();//for delete element 
+// element.remove();//for delete element
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let span = document.querySelector(".two");
 
-
+// console.log(span.nextSibling);//nextSibling any element or comment or object come after it
+// console.log(span.nextElementSibling);//nextElementSibling only element come after it
+// console.log(span.previousSibling);//nextSibling any element or comment or object come before it
+// console.log(span.previousElementSibling);//nextElementSibling only element come before it
+// console.log(span.parentElement);// return parent of element
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //cloneNode makes copy from the element if you want it with all element inside it write true if not write false
+// let myP = document.querySelector(".my-p").cloneNode(true);
+// let myDiv = document.querySelector("div");
+// myP.id = `${myP.id}-copy`;//you can change id or class for clone element
+// myDiv.appendChild(myP);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//addEventListener used to make event click, blur el...,and it is good more than "on" because addEventListener doesnt make override li
+// let myp = document.querySelector("p");
+// myp.onclick = one;
+// myp.onclick = two;
+// function one() {
+//   console.log("click 1");
+// }
+// function two() {
+//   console.log("click 2");
+// }
+// console.log("------------------------");
+// myp.addEventListener("click", one);
+// myp.addEventListener("click", two);
+//-------------------------------------------------
+// //you cant enter string in event and onclick doesnt show you error but addEventListner show you the error
+// // myp.onclick = "fadi";
+// // myp.addEventListener("click", "fadi");
+//-------------------------------------------------
+//if you want to attach element not found in page yet you cant use "on"
+// myp.onclick = function () {
+//   let newp = myp.cloneNode(true);
+//   newp.className = "clone";
+//   document.body.appendChild(newp);
+// };
+//               "false"
+// let cloned = document.querySelector("clone");
+// cloned.onclick = function () {
+//   console.log("i am clone");
+// };
+//---------------------------------
+//             "true"
+// document.addEventListener("click", function (e) {
+// if(e.target.className==="clone")
+//     console.log("i am clone");
+// });
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // let container = document.createElement("div");
 // container.className = "container";
@@ -1506,7 +1552,6 @@
 // footer.appendChild(CR);
 // let CRText = document.createTextNode("CopyRight 2023");
 // CR.appendChild(CRText);
-
 // console.log(container);
 // document.body.appendChild(container);
 // CR.style.cssText=`
@@ -1521,3 +1566,918 @@
 //     justify-content: center;
 // `
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //No longer used
+// alert("test"); //used if you want make  warning
+// let confirmMsg = confirm("are you sure?"); //confirm return true or false value
+// if (confirmMsg == true) {
+//   console.log("deleted item");
+// } else {
+//   console.log("not deleted item");
+// }
+// let promptMsg = prompt("what do you want?","write there");//if you want to collect message from user
+// console.log(promptMsg);
+// // you can use good way like "sweetalert2.github.io"
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //setTimeOut used for make delay before print the message or element...
+// setTimeout(() => {
+//   console.log("msg");
+// }, 3000);
+// //---------------------------
+// //another way with function
+// //in set time out yoou cant make brakets and put the argument
+// setTimeout(sayMsg, 3000, "fadi" /*<= user*/, 34 /*<= age*/);
+// function sayMsg(user, age) {
+//   console.log(`iam message for ${user} his age is ${age}`);
+// }
+// //---------------------------
+// //counter is handler of this set time need it to make clear time out
+// let counter = setTimeout(sayMsg1, 3000);
+// function sayMsg1() {
+//     console.log(`iam message`);
+// }
+// let btn = document.querySelector(".btn");
+// btn.onclick = function () {
+//   clearTimeout(counter);
+// };
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// setInterval(() => {
+//   //setInterval used for make call in specfic time by looping
+//   console.log("msg every 1s");
+// }, 1000);
+// //----------------------
+// // another way
+// setInterval(sayMsg, 1000);
+// function sayMsg() {
+//   console.log("msg every 1s");
+// }
+// //---------------------
+// //ex for setInterval and clearInterval
+// let div = document.querySelector("div");
+// let counter=setInterval(countDown, 3000);
+// function countDown() {
+//   div.innerHTML-=1;
+//   if(div.innerHTML=="0"){
+//       clearInterval(counter)
+//   }
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// console.log(window.location.href); //if you want to get link of page
+// // location.href = "https://google.com"; //to change the link of page
+// console.log(location.host); //return value port of link
+// location.host = "https:google.com"; //for cahnge name of link with write protocol
+// console.log(location.hostname); //return value port of link
+// location.hostname = "google.com"; //for cahnge name of link without write protocol
+// console.log(location.protocol); //return value protocol of link
+// console.log(location.hash); //return value hash of page
+// console.log(location.reload); //make reload for page
+// //remove te current page from history and change it in new page by link
+// console.log(location.replace("https://google.com"));
+// //save current page in history
+// console.log(location.assign("https://google.com"));
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// setTimeout(() => {
+//   //for open new page in window
+//   window.open(
+//     /*url any link(default value 'blank')=>*/ "https://google.com",
+//     /*window name title of new page"_blank in other page","_self=> in same page"*/ "_blank",
+//     /*window features for search */ "width=400,height=400,top=200,left=200"
+//   );
+// }, 2000);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// console.log(history); //history is box of your pages opened
+// console.log(history.length);
+// console.log(history.back()); //for back one page
+// console.log(history.forward()); //for forward one page
+// console.log(history.go(0))//0=>same page,1 forward one page,-1 back one page
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// window.stop();//for stop reload of page
+// window.print();//using to print page or part of it
+// let myNewWindow = window.open(
+//   "https://google.com",
+//   "_blank",
+//   "width=500,height=500"
+// );
+// myNewWindow.focus(); //for make focus to page
+// myNewWindow.close();
+//----------------------------------------------------------
+// window.scrollTo(0,1000);//if you want to make scroll to spesfic index in page direct
+// window.scrollTo({
+//     left:0,
+//     top:1000,
+//     behavior:"smooth",
+// })
+// window.scroll(0, 400); //same
+// window.scrollBy(0,400); //if want to increase to scroll where is it
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// window.scrollY; //return value of scrolling in page of y
+// window.onscroll = function () {
+//   console.log(window.scrollY);
+// };
+// window.scrollX; //return value of scrolling in page of x
+// console.log(window.scrollX);
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// console.log(window.localStorage);
+// //setItem take 2 argument and it save the value in localstorge
+// window.localStorage.setItem(/*key=>*/ "color", /*value=>*/ "#f00");
+// //other way
+// window.localStorage.fontWeight = "bold";
+// window.localStorage["fontSize"] = "20px";
+// //getItem take 1 argument and it print the value from localstorge
+// console.log(window.localStorage.getItem(/*key=>*/ "color"));
+// document.body.style.backgroundColor = window.localStorage.getItem("color");
+// // other way
+// console.log(window.localStorage.fontWeight);
+// console.log(window.localStorage["fontSize"]);
+// //removeItem take 1 argument and delete the key and value from localstroge
+// window.localStorage.removeItem(/*key=>*/ "color");
+// //clear remove all value from localstorge
+// window.localStorage.clear();
+// //localstroge.key() to know index of key
+// console.log(window.localStorage.key(0));
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let lis = document.querySelectorAll("li");
+// let exp = document.querySelector(".ex");
+// // window.localStorage.clear();
+// if (window.localStorage.getItem("color")) {
+//   exp.style.backgroundColor = window.localStorage.getItem("color");
+//   lis.forEach((li) => {
+//     li.classList.remove("active");
+//   });
+//   document
+//     .querySelector(`[data-color=${window.localStorage.getItem("color")}]`)
+//     .classList.add("active");
+// } else {
+//   console.log("no");
+// }
+// lis.forEach((li) => {
+//   li.addEventListener("click", (e) => {
+//         lis.forEach((li) => {
+//       li.classList.remove("active");
+//     });
+//     e.currentTarget.classList.add("active");
+//     window.localStorage.setItem("color", e.currentTarget.dataset.color);
+//     exp.style.backgroundColor = e.currentTarget.dataset.color;
+//   });
+// });
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// window.localStorage.setItem("color", "red"); //save data in localstorge data will stay when leave page
+// window.sessionStorage.setItem("color", "blue"); // save data only during work in page
+// let Name = document.querySelector(".name");
+// Name.oninput = function () {
+//   window.sessionStorage.setItem("value", Name.value);
+// };
+// if(sessionStorage.getItem("value")){
+//     Name.value=sessionStorage.getItem("value")
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// document.addEventListener("DOMContentLoaded", function () {
+//     let input = document.querySelector(".input");
+//     let submit = document.querySelector(".add");
+//     let tasks = document.querySelector(".tasks");
+
+//     function createTaskElement(taskText, index) {
+//       let task = document.createElement("div");
+//       task.className = "task";
+//       task.innerHTML = taskText;
+
+//       let dele = document.createElement("div");
+//       dele.className = "delete";
+//       dele.innerHTML = "delete";
+//       dele.addEventListener("click", function () {
+//         // Remove task from local storage and DOM
+//         localStorage.removeItem(`title${index}`);
+//         localStorage.removeItem(`delete${index}`);
+//         tasks.removeChild(task);
+//       });
+
+//       task.appendChild(dele);
+//       return task;
+//     }
+
+//     submit.addEventListener("click", function () {
+//       let taskText = input.value;
+
+//       if (taskText.trim() !== "") {
+//         let size = localStorage.getItem("size") || 0;
+//         localStorage.setItem(`title${size}`, taskText);
+//         localStorage.setItem(`delete${size}`, "delete");
+//         localStorage.setItem("size", parseInt(size) + 1);
+
+//         let task = createTaskElement(taskText, size);
+//         tasks.appendChild(task);
+
+//         input.value = ""; // Clear input after adding task
+//       }
+//     });
+
+//     // Load tasks from local storage
+//     for (let g = 0; g < localStorage.getItem("size"); g++) {
+//       if (localStorage.getItem(`title${g}`)) {
+//         let taskText = localStorage.getItem(`title${g}`);
+//         let task = createTaskElement(taskText, g);
+//         tasks.appendChild(task);
+//       }
+//     }
+//   });
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // let a = 1;//error-----|
+// // let b = 2;//error     |
+// // let c = 3;//error     }beacuse you already made declare for it
+// // let d = 4;//error-----|
+// let myFriends = ["ahmed", "sayed", "ali", "maysa"]; //array
+// let [a, b, c, d] = myFriends; //destructuring for array=> every variable take value from array
+// console.log(a); //ahmed
+// console.log(b); //sayed
+// console.log(c); //ali
+// console.log(d); //maysa
+// //if you dont want value from array you can skip it like this
+// let [y, x /*stay empty=>*/, , z] = myFriends;
+// console.log(y);
+// console.log(x);
+// console.log(z);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myFriends = [
+//   "ahmed",
+//   "saved",
+//   "ali",
+//   ["shady", "amr", ["mohamed", "gamal"]],
+// ];
+// console.log(myFriends[3][2][1]); //by index
+// let [, , , [a, , [, b]]] = myFriends;
+// console.log(a);//by distructuring
+// console.log(b);//by distructuring
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // // smiple and older way for swwapping variables
+// let book = "video";
+// let video = "book";
+// // let stash = book;
+// // book = video;
+// // video = stash;
+// // console.log(video)
+// // console.log(book)
+// //------------------------------
+// //new with distructuring
+// [book, video] = [video, book];
+// console.log(video)
+// console.log(book)
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   theTtile: "developer",
+//   theCountry: "egypt",
+// };
+// console.log(user.theName);
+// console.log(user.theAge);
+// console.log(user.theTtile);
+// console.log(user.theCountry);
+// //if want save it in variables
+// // let theName = user.theName;//error------------|
+// // let theAge = user.theAge;//  error            }you cant Declare the variable two times
+// // let theTtile = user.theTtile;//error          |
+// // let theCountry = user.theCountry;//error------|
+// let { theName, theAge, theTtile, theCountry } = user;//you declare the  object by same name
+// console.log(theName);
+// console.log(theAge);
+// console.log(theTtile);
+// console.log(theCountry);
+// let { theName, theAge, theTtile, theCountry } = user;//you declare  the  object by same name
+// console.log(theName);
+// console.log(theAge);
+// console.log(theTtile);
+// console.log(theCountry);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   theTtile: "developer",
+//   theCountry: "egypt",
+//   skills: {
+//     html: 70,
+//     css: 80,
+//   },
+// };
+// //you skip value from object by doesnt write tis name and can change name of variable like this
+// let {
+//   theName: a,
+//   theAge: b,
+//   theCountry: c,
+//   /*you can add property=>*/ theColor: d = "red",
+//   /*if you have nest object */ skills: { html: h, css: s },
+// } = user;
+// //other way for nests object |||
+// //                           \/
+// let { html: skillone, css: skilltwo } = skills.user;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(h);
+// console.log(s);
+// console.log(skillone);
+// console.log(skilltwo);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   skills: {
+//     html: 70,
+//     css: 80,
+//   },
+// };
+// showDetails(user);
+// // global way for call from object by function
+// function showDetails(obj) {
+//   console.log(`your name is ${obj.theName}`);
+//   console.log(`your name is ${obj.theAge}`);
+//   console.log(`your name is ${obj.skills.css}`);
+// }
+// //by distructuring
+// showDetails1(user);
+// function showDetails1(
+//   /*you can change name of variable*/ {
+//     theName: n,
+//     theAge: a,
+//     skills: { css: s },
+//   } = user
+// ) {
+//   console.log(`your name is ${n}`);
+//   console.log(`your name is ${a}`);
+//   console.log(`your name is ${s}`);
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //trining
+// let user = {
+//   theName: "osama",
+//   theAge: 39,
+//   skills: ["html", "css", "javascript"],
+//   addresses: {
+//     egypt: "cairo",
+//     ksa: "riyadh",
+//   },
+// };
+// let {
+//   theName,
+//   theAge,
+//   skills: [one, two, three],
+//   addresses:{egypt},
+// } = user;
+// console.log(theName);
+// console.log(theAge);
+// console.log(`${one} ${two} ${three}`);
+// console.log(egypt);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // challenge
+// let chosen = 2;
+// let myFriends = [
+//   { title: "osama", age: 39, available: true, skills: ["html", "css"] },
+//   { title: "ahmed", age: 25, available: false, skills: ["python", "Django"] },
+//   { title: "sayed", age: 33, available: true, skills: ["php", "laravel"] },
+// ];
+
+// if (chosen == 1) {
+//   let [
+//     {
+//       title,
+//       age,
+//       available:av,
+//       skills: [, two],
+//     },
+//     ,
+//   ] = myFriends;
+//   ([{av = "available"},,]=myFriends)
+//   console.log(title);
+//   console.log(age);
+//   console.log(av);
+//   console.log(two);
+// } else if (chosen == 2) {
+//   let [
+//     ,
+//     {
+//       title,
+//       age,
+//       available:av,
+//       skills: [, two],
+//     },
+//   ] = myFriends;
+//   ([,{av = "not available"},]=myFriends)
+//   console.log(title);
+//   console.log(age);
+//   console.log(av);
+//   console.log(two);
+// } else if (chosen == 3) {
+//   let [
+//     ,
+//     ,
+//     {
+//       title,
+//       age,
+//       available:av,
+//       skills: [, two],
+//     },
+//   ] = myFriends;
+//   ([,{av = "available"},]=myFriends)
+//   console.log(title);
+//   console.log(age);
+//   console.log(av);
+//   console.log(two);
+// }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myData = [1, 1, 1, 2, 3];
+// let myUniqueData = new Set([1, 1, 1, 2, 3]);//set make fliter if you have many value same  retrun one value of it
+// myUniqueData = new Set(myData);//other way
+// myUniqueData = new Set().add(1).add(1).add(1).add(2).add(3).add("A");//other way
+// console.log(myData);
+// console.log(myData[0]);
+// console.log(myUniqueData);
+// console.log(myUniqueData.size);//size return length of set
+// console.log(myUniqueData[0]);//if call it by index return undefine
+// console.log(myUniqueData.delete(2));//delete  remove the value and return boolean true if found it or false if not
+// console.log(myUniqueData.size);
+// console.log(myUniqueData.has("A"))//has search for value if found it return true or false if not
+// console.log(myUniqueData.clear());//clear delete all value
+// console.log(myUniqueData.size);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // defferent between aet and weakset
+// let mySet = new Set([1, 1, 1, 2, 3, "A", "A"]); //in set you can stroe any data variable string number
+
+// console.log(mySet);
+// console.log(`size of element is :${mySet.size}`); //set have perproty size
+// let iterator = mySet.keys();
+// console.log(iterator);
+// console.log(iterator.next()); //next go one step foewards and check if it last value ex:1
+// console.log(iterator.next()); //2 false
+// console.log(iterator.next()); //3 false
+// console.log(iterator.next()); //A false
+// console.log(iterator.next()); //undefined true
+// console.log(iterator.next().value); // value return value => undefined
+// console.log(iterator.next().done); // done return boolean false or true => true
+
+// mySet.forEach((el) => console.log(el));
+// console.log("#".repeat(30));
+// //---------------------------------------------
+// let myWeakSet = new WeakSet({ a: "a", b: "b" }); //in weakset  can store only object
+// //weakset doesnt have perporty like size and next()
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // defferent between map datatype and Object
+// let myObject = {}; //object have defualt keys=>value
+// // how you can make object doesnt have keys like map doesnt have property
+// let myEmptyObject = Object.create(null);
+// let myMap = new Map(); //doesnot have property when it empty and we can add any key variable, object, function.....
+// console.log(myObject);
+// console.log(myEmptyObject);
+// console.log(myMap);
+// let myNewObject = {
+//   10: "Number",
+//   10: "String",
+// };
+// //--------------------------------------
+// let myNewMap = new Map();
+// myNewMap.set(10, "number");//set for enter the key
+// myNewMap.set("10", "string");
+// //----------------------------------------
+// console.log(myNewMap.get(10));//get for call the key
+// console.log(myNewMap.get("10")); //map doesnt make override on same key 10=>number,"10"=>string
+// console.log(myNewObject[10]); //object make override if see to key same ,10 =>string
+// //-----------------------------------------
+// console.log(myNewObject); //this have only one value=>10:"string"
+// console.log(myNewMap); //this have two value:10=>"number","10"=>"string"
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myMap = new Map([
+//   [10, "number"], //-----------------|
+//   ["name", "string"], //              }can you add key in map like this or by set
+//   [false, "boolean"], //--------------|
+// ]);
+// // myMap.set(10, "number");
+// // myMap.set("name", "string");
+// console.log(myMap);
+// console.log(myMap.get(10));
+// console.log(myMap.get("name"));
+// console.log(myMap.get(false));
+// console.log(myMap.size);//to get size of map
+// console.log(myMap.delete("name"))//to remove key from map and retrun boolean value
+// console.log(myMap.size);
+// console.log(myMap.has(false))//search for key if found it return boolean value true
+// myMap.clear();//delete all keys
+// console.log(myMap.size);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // map VS WeakMap
+// let mapUser = {
+//   theName: "Elzero",
+// };
+// let myMap = new Map();
+// myMap.set(mapUser, "object value");
+// mapUser = null; //the null will not make override becouse it is store in Map
+// console.log(myMap)
+// console.log("#".repeat(20));
+// let weakMapUser = {
+//   theName: "Elzero",
+// };
+// let myWeakMap = new WeakMap();//weakMap doesnt have all property have it the Map
+// myWeakMap.set(weakMapUser, "object value");
+//  weakMapUser= null; //weakMap make override
+// console.log(myWeakMap);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // array method
+// console.log(Array.from("osama")); //array.from take any iterable ,mapfunction and make it array
+// console.log(Array.from(1234)); //not iterable
+// console.log(Array.from("1234")); //iterable
+
+// console.log(
+//   Array.from("1234", function (e) {
+//     //to make string number
+//     return +e + +e;
+//   })
+// );
+// let myArray = [1, 1, 1, 2, 2, 3, 4];
+// let mySet = new Set(myArray); //we use set fro take specail number but it makes the array object
+// console.log(Array.from(mySet)); //we use array.from to return it array
+// // console.log(...new Set(myArray));//from future
+// function testArgs() {
+//   //return arguments
+//   return arguments;
+// }
+// console.log(testArgs("osama", "ahmed", "sayed")); //the arguments
+// function af() {//return array
+//   return Array.from(arguments);
+// }
+//   console.log(af("osama", "ahmed", "sayed")); //the arguments
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myArray = [10, 20, 30, 40, 50, "A", "B"];
+// //to make copy from same array
+// myArray.copyWithin(
+//   1 /*=>start of select default "0" */,
+//   4 /*=>start of copy default "0" */,
+//   6 /*=>end of copy and the end is not included default from start to end the array*/
+// );
+// console.log(myArray);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let nums = [1, 2, 3, 4, 5, 6, 7];
+// let myNumber = 5;
+// //some like for each or fliter but this retrun bolean value
+// //that mean some check all value in array if found your condition return true if not false
+// let check = nums.some(function (e) {
+//   console.log("test");
+//   return e > this; //this return to window but if you put your variable return it
+// }, myNumber); //variable of 'this'
+// console.log(check);
+// //trrining
+// function checkValues(arr /*array*/, val /*value we need to check it*/) {
+//   return arr.some(function (e /*values in array*/) {
+//     //it is enter on array check one by one
+//     return e === val; //if it found values enter by user return true if not false
+//   });
+// }
+// console.log(checkValues(nums, 20)); //false
+// console.log(checkValues(nums, 5)); //true
+
+// let range = {
+//   min: 1,
+//   max: 5,
+// };
+// let checkNumberInRange = nums.some(function (e) {
+//   return e >= this.min && e <= this.max;
+// }, range);
+// console.log(checkNumberInRange);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let locations = {
+//   20: "place1",
+//   30: "place2",
+//   10: "place3",
+//   40: "place4",
+// };
+// let mainLocation = 15;
+// console.log(locations)
+// let locationsArray = Object.keys(locations);
+
+// console.log(locationsArray);
+// let array1 = locationsArray.map(function (e) {
+//   return +e;
+// });
+// console.log(array1);
+// let check = array1.every(function (e) {
+//   return e >= this;
+// }, mainLocation);
+// console.log(check);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // spread oprator => ...iterable
+// // "allow iterable to expand in place"
+// console.log("osama");
+// console.log(..."osama");
+// console.log([..."osama"]);
+// //-------------------------
+// // concatenate arrays
+// let array1 = [1, 2, 3];
+// let array2 = [4, 5, 6];
+// let allArray = [...array1, ...array2];
+// console.log(allArray);
+// //-------------------------
+// // copy arrays
+// let copyArray = [...array1];
+// console.log(copyArray);
+// //-------------------------
+// // push inside array
+// let oldFriends = ["ahmed", "samir", "fadi"];
+// let newFriends = ["sameh", "mahmoud"];
+// oldFriends.push(...newFriends);
+// console.log(oldFriends);
+// //-------------------------
+// //use with math object
+// let myNums = [10, 20, 100, -100, 1000, 500];
+// console.log(Math.max(...myNums));
+// //-------------------------
+// //spread with object =>merge objects
+// let objone = {
+//   a: 1,
+//   b: 2,
+// };
+// let objtwo = {
+//   c: 3,
+//   d: 4,
+// };
+// console.log({ ...objone, ...objtwo, e: 5 });
+//-----------------------------------chellange-----------------------------------------------------------------------------------------------------------------------------------------
+// let n1 =[10,30,10,20];
+// let n2=[30,20,10]
+// console.log([...n1,...n2].length*new Set(n1).size*Math.min(...n1))//210
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myString = "Hello Elzero Web School I Love elzero";
+// let regex = /Elzero/gi; /*<= pattern*/
+// /*i<=used for doesnt make deferent between captail or samll latter "case insensitive" */
+// /*g<= used for return all value in variable "global" */
+// /*m<= used for check all lines */
+// console.log(myString.match(regex)); // match make search and return the values by array if not found the values return null
+// //syntax
+// // /pattern/modifier(s)"preferred"
+// // new RegExp("pattern","modifier(s)")"Not preferred"
+// //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //regular expression "ranges"
+// let tld = "com net org info code io";
+// let tldre = /(org|info|io)/gi; //used or "|" if you want to check many values
+// console.log(tld.match(tldre));
+// //----------------------
+// let nums = "12345678910";
+// let numsRe = /[0-9]/g; //make range in number
+// console.log(nums.match(numsRe));
+// //----------------------
+// let notNums = "1234%^&56&^78910";
+// //^<=not used if you want any value but doesnt in this range
+// let notNumsRe = /[^0-9]/g;
+// console.log(notNums.match(notNumsRe));
+// //----------------------
+// let practice = "os1 os1os os2 os8 os8os";
+// //we want all os have number between 5 and 9 and have after it os
+// let practiceRe = /os[5-9]os/g;
+// console.log(notNums.match(notNumsRe));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// let myString = "AaBbcdefg123!234%^&*";
+// let aTozSmall = /[a-z]/g;
+// let AToZcapital = /[A-Z]/g;
+// let aAndbAnde=/[abe]/g
+// let allLetter = /[a-zA-Z]/g;
+// let specail = /[^a-zA-z0-9]/g;
+// console.log(myString.match(aTozSmall));
+// console.log(myString.match(AToZcapital));
+// console.log(myString.match(aAndbAnde));
+// console.log(myString.match(allLetter));
+// console.log(myString.match(specail));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //regular expression
+// /*character classes
+// .=>matches any character ,except newline or other line termintors
+// \w=> matches word character,[a-zA-Z0-9]and underscore
+// \W=> matches non word character
+// \d=>matches digits from 0 to 9
+// \D=>mathces non-digits character
+// \s=>mathces whitespace character
+// \S=>matches non whitespace character
+// */
+// let email = "o@@@g...com o@g.com o@g.net A@y.com O-g.com o@s.org 1@1.com";
+// let dot = /./g;
+// let word = /\w/g;
+// let valid = /\w@\w.(com|.org|net)/g;
+// console.log(email.match(dot));
+// console.log(email.match(word));
+// console.log(email.match(valid));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //regular expression
+// /*character classes
+// \b=> matches at the beginning or end of a word
+// \B=>matches not at the beginning or endof a word
+// test method
+// pattern.test(input)=> test used to retrun true if values was find or false if not
+// */
+// let names = "sayed 1Spam 2Spam 3Spam Spam4 Spam5 Osama Ahmed Aspamo";
+// let re = /(\bspam|spam\b)/gi;
+// console.log(names.match(re));
+// //syntax
+// console.log(
+//   /(\bspam|spam\b)/gi.test(
+//     "sayed 1Spam 2Spam 3Spam Spam4 Spam5 Osama Ahmed Aspamo"
+//   )
+// ); //true
+// console.log(re.test(names)); //true
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*regular expression
+
+// quantifiers
+// n+   =>one or more character
+// n*   =>zero or more character
+// n?   =>zero or one character
+// */
+// let mail = "o@nn.sa osama@gmail.com elzero@gmail.net osama@mail.ru"; //all mail
+// let mailRe = /\w+@\w+.(com|net)/gi;
+// console.log(mail.match(mailRe));
+// let nums = "0110 10 150 05120 0560 350 00"; //0 number or no 0
+// let numsRe = /0\d*0/gi;
+// console.log(nums.match(numsRe));
+// let urls = "https://google.com http://www.website.net web.com "; //http + https
+// let urlsRe = /(https?:\/\/)?(www.)?\w+.\w+/gi;
+// console.log(urls.match(urlsRe));
+// //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*quantifier
+// n{x}=>number of
+// n{x,y}=>range
+// n{x,} =>at least x*/
+// let serials = "s100s s3000s s50000s s950000s";
+// console.log(serials.match(/s\d{3}s/gi));
+// console.log(serials.match(/s\d{4,5}s/gi));
+// console.log(serials.match(/s\d{4,}s/gi));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*regular expression
+// quantifiers
+// $  => end with something
+// ^  => start with something
+// ?= => followed by something
+// ?! =>not followed by something
+// */
+// let myString = "We Love Programing";
+// let names = "1OsamaZ 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
+// console.log(/ing$/gi.test(myString)); //end in "ing"
+// console.log(/^we/gi.test(myString)); //start in "we"
+// console.log(/lz$/gi.test(names)); //end in "lz"
+// console.log(/^\d/gi.test(names)); //start in digit
+// //return all values start in digits then 5 word character then followed by Z
+// console.log(names.match(/\d\w{5}(?=z)/gi));
+// //return all values start in digits then 8 word character then not followed by Z
+// console.log(names.match(/\d\w{8}(?!z)/gi));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// /*regular Expression
+// replace
+// replaceAll
+// */
+// let txt = "we Love Programing And @ Because @ Is Amazing";
+// console.log(txt.replaceAll("@", "javascript")); //replaceAll used to replace all values
+// console.log(txt.replace("@", "javascript")); //replace used to replace one value
+// console.log(txt.replace(/@/gi, "javascript"));
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // regilar expressiom
+// // input form validation practice
+// document.querySelector("#register").onsubmit = function () {
+//   let phoneInput = document.querySelector("#phone").value;
+//   let phoneRe = /\(\d{4}\)\s\d{3}-\d{4}/gi;
+//   let validationResult = phoneRe.test(phoneInput);
+//   if (validationResult === false) {
+//     return false;//for doesnt make submit
+//   }
+// };
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //chellange regular expression
+// let url1 = "elzero.org";
+// let url2 = "elzero.org";
+// let url3 = "https://elzero.org";
+// let url4 = "https:www.elzero.org";
+// let url5 = "https:www.elzero.org:8080/articles.php?id=100&cat=topics";
+// let url6 =
+//   "https://www.youtube.com/watch?v=_n_oiZRqH_k&list=PLDoPjvoNmBAx3kiplQR_oeDqLDBUDYwVv&index=146";
+//   let re = /(https|http)?(:\/\/)?(www.)?\w+.(com|org|net)((\/|:)[\w\W]+)?/gi;
+// console.log(url1.match(re))
+// console.log(url2.match(re))
+// console.log(url3.match(re))
+// console.log(url4.match(re))
+// console.log(url5.match(re))
+// console.log(url6.match(re))
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// //opp
+// function User(id, userName, salary) {//opp class or function
+//   this.i = id;
+//   this.u = userName;
+// //we can add for all user by this function without acc one by one
+//   this.s = salary+1000;
+// }
+// let oneUser = new User(101, "fadi", 1000);//we make instance from class or function
+// let twoUser = new User(102, "hadi", 2000);
+// let threeUser = new User(103, "shadi", 3000);
+// console.log(oneUser.i);//we call id of userone
+// console.log(oneUser.u);//-- --- username ----
+// console.log(oneUser.s);//-- --- salary ----
+// //same
+// console.log(twoUser.i);
+// console.log(twoUser.u);
+// console.log(twoUser.s);
+// console.log(threeUser.i);
+// console.log(threeUser.u);
+// console.log(threeUser.s);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+//   //new syntax but same value return
+//   constructor(id, userName, salary) {
+//     //opp class or function
+//     this.i = id;
+//     this.u = userName;
+//     //we can add for all user by this function without acc one by one
+//     this.s = salary + 1000;
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000); //we make instance from class or function;
+// console.log(oneUser.i); //we call id of userone
+// console.log(oneUser.u); //-- --- username ----
+// console.log(oneUser.s); //-- --- salary ----
+// console.log(oneUser instanceof User); //we check if oneUser if from class user
+// console.log(oneUser.constructor === User); //we check if oneUser if from class user
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+//   constructor(id, userName, salary) {
+//     this.i = id;
+//     this.u = userName || "unkown";
+//     this.s = salary < 6000 ? salary + 500 : salary; //we make condition
+//    //property \/
+//     this.msg = function () {
+//       return `hello ${this.u} your salary is ${this.s}`;
+//     };
+//   }
+//   //method \/
+//   writeMsg() {
+//     return `hello ${this.u} your salary is ${this.s}`;
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000);
+// let twoUser = new User(102, "hadi", 2000);
+// console.log(oneUser.i);
+// console.log(oneUser.u);
+// console.log(oneUser.s);
+// console.log(oneUser.msg());
+// console.log(oneUser.writeMsg());
+// console.log(twoUser.i);
+// console.log(twoUser.u);
+// console.log(twoUser.s);
+// console.log(twoUser.msg());
+// console.log(twoUser.writeMsg());
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+//   constructor(id, userName, salary) {
+//     this.i = id;
+//     this.u = userName;
+//     this.s = salary;
+//   }
+//   //method used for update the name because some times you can access on it
+//   updateName(newName) {
+//     return (this.u = newName);
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000);
+// oneUser.updateName("ahmed");
+// console.log(oneUser.i);
+// console.log(oneUser.u);
+// console.log(oneUser.s);
+// let strOne = "elzero";
+// let strtwo = new String("elzero");
+// console.log(strOne);
+// console.log(strtwo);
+// console.log(strOne instanceof String);//false because it is not from object string
+// console.log(strtwo instanceof String);//true
+// console.log(strOne.constructor === String);//true because we used object string to create it
+// console.log(strtwo.constructor === String);//true because we used object string to create it
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// class User {
+  //   //we used static if we need to make praperty or var for class without effect to object
+//   //and we cant access on it by any object
+//   static count = 0;
+//   //opposite
+//   count1 = 1;
+//   constructor(id, userName, salary) {
+//     this.i = id;
+//     this.u = userName;
+//     this.s = salary;
+//     User.count++;
+//   }
+//   static sayHello() {
+//     return `hello from class`;
+//   }
+//   static countMembers() {
+//     return `${this.count} members created`;
+//   }
+// }
+// let oneUser = new User(101, "fadi", 1000);
+// let twoUser = new User(102, "hadi", 2000);
+// let threeUser = new User(103, "shadi",3000);
+// console.log(oneUser.i);
+// console.log(oneUser.count); //return undefined =>object
+// console.log(User.count); //return value=>class
+// console.log("#".repeat(8)); //###################
+// console.log(oneUser.count1); //return value =>object
+// console.log(User.count1); //return undefine =>class
+// // console.log(oneUser.sayHello());//error
+// console.log(User.sayHello());
+// console.log(User.countMembers());
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

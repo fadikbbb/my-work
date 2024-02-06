@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Printer</title>
+</head>
+<body>
+
+    <label for="commentInput">Enter your comment:</label>
+    <input type="text" id="commentInput">
+    <button onclick="saveComment()">Save Comment</button>
+
+    <div id="commentOutput"></div>
+
+    <script>
+        function saveComment() {
+            // Get the entered comment
+            var comment = document.getElementById('commentInput').value;
+
+            // Retrieve existing comments or initialize an empty string
+            var comments = localStorage.getItem('userComments') || '';
+
+            // Add the new comment to the string
+            comments += comment + '|'; // Use a delimiter to separate comments
+
+            // Save the updated string back to local storage
+            localStorage.setItem('userComments', comments);
+
+            // Display all comments
+            displayComments();
+        }
+
+        function displayComments() {
+            // Retrieve comments from local storage or initialize an empty string
+            var comments = localStorage.getItem('userComments') || '';
+
+            // Display comments on the page
+            var commentOutput = document.getElementById('commentOutput');
+            commentOutput.innerHTML = '';
+
+            // Split the string into an array using the delimiter
+            var commentsArray = comments.split('|');
+
+            commentsArray.forEach(function(comment, index) {
+                if (comment.trim() !== '') {
+                    var commentDiv = document.createElement('div');
+                    commentDiv.innerText = 'Comment ' + (index + 1) + ': ' + comment;
+                    commentOutput.appendChild(commentDiv);
+                }
+            });
+        }
+
+        // Load comments from local storage when the page loads
+        window.onload = displayComments;
+    </script>
+
+</body>
+</html>

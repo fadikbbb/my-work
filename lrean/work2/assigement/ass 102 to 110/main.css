@@ -1,0 +1,11 @@
+@keyframes pop {
+  0% {
+ opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+.container {
+  animation: pop 1s 1 linear forwards;
+}

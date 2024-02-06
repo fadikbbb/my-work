@@ -1,10 +1,183 @@
 :root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+  .attribution {
+
+    font-size: 501px;
+    text-align: center;
+
+  }
+
+  body {
+    background-color: hsl(215, 55%, 96%);
+  }
+
+  .bigest-container {
+    margin: auto;
+    width: 886px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .nav {
+    width: 275px;
+    height: 580px;
+    margin-right: 100px;
+    background-repeat: no-repeat;
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-nav1,
+  .content-nav2,
+  .content-nav3,
+  .content-nav4 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  .nb-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin: 0px 20px 0px 40px;
+  }
+
+  span {
+    font-size: 14px;
+    color: hsl(231, 11%, 63%);
+  }
+
+  .nav-name {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .name-card{
+    font-size: 16px;
+    font-weight: bold;
+    color:hsl(213, 96%, 18%) ;
+  }
+  .price{
+    color:hsl(0, 0%, 68%) ;
+  }
+  .container1 {
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 50px;
+    width: 443px;
+  }
+
+  .title {
+
+    font-size: 30px;
+    font-weight: bold;
+    color: hsl(213, 96%, 18%);
+  }
+
+  .des {
+    color: hsl(231, 11%, 63%);
+  }
+
+  .input-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .active {
+    background-color: hsl(206, 94%, 87%) !important;
+    color: hsl(213, 96%, 18%) !important;
+  }
+
+  .input-name,
+  .input-email,
+  .input-phone {
+    padding-left: 15px;
+    height: 35px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border: 1px solid hsl(0, 0%, 87%);
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+  }
+
+  .input-email:focus,
+  .input-name:focus,
+  .input-phone:focus {
+    outline: 1px solid hsl(228, 57%, 40%);
+
+  }
+
+  .one {
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+  }
+
+  
+  .front:hover {
+    background-color: hsl(213, 96%, 18%);
+  }
+
+  .attribution a {
+    color: hsl(213, 96%, 18%);
+  }
+
+  .container2,
+  .container3,
+  .container4,
+  .container5 {
+    position: relative;
+    width: 443px;
+    display: none;
+    flex-direction: column;
+  }
+
+  img {
+    width: 40px;
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-content {
+    width: calc(100% / 3);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid hsl(0, 0%, 87%);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .card-content:hover {
+    border: 2px solid hsl(243.11deg 100% 62.16%);
+    cursor: pointer;
+  }
+.color{
+
+background-color:hsl(215, 55%, 96%);
+border:2px solid hsl(213, 96%, 18%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -371,18 +544,140 @@ input[type="checkbox"] {
   border-radius: 50%;
 }
 
-.front {
-  padding: 10px 15px 15px 15px;
-  background-color: hsl(213, 90%, 37%);
-  color: white;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
+  
+
+  .front {
+    padding: 10px 15px 15px 15px;
+    background-color: hsl(213, 90%, 37%);
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked {
+    accent-color: hsl(243.11deg 100% 62.16%);
+    align-content: center;
+  }  
+.content5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
-input[type="checkbox"]:checked {
-  accent-color: hsl(243.11deg 100% 62.16%);
-  align-content: center;
+.container5{
+  justify-content: center;
+  align-items: center;
 }
+.container5 .content5 p{
+  text-align: center;
+  color: hsl(220, 2%, 67%) ;
+  font-size: 20px;
+}
+.container5 .content5 img{
+  width: 100px;
+  margin-bottom:20px ;
+}
+  @media (max-width:767px){
+    .bigest-container{
+      position: relative;
+      width: 100%;
+      height: 700px;
+      background-color: aliceblue;
+      flex-direction: column;
+      padding: 0;
+    }
+    .nav{
+      margin: 0;
+      background-image: url(assets/images/bg-sidebar-desktop.svg);
+      background-position: bottom;
+      background-size: cover;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      height: 120px; 
+    }
+    .text{
+      display: none;
+    }
+    .container1,.container2,.container3,.container4,.container5{
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 15px;
+      width: 70%;
+      height: 515px;
+      border-radius: 10px;
+      z-index: 1;
+      margin: 0;
+  
+    }
+    .card{
+      flex-direction: column;
+      height: fit-content;
+    }.card-content{
+      flex-direction: row;
+      width: calc(100% - 20px);
+      margin-bottom: 15px;
+      padding: 20px 0px 20px 10px;
+      justify-content: flex-start;
+
+    }.card-text{
+      margin-left: 15px;
+    }
+    .name-card{
+      font-size: 20px;
+    }
+    .nb-nav{
+      width: 40px;
+      height: 40px;
+      margin: 0;
+
+    }.content-nav1,.content-nav2,.content-nav3,.content-nav4{
+      display: flex;
+      align-items: center;
+      height: fit-content;
+      width: fit-content;
+      justify-content: center;
+      width: calc(50%/4);
+      height:60px ;
+    }
+.form2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    .switch{
+width: 100%;
+  flex-direction: row;
+  margin: 20px;
+}
+.content-box{
+  width: calc(100% - 20px);
+}
+.text1{
+  
+  display: flex;
+  flex-direction: column;
+}
+.front{
+position: absolute;
+right: 0;
+bottom: 0;
+transform: translateX(40%)translateY(150%);
+margin-bottom: 15px;
+}
+.back{
+  transform: translateX(-40%)translateY(150%);
+  margin: 15px;
+}.slider.round {
+  width: 50px;
+}
+
+    }
+    

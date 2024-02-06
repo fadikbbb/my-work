@@ -1,0 +1,115 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  --background-image: linear-gradient(
+    to right,
+    rgb(164, 91, 248),
+    rgb(122, 0, 209)
+  );
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.all {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50% )translateY(-50%);
+    width: 70vw;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+  box-shadow:  0 0 10px 4px black;
+}
+.container1 {
+    transition: 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-right: 30px;
+
+}
+.pass-forget{
+    text-decoration: none;
+    color: gray;
+    margin-top: 10px;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.links {
+  display: flex;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.email,.password,.userName {
+  width: calc(100% - 40px);
+  margin-top: 10px;
+  border: none;
+  background-color: #eee;
+  outline: none;
+  border-radius: 9px;
+  height: 15px;
+  padding: 10px;
+}
+
+.submit,.button {
+    margin-top: 10px;
+  width: 150px;
+  background-image: var(--background-image);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  
+}
+.container2 {
+    width: 50%;
+  background-image: var(--background-image);
+  border-radius: 100px 0px 0 100px;
+  transition: 0.3s linear;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+}
+.button{
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid white;
+  background-image: none;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.paragraph{
+    width: calc(100% - 40px);
+    text-align: center;
+}
+.check{
+    transition: 0.3s linear;
+ width: 0%;
+ overflow: hidden;   
+}
