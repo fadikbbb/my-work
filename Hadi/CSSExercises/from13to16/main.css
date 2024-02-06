@@ -1,0 +1,26 @@
+/* .parent .child .title{
+    color: #ff0000;
+}
+.parent .title{
+    color: blue;
+}
+p{
+    color: green;
+}
+body .title{
+    color: green;
+}
+p,body .title{
+    color: green;
+} */
+div {
+    background-color: brown;
+    padding: 20px;
+    margin: 20px;
+    width: max-content;
+    max-width: 400px;
+    height: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+}

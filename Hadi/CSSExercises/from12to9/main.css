@@ -1,0 +1,56 @@
+/* * {
+    font-family: sans-serif;
+padding: 20px;
+
+}
+.shape1 {
+    display: inline-block;
+    background-color: #eee;
+    border-color: red ;
+    border-style: solid;
+    border-width: 5px;
+    outline: 5px solid black;
+    margin: 10px;
+}
+.shape2 {
+    display: inline-block;
+    background-color: #eee;
+    border-color: blue green  ;
+    border-style: solid;
+    outline: 5px solid black;
+    border-width: 5px;
+    margin: 10px;
+}
+.shape3 {
+    display: inline-block;
+    background-color: #eee;
+    border-color: red  green blue yellow;
+    outline: 5px solid black;
+    border-style: dashed;
+    margin: 10px;
+    border-width: 5px;
+} */
+.one,
+.two,
+.three {
+    width: 400px;
+    margin: 20px;
+    padding: 5px 10px;
+    background-color: #eee;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+ p {
+    margin: 5px;
+    border-left: 5px solid palevioletred;
+    height: 40px;
+    padding-top: 11px;
+    padding-left: 10px;
+}
+.two{
+visibility: hidden;
+}
+.three p {
+    border-left: 5px solid rgb(5, 65, 0);
+}

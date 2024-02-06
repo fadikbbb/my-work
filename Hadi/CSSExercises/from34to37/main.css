@@ -1,0 +1,77 @@
+/* div {
+    width: 300px;
+    height: 60px;
+    text-align:center;
+    margin: 10px;
+    background-color: #eee;
+}
+div:empty{
+    background-color: red;
+} */
+/* div {
+    background-color: #eee;
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 4%;
+
+}
+
+div::before {
+    content: "1";
+    height: 40px;
+    width: 30px;
+    position: absolute;
+    color: white;
+    background-color: red;
+    left: -15px;
+    top: 20px;
+    padding-top: 4%;
+} */
+/* p {
+    background-color: #eee;
+    width: 350px;
+    padding: 20px;
+    border-left: 5px red solid;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Osama ::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-color: red transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.Ahmed::before {}
+
+.Sayed::before {} */
+/* p {
+    background-color: #eee;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    border-right: 5px red solid;
+    counter-increment: Hadi;
+}
+
+P::before {
+    content: counter(Hadi);
+    position: absolute;
+    width: 50px;
+    height: 55px;
+    left: 20px;
+    margin-top: -19px;
+    text-align: center;
+    background-color: red;
+} */

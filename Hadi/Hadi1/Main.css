@@ -1,0 +1,583 @@
+.Teat1 {
+  /* colorname */
+  background-color: red;
+  /* Red blue Green  alpha Channel*/
+  background-color: rgb(0, 0, 0 / 50%);
+  /* Hexa decimal */
+  background-color: #ff0000;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAO4x-db5CZjc9KczAeKNNlWRm026t9tePdEbGw585&s");
+  /* repeat the picture */
+  background-repeat: repeat;
+  /*no-repeat the picture */
+  background-repeat: no-repeat;
+  /*repeat in the height or width of the picture */
+  background-repeat: repeat-x;
+  /* this background willnot be fixed */
+  background-attachment: scroll;
+  /* this background will be fixed */
+  background-attachment: fixed;
+  /* postion of the background */
+  background-position: left top right bottom center;
+  background-position: 100px 200px;
+  background-position: 50% 50%;
+  /* Size of the background */
+  background-size: cover;
+  /*cover the content maybe cut some content*/
+  background-size: contain;
+  /*cover the content with no cut */
+  background-size: 100px 200px;
+  /*width and height difined the size by pixel*/
+  background-size: 100% 100%;
+  /*difined the size by percentage*/
+  background-color: aliceblue;
+  /*back_color*/
+  /* none of the objects */
+  display: none;
+  /* none the object but its space remain */
+  visibility: hidden;
+  /* the min size you want the object to be  */
+  min-width: 100px;
+  min-height: 100px;
+  /* the max size you want the object to be */
+  max-width: 100px;
+  max-height: 100px;
+  /* to fit the content  */
+  width: fit-content;
+  /* to hide the extra content  */
+  overflow: hidden;
+  /* to visible the extra content  */
+  overflow: visible;
+  /*defualt */
+  /* to visible the extra content but in scroll */
+  overflow: scroll;
+  /* scroll appear just if the content overflow  */
+  overflow: auto;
+  /* text-shadow: H-shadow V-shadow blur color  */
+  text-shadow: 0 0 0 red;
+  /* to centered the text  */
+  text-align: center;
+  /* the text from right to left  */
+  direction: rtl;
+  /* the text from left to right  */
+  direction: ltr;
+  /* to make another object in the same line  */
+  vertical-align: middle;
+  /* decorate the text  */
+  text-decoration: line-through;
+  /* change what you want in the text  */
+  text-transform: capitalize;
+  /* space beatween letters */
+  letter-spacing: 2px;
+  /* the indentaion  */
+  text-indent: 10px;
+  /* the distance between lines  */
+  line-height: 1.6;
+  /* space between words  */
+  word-spacing: 1px;
+  white-space: normal;
+  white-space: nowrap;
+  word-break: break-all;
+  /* like overflow but this for text only to tell the user there is an overflow */
+  text-overflow: ellipsis;
+  /* serif mean with edges sans serif mean without edges  */
+  font-family: "Courier New", Courier, monospace;
+  /* to bring the fonts go to fonts.google.com  */
+  /* anothe wway to import the font family  */
+  /* @font-face {
+   /* colorname */
+  background-color: red;
+  /* Red blue Green  alpha Channel*/
+  background-color: rgb(0, 0, 0 / 50%);
+  /* Hexa decimal */
+  background-color: #ff0000;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAO4x-db5CZjc9KczAeKNNlWRm026t9tePdEbGw585&s");
+  /* repeat the picture */
+  background-repeat: repeat;
+  /*no-repeat the picture */
+  background-repeat: no-repeat;
+  /*repeat in the height or width of the picture */
+  background-repeat: repeat-x;
+  /* this background willnot be fixed */
+  background-attachment: scroll;
+  /* this background will be fixed */
+  background-attachment: fixed;
+  /* postion of the background */
+  background-position: left top right bottom center;
+  background-position: 100px 200px;
+  background-position: 50% 50%;
+  /* Size of the background */
+  background-size: cover;
+  /*cover the content maybe cut some content*/
+  background-size: contain;
+  /*cover the content with no cut */
+  background-size: 100px 200px;
+  /*width and height difined the size by pixel*/
+  background-size: 100% 100%;
+  /*difined the size by percentage*/
+  background-color: aliceblue;
+  /*back_color*/
+  /* none of the objects */
+  display: none;
+  /* none the object but its space remain */
+  visibility: hidden;
+  /* the min size you want the object to be  */
+  min-width: 100px;
+  min-height: 100px;
+  /* the max size you want the object to be */
+  max-width: 100px;
+  max-height: 100px;
+  /* to fit the content  */
+  width: fit-content;
+  /* to hide the extra content  */
+  overflow: hidden;
+  /* to visible the extra content  */
+  overflow: visible;
+  /*defualt */
+  /* to visible the extra content but in scroll */
+  overflow: scroll;
+  /* scroll appear just if the content overflow  */
+  overflow: auto;
+  /* text-shadow: H-shadow V-shadow blur color  */
+  text-shadow: 0 0 0 red;
+  /* to centered the text  */
+  text-align: center;
+  /* the text from right to left  */
+  direction: rtl;
+  /* the text from left to right  */
+  direction: lrt;
+  /* to make another object in the same line  */
+  vertical-align: middle;
+  /* decorate the text  */
+  text-decoration: line-through;
+  /* change what you want in the text  */
+  text-transform: capitalize;
+  /* space beatween letters */
+  letter-spacing: 2px;
+  /* the indentaion  */
+  text-indent: 10px;
+  /* the distance between lines  */
+  line-height: 1.6;
+  /* space between words  */
+  word-spacing: 1px;
+  white-space: normal;
+  white-space: nowrap;
+  word-break: break-all;
+  /* like overflow but this for text only to tell the user there is an overflow */
+  text-overflow: ellipsis;
+  /* serif mean with edges sans serif mean without edges  */
+  font-family: "Courier New", Courier, monospace;
+  /* to bring the fonts go to fonts.google.com  */
+  /* anothe wway to import the font family  */
+  /* @font-face {
+        font-family: "face";
+        src: url("myfont.woff");
+    } */
+  /* to make style for the text  */
+  font-style: italic;
+  /* capital the letters  */
+  font-variant: small-caps;
+  /* to make it bold or remove the bold */
+  font-weight: 500;
+  /* to make the user know that is bottom is clicker and there are others features */
+  cursor: pointer;
+  /* to float the content  */
+  float: left;
+  /* to fix the problem in float  */
+  clear: both;
+  /* to calculate the areas and spaces */
+  width: calc(95% / 4);
+  width: calc((100%-90px) / 4);
+  margin-left: 15px;
+  /* to change the opcity of the content  */
+  opacity: 0.6;
+  /* change the position of the elements according to its self*/
+  position: relative;
+  /* use to put one object sbove the another */
+  z-index: 3;
+  /* to change the icon of the list  */
+  list-style-type: armenian;
+  /* to put the icon where you want  */
+  list-style-position: outside;
+  /* to put image for the icon  */
+  list-style-image: url();
+  list-style: none;
+  /* to make a counter for the content  */
+  counter-increment: counter;
+  /* to give the element a radius 
+   defualt 0
+   50% to make a circle should width = height
+   you can choose the corner you want
+   */
+  border-radius: 10px;
+  /* 
+   H-Shadow | V-Shadow | Blur | Spread | Color | Inset
+   */
+  box-shadow: 10px 10px 10px red inset, 10px 10px 10px blue;
+  /* to setting correct boxes */
+  box-sizing: content-box;
+  /* to make the transition smooth */
+  transition-duration: 0.5s;
+  /* to delay the objects */
+  transition-delay: 0.7;
+  transition-property: all;
+  /* 
+   ease => slow fast slow again
+   linear => same speed all the time
+   ease-in => slow in the beginning
+   ease-out => slow in the ending
+   ease-in-out => slow both side
+   */
+  transition-timing-function: ease;
+  transition: width 2s;
+  /* !important to overread what you want */
+  /* to make filters for images like instagram search for filters list */
+  filter: grayscale(100%);
+  filter: blur(100%);
+  filter: blur(100%);
+  /* to merge many color  and should make the end for the color*/
+  background-image: linear-gradient(to right, red 100px, green, yellow);
+  /* Caret color => to change the color of this thing => */
+  caret-color: #ff0000;
+  /* if you want to make any event for the pointer  */
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+.list1::after {
+  content: "";
+  position: absolute;
+  /* to make any change you want after ele */
+}
+.list1::before {
+  content: "";
+  position: absolute;
+  /* to make any change you want  before ele*/
+}
+::selection {
+  /* for the selecter para or ant element */
+}
+.list1::first-line {
+  /* for first line of the paragraph */
+}
+.tist1::first-letter {
+  /* for first color of the paragraph */
+}
+.list:focus {
+  /* for the focuse content  */
+}
+.list1:hover {
+  /* for any item  */
+}
+.list1:checked {
+  /* for check box  */
+}
+.list1:visited {
+  /* for links  */
+}
+.list:empty {
+  /* for any elemnt empty  */
+}
+/* selctor: hover { } */
+/* postion 
+      Static => Default
+      Relative => according to the parent
+      Absolute => according to another element
+      Fixed => fixed the content in its palce
+      Sticky => fixed the content and continue with you if you scroll
+*/
+
+/* 
+content Iwdth Is: 100%
+5 Spaces 1% *5 => 5% from content width
+95% Available Space
+4 elements the width Is: 95%/4 =23.75
+ */
+/* Block
+   -Take Full width If No Width
+   -Add line Break
+   -Respect Padding, Margin, Width, Height
+Inline
+   -Respect Padding, Margin Just left and right
+   -Don't Add line Break
+   -Don't Respect Width, Height
+Inline-Block
+   -Allow Elements Before and after it
+   -Respect Padding, Margin, Width, Height
+*/
+/* 
+.one,
+.two,
+.three,
+.four{
+use to grouping some elements with same characteristics
+}
+ */
+/* nesting like div p {
+
+ } 
+ */
+/* 
+CSS Units
+   px
+   em => Time inheirt the size from to the father
+   rem => root time inhirt the size from the html
+   vw => View Port Width take size acorrding the width of the page
+   percentage => take the size in percentage from the father
+
+Read 
+    vmin
+    vh
+
+    1em = 16px is wrong
+    default Font Size For Web Page Is 16px
+*/
+
+/*
+ Vendors prefixes
+
+ Chrome 
+ Safari
+ opera
+
+ [1]New CSS Feature Appeared
+ [2]Browser Tests The Feature In Version X
+ [3]Browsers Add Perfix to Give Developers The ability To Use It
+ [4]The Feature Is Fully Supported In Version Y, No Need For Perfix
+
+ -Webkit- => Chrome, Safari, New opera Version
+ -moz- => FireFox
+ -ms- => ie, Edge
+ -o- => Old Version of Opera
+ website Can I Use
+ [1] Most of Users Is Using Modern Browsers
+ [2] Vs Code addon To Add The Perfix
+ [3] Task Runner
+*/
+/* 
+ Transition
+      Duration
+      Property
+      Delay
+      Timing Function
+      Animatable CSS Properties website
+*/
+/* 
+The Margin Collapse
+   [1] Only Vertiacl Margin collapse
+   [2] Bigger Margin Wins
+   [3] Margin Collapsing With Elements Without Anything Between
+   [4] nesting Does Not Prevent Collapsing
+*/
+/* 
+CSS Variables
+   Global Variable 
+   Local Variable
+   var(Variable Name, Fallback Value)
+:root{
+   --mainColor: blue;
+   var(mainColor, black);
+   --mainPadding: 20px;
+   var(mainPadding);
+}   
+*/
+/* 
+Flexible Box
+For Parent
+      Diplay: flex => To Start Flexible Box
+      flex-direction : row => Default Value
+      flex-wrap: no-wrap => Default
+      flex-flow: {flex-Direction + flex-wrap} Short Hand
+
+      justify-content: flex-start => Default
+      align-items: strtch=> default for the content in the flex box
+      align-content: strtch => Default
+For Child
+      flex-grow: 0 => Default      
+      flex-shrink: 1 => Default      
+      order: 0 => Default   
+      flex-basis: auto => Default  
+      flex: [Flex grow]+[Flex Shrink]+[Flex Basis] 0 1 Auto => short Hand
+      display: inline-flex;
+      align-self: auto => default
+      Holly grail web desgin
+      flexbox froggy
+      flexbox zobie
+*/
+/*
+  Gradients
+  linear-gradient(Direction || Angle, Color Stop 1, Color Stop 2,......)
+ */
+/* 
+Grid
+For Parent
+   diplay: grid | inline grid
+   grid-template-columns => [Number Of Columns In] => [Px, %, Auto, Fracton, Repeat(), Mix]
+   grid-template-rows => [Number of rows Height In] => [px, %, Auto, Fraction, Repeat(), Mix]
+   row-gap: 20px => to make gap between row
+   column-gap: 20px => to make gap between column
+   gap: [row Gap] [Column Gap]
+   justify-content same flex
+   align-content like flex
+   grid-template-areas => to divide your page to columns and row perfectly
+For Child
+   grid-column: 1 / 7 || span 3 [Grid Column Start] [Grid Column End]
+   grid-row: 1 / 4 || span 2 [Grid Row Start] [Grid Row End]
+   grid-area: [Grid Row Start] [Grid Cloumn Start] [Grid Row End] [Grid Column End]
+   auto-fill => to avoid the empty space when you fixed thesize of the columns
+   minmax => to make the max and min size of the columns
+   search about auto-fit
+   Grid Garden
+*/
+/* 
+2D -webkit-Tramsform
+   - ScaleX
+   - ScaleY
+   - Scale
+   - Rotate
+      deg => Degrees
+      rad => Radians
+      grad => Gradians
+      turn => Turn
+   - Translate
+   - skewX
+   - skewY
+   - skew
+   - matrix Syntax => matrix(ScaleX(), skewx(), skewy(), scaley(), translatex(), translatey())
+   -Transform-origin illustration search
+      syntax 
+      Default Values => 50% 50% 0
+      2D Transform => transform-origin(X, Y)
+      3D Transform => transform-origin(X, Y, Z)
+      X-Axis
+         -CSS Unit [px, em, rem]
+         -%
+         -keyword
+            left
+            center
+            right
+      Y-Axis
+         -CSS Unit [px, em, rem]
+         -%
+         -keyword
+            Top = 0%
+            center = 50%
+            right = 100%
+3D Transform
+   - rotate3d
+   - Translate
+   - Perspective => to declare the distance between the screen and the object
+   - Perspective-Origin
+   - Backface-Visibility
+   - Transform-Style => preserve-3d
+   - Flip Product
+Animation
+   - KeyFrams
+   - Animation Name
+   - Animation Duration
+   - Iteration Count
+   - Timing Function
+   - Spinner Loading
+   - Direction
+   - Delay
+   - Fill-Mode
+   - Play-State
+   - Shorthand => animation: [name, duration, .....]
+   - animation-name: change-color;
+   - animation-duration: 6s;
+*/
+/* 
+CSS Selectors 
+
+   ------Part 1------
+
+   * => select all the elements
+   Element => [p, div, h2]
+   Element OtherElement => div.p
+   class-name
+   #id-name
+   .parent.child
+   .class-one.class-two
+   .class-name div, .class-name p
+   Element.class-name
+   .parent > .child => Direct Child
+
+   -----Part 2------
+
+   Element + Other elemnt => [div + p]
+   elment ~ Other Elemnts => [p ~ div]
+   [Attribute]
+   Element[Attribute]
+   [Attribute=Value]
+   Element[Attribute=Value] => input[type ="search"]
+   [Attribute~=Value] => Contain A Word
+   [Attribute*=Value] => Contain A String
+   [Attribute^=Value] => Start With A String
+
+   -----Part 3------
+
+   :first-child
+   :last-child
+   :first-of-type
+   :last-of-type
+   :only-child
+   :only-of-type
+
+   ------Part 4------
+
+   :not(selectors)
+   :nth-child(n, even, odd)
+   :nth-last-child(n, even, odd)
+   :nth-of-type(n)
+   :nth-last-of-type(n)
+
+   -----Part 5------
+
+   :root
+   :checked
+   :empty
+   :disabled
+   :required
+   :focus
+   ::Selection
+   ::placeholder
+ */
+/* 
+ Media Queries
+ Responsive Design
+
+ */
+/* 
+ CSSBattle
+ Frontend MEntor 
+ Git and GitHub
+ CodePen
+ */
+@keyframes Change-color {
+  form {
+    /* conditions */
+  }
+  to {
+    /* conditions */
+  }
+  /* OR  */
+  0% {
+    /* conditions */
+  }
+  100% {
+    /* conditions */
+  }
+  /* OR  */
+  0% {
+    /* conditions */
+  }
+  50% {
+    /* conditions */
+  }
+  100% {
+    /* conditions */
+  }
+}
+@media print {
+  /* conditions */
+  /* CSS TRICKS search */
+}

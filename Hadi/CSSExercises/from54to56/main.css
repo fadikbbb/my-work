@@ -1,0 +1,102 @@
+.first {
+    width: 600px;
+    margin: 20px auto;
+    background-color: #eee;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    border-left: 10px #f44336 solid;
+    border-right: 10px #673ab7 solid;
+    position: relative;
+
+}
+
+.first::first-letter {
+    color: red;
+}
+
+.first::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #f44336 20%, #2196f3 20%, #2196f3 40%, #4caf50 40%, #4caf50 60%, #e91e63 60%, #e91e63 80%, #673ab7);
+    left: 0px;
+    bottom: 0px;
+}
+
+.first::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(to right, #f44336 20%, #2196f3 20%, #2196f3 40%, #4caf50 40%, #4caf50 60%, #e91e63 60%, #e91e63 80%, #673ab7);
+}
+
+.parent {
+    width: 600px;
+    margin: 20px auto;
+    caret-color: #fd2222;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: #eee;
+    font-family: sans-serif;
+}
+
+.one,
+.two,
+.three {
+    position: relative;
+    background-color: #eee;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+.one:hover {
+    content: "";
+    border: none;
+}
+
+.two,
+.three {
+    pointer-events: none;
+    color: #757575;
+}
+
+.one:before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #f44336 0%, #f44336 50%, #009688 50%, #009688);
+    left: 0px;
+    bottom: 0px;
+}
+
+.two:before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #f44336 0%, #f44336 50%, #009688 50%, #009688);
+    left: 0px;
+    bottom: 0px;
+}
+
+.three::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #f44336 0%, #f44336 50%, #009688 50%, #009688);
+    left: 0px;
+    bottom: 0px;
+}

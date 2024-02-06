@@ -1,0 +1,78 @@
+.all {
+    width: 800px;
+    background-color: #eee;
+    display: inline-block;
+    text-align: center;
+}
+
+/* .First{
+background-color: #b4b4b4;
+margin: 10px;
+
+}
+.Second{
+    background-color: #b4b4b4;
+    margin: 10px;
+    width: calc((800px - 20px)/3);
+    display: ;
+}
+.Third{
+    background-color: #b4b4b4;
+    margin: 10px;
+}
+.Fourth{
+    background-color: #b4b4b4;
+    margin: 10px;
+}  */
+/* .First,.Second,.Third,.Fourth{
+        margin: 10px;
+
+}
+.Second div,.First, .Third div ,.Fourth div{
+     padding:10px; 
+     display: inline-block;    
+     background-color: #b1b1b1;
+}
+.First {
+    width: calc(100% - 60px);
+}
+.Second {
+}
+.Second div {
+    width: calc((800px / 3) - 35px);
+}
+.Third {
+
+}
+.Third div {
+    width: calc((800px / 2) - 40px);
+
+}
+.Fourth {
+
+}
+.Fourth div {
+    width: calc((800px / 4) - 32px);
+} */
+div {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: #b3b3b3;
+    /* Get The Background From Image */
+    color: black;
+}
+
+.normal {
+    opacity: 1;
+}
+
+.two {
+    opacity: 0.1;
+}
+
+.one {
+    background-color: #b3b3b31c;
+}

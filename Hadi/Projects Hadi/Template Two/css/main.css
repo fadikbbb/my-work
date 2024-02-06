@@ -1,0 +1,115 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #666666;
+    --secondary-color: #19c8fa;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.first-section .container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.first-section .container .header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    bottom: 0px;
+    z-index: -1;
+}
+
+.first-section .container .header .right-side .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.first-section .container .header .left-side {
+    width: auto;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.first-section .container .header .left-side .bar-icon img {
+    width: 20px;
+    display: none;
+}
+
+.first-section .container .header .left-side .search-icon {
+    padding-left: 10px;
+    border-left: 2px solid var(--text-color);
+}
+
+.first-section .container .header .list ul {
+    display: flex;
+}
+
+@media (max-width:767px) {
+    .first-section .container .header .left-side .bar-icon img {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .first-section .container .header .left-side .list .nav {
+        display: none;
+        padding-left: 0px;
+    }
+
+
+    .first-section .container .header .left-side .bar-icon:hover+.list .nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 41px;
+    }
+    .first-section .container .header .list ul .active{
+        width: 100%;
+        display: flex;
+        padding: 0;
+    } 
+    .first-section .container .header .left-side .list .nav li {
+        padding: 15px;
+    }
+    .first-section .container .header .list ul li a:first-child{
+border-bottom: none;
+    
+}
+.first-section .container .header .list ul li:first-child{
+    border-bottom: 1px solid var(--secondary-color);
+}
+}
+
+.first-section .container .header .list ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.first-section .container .header .list ul li a {
+    color: var(--text-color);
+    padding: 16px 10px;
+}
+
+.first-section .container .header .list ul li:hover ,
+.first-section .container .header .list ul li .active {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
