@@ -24,7 +24,7 @@ body{
     height: 60vh;
     border-radius: 20px;
     overflow: hidden;
-  box-shadow:  0 0 10px 4px black;
+  box-shadow:  0 0 10px 4px gray;
 }
 .container1 {
     transition: 0.3s linear;
@@ -110,6 +110,13 @@ color: white;
 }
 .check{
     transition: 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
  width: 0%;
  overflow: hidden;   
+}
+.link{
+  text-decoration: none;
 }
