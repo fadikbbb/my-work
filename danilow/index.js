@@ -1,11 +1,12 @@
-let bar=document.querySelector(".fa-bars")
-let nav= document.querySelector(".nav") 
-let newOb = document.createElement("div");
-document.querySelector(".container").append(newOb)
-bar.onclick=function(){
-//    nav.style.cssText=`display:flex;`
-   nav.classList.toggle("active")
-}
-let button=document.querySelector(".accept").onclick=function(){
-    location.href="https://wa.me/qr/CLQPR4DUZNG3G1"
-}
+let bar = document.querySelector("#menu-bar");
+let nav = document.querySelector(".nav");
+bar.onclick = function () {
+  nav.classList.toggle("active");
+
+  if(nav.classList.contains("active")){
+      bar.classList.replace("fa-bars", "fa-bars-staggered");
+}else{
+      bar.classList.replace("fa-bars-staggered", "fa-bars");
+
+  }
+};
