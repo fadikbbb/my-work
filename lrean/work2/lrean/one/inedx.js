@@ -1452,119 +1452,120 @@
 //     console.log("i am clone");
 // });
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// let container = document.createElement("div");
-// container.className = "container";
-// let header = document.createElement("div");
-// //=============header============================
-// header.className = "header";
-// container.appendChild(header);
-// let logo = document.createElement("div");
-// header.appendChild(logo);
-// logo.className = "logo";
-// let textLogo = document.createTextNode("elzero");
-// logo.append(textLogo);
-// header.style.cssText = `
-// margin:0;
-// font-family:Tahoma,Arial;
+let container = document.createElement("div");
+container.className = "container";
+let header = document.createElement("div");
+//=============header============================
+header.className = "header";
+container.appendChild(header);
+let logo = document.createElement("div");
+header.appendChild(logo);
+logo.className = "logo";
+let textLogo = document.createTextNode("elzero");
+logo.append(textLogo);
+header.style.cssText = `
+margin:0;
+font-family:Tahoma,Arial;
+display:flex;
+justify-content:space-between;
+align-items:center;
+`;
+logo.style.cssText = `margin:10px;color:green;font-size:20px; font-weight:bold;`
+//===========ul=>list nav========================
+let list = document.createElement("ul");
+list.className = "list";
+header.appendChild(list);
+let menu1 = document.createElement("li");
+let menu2 = document.createElement("li");
+let menu3 = document.createElement("li");
+let menu4 = document.createElement("li");
+list.appendChild(menu1);
+list.appendChild(menu2);
+list.appendChild(menu3);
+list.appendChild(menu4);
+let li1 = document.createTextNode("home");
+menu1.className = "nav";
+menu1.appendChild(li1);
+let li2 = document.createTextNode("about");
+menu2.className = "nav";
+menu2.appendChild(li2);
+let li3 = document.createTextNode("service");
+menu3.className = "nav";
+menu3.appendChild(li3);
+let li4 = document.createTextNode("contact");
+menu4.className = "nav";
+menu4.appendChild(li4);
+list.style.cssText = `
+list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+`;
+(menu1.style.cssText = `margin:10px;color:gray;`),
+(menu2.style.cssText = `margin:10px;color:gray;`),
+(menu3.style.cssText = `margin:10px;color:gray;`),
+(menu4.style.cssText = `margin:10px;color:gray;`);
+//===============sction======================
+let all = document.createElement("div");
+all.className = "all";
+container.appendChild(all);
+all.style.cssText=`display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+background-color:rgb(236,236,236)
+`;
+for (let i = 1; i <= 15; i++) {
+  prodact = document.createElement("div");
+  prodact.className = `prodact`;
+  all.appendChild(prodact);
+  num = document.createElement("h1");
+  prodact.appendChild(num);
+  numText = document.createTextNode(i);
+  num.appendChild(numText);
 
-// display:flex;
-// justify-content:space-between;
-// align-items:center;
-// `;
-// logo.style.cssText = `margin:10px;color:green;font-size:20px; font-weight:bold;`
-// //===========ul=>list nav========================
-// let list = document.createElement("ul");
-// list.className = "list";
-// header.appendChild(list);
+  p = document.createElement("p");
+  prodact.appendChild(p);
+  pText = document.createTextNode("product");
+  p.appendChild(pText);
+  prodact.style.cssText=`
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color: white;
+margin:5px;
+`
+num.style.cssText=`margin:0;
+margin-bottom:5px;
+`
+p.style.cssText=`margin:0;
+margin-bottom:5px;
+font-size:9px ;
+color:rgb(151,151,151);`
+}
+all.append(prodact);
 
-// let menu1 = document.createElement("li");
-// let menu2 = document.createElement("li");
-// let menu3 = document.createElement("li");
-// let menu4 = document.createElement("li");
-// list.appendChild(menu1);
-// list.appendChild(menu2);
-// list.appendChild(menu3);
-// list.appendChild(menu4);
-// let li1 = document.createTextNode("home");
-// menu1.className = "nav";
-// menu1.appendChild(li1);
-// let li2 = document.createTextNode("about");
-// menu2.className = "nav";
-// menu2.appendChild(li2);
-// let li3 = document.createTextNode("service");
-// menu3.className = "nav";
-// menu3.appendChild(li3);
-// let li4 = document.createTextNode("contact");
-// menu4.className = "nav";
-// menu4.appendChild(li4);
-// list.style.cssText = `
-// list-style: none;
-//     display: flex;
-//     justify-content: end;
-//     align-items: center;
-// `;
-// (menu1.style.cssText = `margin:10px;color:gray;`),
-// (menu2.style.cssText = `margin:10px;color:gray;`),
-// (menu3.style.cssText = `margin:10px;color:gray;`),
-// (menu4.style.cssText = `margin:10px;color:gray;`);
+//===============footer=============================
 
-// //===============sction======================
-// let all = document.createElement("div");
-// all.className = "all";
-// container.appendChild(all);
-// all.style.cssText=`display: grid;
-// grid-template-columns: 1fr 1fr 1fr;
-// background-color:rgb(236,236,236)
-// `;
-// for (let i = 1; i <= 15; i++) {
-//   prodact = document.createElement("div");
-//   prodact.className = `prodact`;
-//   all.appendChild(prodact);
-//   num = document.createElement("h1");
-//   prodact.appendChild(num);
-//   numText = document.createTextNode(i);
-//   num.appendChild(numText);
-
-//   p = document.createElement("p");
-//   prodact.appendChild(p);
-//   pText = document.createTextNode("product");
-//   p.appendChild(pText);
-//   prodact.style.cssText=`
-// display: flex;
-// align-items: center;
-// flex-direction: column;
-// background-color: white;
-// margin:5px;
-
-// `
-// num.style.cssText=`margin:0;margin-bottom:5px;`
-// p.style.cssText=`margin:0;margin-bottom:5px;font-size:9px ;color:rgb(151,151,151)`
-// }
-// all.append(prodact);
-
-// //===============footer=============================
-
-// let footer = document.createElement("footer");
-// footer.className = "footer";
-// container.appendChild(footer);
-// let CR = document.createElement("div");
-// CR.className = "copyRight";
-// footer.appendChild(CR);
-// let CRText = document.createTextNode("CopyRight 2023");
-// CR.appendChild(CRText);
-// console.log(container);
-// document.body.appendChild(container);
-// CR.style.cssText=`
-// color:white
-// `;
-// footer.style.cssText=`
-// height: 50px;
-//     background: #009688;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: row;
-//     justify-content: center;
-// `
+let footer = document.createElement("footer");
+footer.className = "footer";
+container.appendChild(footer);
+let CR = document.createElement("div");
+CR.className = "copyRight";
+footer.appendChild(CR);
+let CRText = document.createTextNode("CopyRight 2023");
+CR.appendChild(CRText);
+console.log(container);
+document.body.appendChild(container);
+CR.style.cssText=`
+color:white
+`;
+footer.style.cssText=`                           
+height: 50px;
+    background: #009688;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+`
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // //No longer used
 // alert("test"); //used if you want make  warning
